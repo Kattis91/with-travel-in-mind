@@ -5,12 +5,28 @@
 }
   
 .Main {
-    padding-top: 90px;
+    padding-top: 100px;
 }
   
 * {
     box-sizing: border-box;
 }
+
+a {
+    color: rgb(65, 65, 70);
+    transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(65, 65, 70);
+}
+
+a:hover i {
+    color: #a78db6;
+    transition: color ease-in-out 0.3s;
+} 
 
 i {
     color: #338f85;
