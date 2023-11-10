@@ -1,0 +1,26 @@
+.App {
+    font-family: "Ubuntu", sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+  
+.Main {
+    padding-top: 90px;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+i {
+    color: #338f85;
+    font-size: 1.6rem;
+    padding: 7px;
+    vertical-align: middle;
+}
+  
+i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #a78db6;
+}
