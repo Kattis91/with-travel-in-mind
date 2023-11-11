@@ -1,0 +1,21 @@
+.Button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 75px;
+    display: flex;
+    justify-content:center;
+    width: 30%;
+    border: none;
+}
+
+.Bright {
+    background-color: rgb(196, 58, 81);
+    color: white;
+}
+
+.Bright:hover {
+    background-color: #338f85;
+    color: white;
+}
+
