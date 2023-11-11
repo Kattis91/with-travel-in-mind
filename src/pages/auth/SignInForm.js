@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Alert, Button, Col, Container, Form, Image, Row } from 'react-bootstrap'
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import { useHistory } from 'react-router';
+import { SetCurrentUserContext } from '../../App';
 
-const SignInForm = () => {
+function SignInForm() {
+
+  const setCurrentUser = useContext(SetCurrentUserContext);
 
   const [signInData, setSignInData] = useState({
     username: '',
@@ -32,12 +34,13 @@ const SignInForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/dj-rest-auth/login/', signInData)
-      history.push('/');
-    } catch (err){
-      setErrors(err.response?.data)
+      const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+      setCurrentUser(data.user);
+      history.push("/");
+    } catch (err) {
+      setErrors(err.response?.data);
     }
-  }
+  };
 
   return (
     <Row className={styles.Row}>
@@ -93,7 +96,7 @@ const SignInForm = () => {
           </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signin">
+          <Link className={styles.Link} to="/signup">
             Don't have an account yet? <span>Sign up now!</span>
           </Link>
         </Container>
