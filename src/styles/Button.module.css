@@ -9,6 +9,14 @@
     border: none;
 }
 
+.Button:hover:active{
+    background-color: #338f85!important;
+}
+
+.Button:focus {
+    background-color: rgb(196, 58, 81);
+}
+
 .Bright {
     background-color: rgb(196, 58, 81);
     color: white;
