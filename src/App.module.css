@@ -12,6 +12,12 @@
     box-sizing: border-box;
 }
 
+.FillerImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+  
 a {
     color: rgb(65, 65, 70);
     transition: color ease-in-out 0.3s;
