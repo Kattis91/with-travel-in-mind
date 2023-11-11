@@ -4,7 +4,10 @@ import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap'
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useHistory } from 'react-router';
 
 const SignInForm = () => {
 
@@ -15,11 +18,21 @@ const SignInForm = () => {
 
   const {username, password} = signInData;
 
+  const history = useHistory();
+
   const handleChange = (e) => {
     setSignInData({
       ...signInData,
       [e.target.name]: e.target.value,
     })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('/dj-rest-auth/login/', signInData)
+      history.push('/');
+    } catch (err){}
   }
 
   return (
@@ -36,7 +49,7 @@ const SignInForm = () => {
       <Col className="my-auto p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>Sign In</h1>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control 
