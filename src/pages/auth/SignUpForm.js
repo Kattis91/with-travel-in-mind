@@ -6,6 +6,8 @@ import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useHistory } from 'react-router';
 
 const SignUpForm = () => {
 
@@ -15,6 +17,9 @@ const SignUpForm = () => {
     password2: ''
   })
 
+  const {username, password1, password2} = signUpData;
+  const history = useHistory();
+
   const handleChange = (e) => {
     setSignUpData({
       ...signUpData,
@@ -22,7 +27,14 @@ const SignUpForm = () => {
     })
   }
 
-  const {username, password1, password2} = signUpData;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('/dj-rest-auth/registration/', signUpData)
+      history.push('/signin');
+    } catch (err){}
+  }
+
   return (
     <Row className={styles.Row}>
       <Col md={6}
@@ -37,7 +49,7 @@ const SignUpForm = () => {
       <Col className="my-auto p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>Sign Up</h1>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
                 <Form.Control 
