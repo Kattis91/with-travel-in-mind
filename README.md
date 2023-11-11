@@ -1,5 +1,32 @@
 # With Travel In Mind
 
+## Fixed Bugs
+
+- NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
+
+  The error message: `failed to load resource: the server responded with a status of 401 (unauthorized)` was displayed in the console. 
+  API's message: `Authentication credentials were not provided`
+  - Fix:
+    - Downgrade dj-rest-auth version in the API: 
+      ````
+      pip3 install dj-rest-auth==2.1.9
+      `````
+    - Git add | git commit | git push
+    - Deploy on Heroku.
+    - See below.
+
+- Deployment failed due to following ImportError: `ImportError: allauth needs to be added to INSTALLED_APPS`
+  - Fix:
+    - Downgrade django-allauth version in the API: 
+      ````
+      pip3 install django-allauth==0.54.0
+      ````
+    - Git add | git commit | git push
+    - Deploy on Heroku.
+
+  Source: [Stack Overflow](https://stackoverflow.com/questions/76969410/importerror-allauth-needs-to-be-added-to-installed-apps)
+    
+
 ## Deployment
 
 ### Create Heroku App and connect it to GitHub
