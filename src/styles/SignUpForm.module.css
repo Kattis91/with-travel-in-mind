@@ -33,5 +33,9 @@
 }
   
 .SignUpCol {
-    height: 375px;
+    height: 345px;
+}
+
+.SignInCol {
+    height: 295px;
 }
