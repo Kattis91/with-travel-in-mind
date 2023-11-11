@@ -3,6 +3,8 @@ import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap'
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignUpForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
+
 import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
@@ -48,7 +50,7 @@ const SignUpForm = () => {
                 name="password2"
               />
             </Form.Group>
-            <Button type="submit">
+            <Button className={`${btnStyles.Button} ${btnStyles.Bright}`} type="submit">
               Sign up
             </Button>
           </Form>
