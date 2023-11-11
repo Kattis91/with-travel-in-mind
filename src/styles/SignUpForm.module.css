@@ -1,0 +1,37 @@
+.Row {
+    height: calc(100vh - 100px);
+}
+
+.Input {
+    background: #ffffff;
+    box-sizing: border-box;
+    border-radius: 7px;    
+}
+  
+.Header {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(65, 65, 70);
+}
+  
+.Link {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+  
+.Link span {
+    color: rgb(65, 65, 70);
+    font-weight: bold;
+}
+  
+.Container {
+    padding: 30px 10px;
+}
+  
+.SignUpCol {
+    height: 375px;
+}
