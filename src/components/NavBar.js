@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
 import { useCurrentUser } from '../contexts/CurrentUserContext';
-import Avatar from './Avatar';
+import { NavDropdown } from 'react-bootstrap';
 
 
 const NavBar = () => {
@@ -25,27 +25,36 @@ const NavBar = () => {
 
   const loggedInIcons = (
     <>
-      <NavLink
-        className={styles.NavLink} 
-        activeClassName={styles.Active} 
-        to="/bookmarks"
+      <NavDropdown 
+        id={styles.dropdownMenu}
+        title=
+          <span >
+            <i className="fa-solid fa-heart-circle-plus"></i>
+            For you
+          </span>
       >
-        <i className="fa-solid fa-book-bookmark"></i>Bookmarks
-      </NavLink>
-      <NavLink
-        className={styles.NavLink} 
-        activeClassName={styles.Active} 
-        to="/favorites"
-      >
-        <i className="fa-solid fa-heart"></i>Favorites
-      </NavLink>
-      <NavLink 
-        className={styles.NavLink} 
-        activeClassName={styles.Active} 
-        to="/following"
-      >
-        <i className="fa-solid fa-star"></i>Following
-      </NavLink>
+        <NavDropdown.Item
+          className={styles.NavLink} 
+          activeClassName={styles.Active} 
+          to="/bookmarks"
+        >
+          <i className="fa-solid fa-book-bookmark"></i>Bookmarks
+        </NavDropdown.Item>
+        <NavDropdown.Item
+          className={styles.NavLink} 
+          activeClassName={styles.Active} 
+          to="/favorites"
+        >
+          <i className="fa-solid fa-heart"></i>Favorites
+        </NavDropdown.Item>
+        <NavDropdown.Item
+          className={styles.NavLink} 
+          activeClassName={styles.Active} 
+          to="/following"
+        >
+          <i className="fa-solid fa-star"></i>Following
+        </NavDropdown.Item>
+      </NavDropdown>
 
       <NavLink 
         className={styles.NavLink} 
@@ -56,6 +65,7 @@ const NavBar = () => {
       </NavLink>
     </>
   );
+
   const loggedOutIcons = (
     <>
       <NavLink 

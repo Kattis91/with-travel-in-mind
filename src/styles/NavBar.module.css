@@ -11,3 +11,10 @@
 .Active i {
     color: #a78db6;
 } 
+
+#dropdownMenu {
+    color:rgb(65, 65, 70);
+    padding: 5px;
+    margin-top: -5px;
+    letter-spacing: 2px;
+}
