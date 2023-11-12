@@ -5,13 +5,25 @@ import Container from 'react-bootstrap/Container';
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import { NavDropdown } from 'react-bootstrap';
+import axios from 'axios';
+import Avatar from './Avatar';
 
 
 const NavBar = () => {
 
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const addPostIcon = (
     <NavLink 
@@ -60,6 +72,7 @@ const NavBar = () => {
         className={styles.NavLink} 
         activeClassName={styles.Active} 
         to="/signout"
+        onClick={handleSignOut}
       >
         <i className="fa-solid fa-right-from-bracket"></i>Sign out
       </NavLink>
