@@ -17,6 +17,21 @@ function PostCreateForm() {
 
   const [errors, setErrors] = useState({});
 
+  const [postData, setPostData] = useState({
+    title: '',
+    description: '',
+    country: ''
+  });
+
+  const {title, description, country} = postData;
+
+  const handleChange = (e) => {
+    setPostData({
+      ...postData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   const textFields = (
     <div className="text-center">   
       <Form.Group controlId="title">
@@ -24,6 +39,8 @@ function PostCreateForm() {
         <Form.Control 
           type="text" 
           name="title"
+          value={title}
+          onChange={handleChange}
         /> 
       </Form.Group>
       <Form.Group controlId="description">
@@ -32,6 +49,8 @@ function PostCreateForm() {
           as="textarea" 
           rows={6}
           name="description"
+          value={description}
+          onChange={handleChange}
         /> 
       </Form.Group>
       <Form.Group controlId="country">
@@ -39,6 +58,8 @@ function PostCreateForm() {
         <Form.Control 
           type="text" 
           name="country"
+          value={country}
+          onChange={handleChange}
         /> 
       </Form.Group>
     
@@ -62,14 +83,12 @@ function PostCreateForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              
-                <Form.Label
-                  className="d-flex justify-content-center"
-                  htmlFor="image-upload"
-                >
-                  <Asset src={Upload} message="Click to upload your image here" />
-                </Form.Label>
-
+              <Form.Label
+                className="d-flex justify-content-center"
+                htmlFor="image-upload"
+              >
+                <Asset src={Upload} message="Click to upload your image here" />
+              </Form.Label>
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
           </Container>
