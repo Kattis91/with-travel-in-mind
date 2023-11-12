@@ -76,6 +76,12 @@ const NavBar = () => {
       >
         <i className="fa-solid fa-right-from-bracket"></i>Sign out
       </NavLink>
+      <NavLink
+        className={styles.NavLink}
+        to={`/explorers/${currentUser?.explorer_id}`}
+      >
+       <Avatar src={currentUser?.explorer_image} text="Explorer" height={40} />
+      </NavLink>
     </>
   );
 
