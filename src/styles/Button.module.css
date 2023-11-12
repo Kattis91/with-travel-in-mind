@@ -27,3 +27,26 @@
     color: white;
 }
 
+.FormGreen {
+    display: inline-block; 
+    margin-right: 20px;
+    background-color: #338f85;
+    color: white;
+}
+
+.FormRed {
+    display: inline-block; 
+    margin-right: 20px;
+    background-color: rgb(196, 58, 81);
+    color: white;
+}
+
+.FormGreen:hover {
+    background-color: #338f85;
+    font-weight: bold;
+}
+
+.FormRed:hover {
+    background-color: rgb(196, 58, 81);
+    font-weight: bold;
+}

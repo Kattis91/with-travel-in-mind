@@ -6,25 +6,49 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
+import Upload from "../../assets/upload.png";
+
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import Asset from "../../components/Asset";
 
 function PostCreateForm() {
 
   const [errors, setErrors] = useState({});
 
-
   const textFields = (
-    <div className="text-center">    
+    <div className="text-center">   
+      <Form.Group controlId="title">
+        <Form.Label>Title</Form.Label>
+        <Form.Control 
+          type="text" 
+          name="title"
+        /> 
+      </Form.Group>
+      <Form.Group controlId="description">
+        <Form.Label>Description</Form.Label>
+        <Form.Control 
+          as="textarea" 
+          rows={6}
+          name="description"
+        /> 
+      </Form.Group>
+      <Form.Group controlId="country">
+        <Form.Label>Country</Form.Label>
+        <Form.Control 
+          type="text" 
+          name="country"
+        /> 
+      </Form.Group>
     
       <Button
-        className={`${btnStyles.Button}`}
+        className={`${btnStyles.FormGreen} ${btnStyles.Button}`}
         onClick={() => {}}
       >
         Create
       </Button>
-      <Button className={`${btnStyles.Button}`} type="submit">
+      <Button className={`${btnStyles.FormRed} ${btnStyles.Button}`} type="submit">
         Cancel
       </Button>
     </div>
