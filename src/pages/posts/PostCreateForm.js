@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -11,8 +11,11 @@ import Upload from "../../assets/upload.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
+import { useHistory } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
 
@@ -25,7 +28,10 @@ function PostCreateForm() {
     image: ''
   });
 
-  const {title, description, country, image} = postData;
+  const { title, description, country, image } = postData;
+
+  const imageInput = useRef(null);
+  const history = useHistory();
 
   const handleChange = (e) => {
     setPostData({
@@ -43,6 +49,26 @@ function PostCreateForm() {
       });
     }
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('country', country);
+    formData.append('image', imageInput.current.files[0]);
+
+    try {
+      const { data } = await axiosReq.post('/posts/', formData);
+      history.push(`/posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  }
 
   const textFields = (
     <div className="text-center">   
@@ -76,19 +102,19 @@ function PostCreateForm() {
       </Form.Group>
     
       <Button
-        className={`${btnStyles.FormGreen} ${btnStyles.Button}`}
-        onClick={() => {}}
-      >
+        className={`${btnStyles.FormGreen} ${btnStyles.Button}`} type="submit">
         Create
       </Button>
-      <Button className={`${btnStyles.FormRed} ${btnStyles.Button}`} type="submit">
+      <Button className={`${btnStyles.FormRed} ${btnStyles.Button}`}
+      onClick={() => history.goBack()}
+      >
         Cancel
       </Button>
     </div>
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="my-auto" md={7} lg={8}>
           <Container
@@ -96,19 +122,19 @@ function PostCreateForm() {
           >
             <Form.Group className="text-center">
             {image ? (
-                <>
-                  <figure>
-                    <Image className={appStyles.Image} src={image} rounded />
-                  </figure>
-                  <div>
-                    <Form.Label
-                      className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
-                      htmlFor="image-upload"
-                    >
-                      Change the image
-                    </Form.Label>
-                  </div>
-                </>
+              <>
+                <figure>
+                  <Image className={appStyles.Image} src={image} rounded />
+                </figure>
+                <div>
+                  <Form.Label
+                    className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
+                    htmlFor="image-upload"
+                  >
+                    Change the image
+                  </Form.Label>
+                </div>
+              </>
               ) : (
                 <Form.Label
                   className="d-flex justify-content-center"
@@ -124,6 +150,7 @@ function PostCreateForm() {
                 id="image-upload"
                 accept="image/*"
                 onChange={handleChangeImage}
+                ref={imageInput}
               />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
