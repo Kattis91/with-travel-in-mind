@@ -13,7 +13,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import Asset from "../../components/Asset";
-import { Image } from "react-bootstrap";
+import { Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -81,6 +81,11 @@ function PostCreateForm() {
           onChange={handleChange}
         /> 
       </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Form.Group controlId="description">
         <Form.Label>Description</Form.Label>
         <Form.Control 
@@ -91,6 +96,11 @@ function PostCreateForm() {
           onChange={handleChange}
         /> 
       </Form.Group>
+      {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Form.Group controlId="country">
         <Form.Label>Country</Form.Label>
         <Form.Control 
@@ -100,6 +110,11 @@ function PostCreateForm() {
           onChange={handleChange}
         /> 
       </Form.Group>
+      {errors?.country?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
     
       <Button
         className={`${btnStyles.FormGreen} ${btnStyles.Button}`} type="submit">
@@ -153,6 +168,11 @@ function PostCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
