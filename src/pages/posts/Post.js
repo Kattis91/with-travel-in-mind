@@ -23,7 +23,7 @@ const Post = (props) => {
     image,
     country,
     updated_at,
-    postPage,
+    postDetail,
     setPosts,
   } = props;
 
@@ -72,7 +72,7 @@ const Post = (props) => {
           </Link>
           <div className='d-flex align-items-center'>
             <span>{updated_at}</span>
-            {is_owner && postPage && "..." }
+            {is_owner && postDetail && "..." }
           </div>
         </Media>
       </Card.Body>

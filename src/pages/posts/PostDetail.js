@@ -9,7 +9,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useParams } from "react-router";
 import Post from "./Post";
 
-function PostPage() {
+function PostDetail() {
 
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
@@ -35,7 +35,7 @@ function PostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Most adventurous explorers for mobile</p>
         <p>The hottest posts for mobile</p>
-        <Post {...post.results[0]} setPosts={setPost} postPage />
+        <Post {...post.results[0]} setPosts={setPost} postDetail />
         <Container className={appStyles.Content}>
           Comments
         </Container>
@@ -48,4 +48,4 @@ function PostPage() {
   );
 }
 
-export default PostPage;
+export default PostDetail;
