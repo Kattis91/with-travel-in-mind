@@ -10,6 +10,7 @@ import { NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
 import Avatar from './Avatar';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -52,6 +53,7 @@ const NavBar = () => {
           className={styles.NavLink} 
           activeClassName={styles.Active} 
           to="/bookmarks"
+          as={Link}        
         >
           <i className="fa-solid fa-book-bookmark"></i>Bookmarks
         </NavDropdown.Item>
@@ -59,6 +61,7 @@ const NavBar = () => {
           className={styles.NavLink} 
           activeClassName={styles.Active} 
           to="/favorites"
+          as={Link}
         >
           <i className="fa-solid fa-heart"></i>Favorites
         </NavDropdown.Item>
@@ -66,6 +69,7 @@ const NavBar = () => {
           className={styles.NavLink} 
           activeClassName={styles.Active} 
           to="/following"
+          as={Link}
         >
           <i className="fa-solid fa-star"></i>Following
         </NavDropdown.Item>
