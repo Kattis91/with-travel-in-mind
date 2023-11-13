@@ -1,8 +1,9 @@
 import React from 'react'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Card, Media } from 'react-bootstrap';
+import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
+import styles from '../../styles/Post.module.css'
 
 const Post = (props) => {
 
@@ -48,6 +49,57 @@ const Post = (props) => {
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {description && <Card.Text className="text-center">{description}</Card.Text>}
         {country && <Card.Text className="text-center"><i class="fa-solid fa-location-dot"></i>{country}</Card.Text>}
+        <div className={styles.Post}>
+          <Link to={`/posts/${id}`}>
+            <i className="far fa-comments" />
+          </Link>
+          {comments_count}
+          {is_owner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+            >
+              <i className="fa-regular fa-thumbs-up" />
+            </OverlayTrigger>
+          ) : like_id ? (
+            <span onClick={() => {}}>
+              <i className="fa-solid fa-thumbs-up" />
+            </span>
+          ) : currentUser ? (
+            <span onClick={() => {}}>
+              <i className="fa-regular fa-thumbs-up" />
+            </span>   
+          ) : (
+            <span>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to like posts!</Tooltip>}
+              >
+                <i className="fa-regular fa-thumbs-up" />
+              </OverlayTrigger>
+            </span>
+          )}
+          {likes_count}
+          {bookmark_id ? (
+            <span onClick={() => {}}>
+              <i className="fa-solid fa-bookmark" />
+            </span>
+          ) : currentUser ? (
+            <span onClick={() => {}}>
+              <i className="fa-regular fa-bookmark" />
+            </span>   
+          ) : (
+            <span>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
+              >
+                <i className="fa-regular fa-bookmark" />
+              </OverlayTrigger>
+            </span>
+          )}
+          {bookmarks_count}
+        </div>
       </Card.Body>
     </Card>
   )
