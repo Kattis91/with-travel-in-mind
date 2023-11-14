@@ -17,7 +17,9 @@ export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
   return (
     <Dropdown className="ml-auto" drop="left">
       <Dropdown.Toggle as={Bars} />  
-      <Dropdown.Menu>
+      <Dropdown.Menu
+        popperConfig={{ strategy: "fixed" }}
+      >
         <Dropdown.Item 
           className={styles.DropdownItem} 
           aria-label="edit"
