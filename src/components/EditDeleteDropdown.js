@@ -1,5 +1,6 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
+import styles from '../styles/EditDeleteDropdown.module.css'
 
 const Bars = React.forwardRef(({ onClick }, ref) => (
     <i
@@ -14,11 +15,21 @@ const Bars = React.forwardRef(({ onClick }, ref) => (
 
 export const EditDeleteDropdown = () => {
   return (
-    <Dropdown>
+    <Dropdown className="ml-auto" drop="left">
       <Dropdown.Toggle as={Bars} />  
       <Dropdown.Menu>
-        <Dropdown.Item eventKey="1">Edit</Dropdown.Item>
-        <Dropdown.Item eventKey="2">Delete</Dropdown.Item>
+        <Dropdown.Item 
+          className={styles.DropdownItem} 
+          aria-label="edit"
+        >
+          <i className="fa-solid fa-pen-to-square" />
+        </Dropdown.Item>
+        <Dropdown.Item 
+          className={styles.DropdownItem} 
+          aria-label="delete"
+        >
+          <i className="fa-solid fa-trash-can" />
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
