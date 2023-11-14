@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import styles from '../../styles/Post.module.css'
 import { axiosRes } from '../../api/axiosDefaults';
+import { EditDeleteDropdown } from '../../components/EditDeleteDropdown';
 
 const Post = (props) => {
 
@@ -63,7 +64,7 @@ const Post = (props) => {
   };
 
   return (
-    <Card>
+    <Card className="mt-5 mb-3">
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/explorers/${explorer_id}`}>
@@ -72,7 +73,7 @@ const Post = (props) => {
           </Link>
           <div className='d-flex align-items-center'>
             <span>{updated_at}</span>
-            {is_owner && postDetail && "..." }
+            {is_owner && postDetail && <EditDeleteDropdown /> }
           </div>
         </Media>
       </Card.Body>
