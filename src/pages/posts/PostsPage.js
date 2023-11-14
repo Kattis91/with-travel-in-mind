@@ -33,7 +33,13 @@ function PostsPage({ message, filter = "" }) {
     };
 
     setHasLoaded(false);
-    fetchPosts();
+    const timer = setTimeout(() => {
+      fetchPosts();
+    }, 1000)
+    return () => {
+      clearTimeout(timer)
+    }
+    
   }, [filter, search, pathname]);
 
   return (
