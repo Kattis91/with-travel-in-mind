@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-function PostsPage() {
+import { useLocation } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
+
+function PostsPage({ message, filter = "" }) {
+  const [posts, setPosts] = useState({ results: [] });
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const { data } = await axiosReq.get(`/posts/?${filter}`);
+        setPosts(data);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    setHasLoaded(false);
+    fetchPosts();
+  }, [filter, pathname]);
 
   return (
     <Row className="h-100">
