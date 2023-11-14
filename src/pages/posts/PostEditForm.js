@@ -6,13 +6,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
-import Upload from "../../assets/upload.png";
-
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import Asset from "../../components/Asset";
 import { Alert, Image } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -138,7 +135,7 @@ function PostEditForm() {
     
       <Button
         className={`${btnStyles.FormGreen} ${btnStyles.Button}`} type="submit">
-        Create
+        Save
       </Button>
       <Button className={`${btnStyles.FormRed} ${btnStyles.Button}`}
       onClick={() => history.goBack()}
@@ -156,31 +153,17 @@ function PostEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-            {image ? (
-              <>
-                <figure>
-                  <Image className={appStyles.Image} src={image} rounded />
-                </figure>
-                <div>
-                  <Form.Label
-                    className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
-                    htmlFor="image-upload"
-                  >
-                    Change the image
-                  </Form.Label>
-                </div>
-              </>
-              ) : (
+              <figure>
+                <Image className={appStyles.Image} src={image} rounded />
+              </figure>
+              <div>
                 <Form.Label
-                  className="d-flex justify-content-center"
+                  className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
                   htmlFor="image-upload"
                 >
-                  <Asset
-                    src={Upload}
-                    message="Click to upload your image here"
-                  />
+                  Change the image
                 </Form.Label>
-              )}
+              </div>
               <Form.File
                 id="image-upload"
                 accept="image/*"
