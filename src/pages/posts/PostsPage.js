@@ -8,6 +8,7 @@ import Post from "./Post";
 import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
+import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -46,8 +47,9 @@ function PostsPage({ message, filter = "" }) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Most adventurous explorers for mobile</p>
-        <i className="fa-solid fa-magnifying-glass"></i>
+        <i className={`fa-solid fa-magnifying-glass ${styles.SearchIcon}`}></i>
         <Form 
+          className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
