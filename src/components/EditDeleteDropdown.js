@@ -13,7 +13,7 @@ const Bars = React.forwardRef(({ onClick }, ref) => (
     />
   ));
 
-export const EditDeleteDropdown = ({handleEdit}) => {
+export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
   return (
     <Dropdown className="ml-auto" drop="left">
       <Dropdown.Toggle as={Bars} />  
@@ -28,6 +28,7 @@ export const EditDeleteDropdown = ({handleEdit}) => {
         <Dropdown.Item 
           className={styles.DropdownItem} 
           aria-label="delete"
+          onClick={handleDelete}
         >
           <i className="fa-solid fa-trash-can" />
         </Dropdown.Item>
