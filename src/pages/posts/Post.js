@@ -6,6 +6,7 @@ import Avatar from '../../components/Avatar';
 import styles from '../../styles/Post.module.css'
 import { axiosRes } from '../../api/axiosDefaults';
 import { EditDeleteDropdown } from '../../components/EditDeleteDropdown';
+import { useHistory } from 'react-router';
 
 const Post = (props) => {
 
@@ -30,6 +31,12 @@ const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/posts/${id}/edit`)
+  }
 
   const handleLike = async () => {
     try {
@@ -73,7 +80,7 @@ const Post = (props) => {
           </Link>
           <div className='d-flex align-items-center'>
             <span>{updated_at}</span>
-            {is_owner && postDetail && <EditDeleteDropdown /> }
+            {is_owner && postDetail && <EditDeleteDropdown handleEdit={handleEdit} /> }
           </div>
         </Media>
       </Card.Body>
