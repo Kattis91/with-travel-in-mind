@@ -12,16 +12,19 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
+import { Form } from "react-bootstrap";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}search=${search}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -31,12 +34,24 @@ function PostsPage({ message, filter = "" }) {
 
     setHasLoaded(false);
     fetchPosts();
-  }, [filter, pathname]);
+  }, [filter, search, pathname]);
 
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Most adventurous explorers for mobile</p>
+        <i className="fa-solid fa-magnifying-glass"></i>
+        <Form 
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search posts by the title or the name of the explorer" 
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+          />
+        </Form>
         {hasLoaded ? (
           <>
             {posts.results.length ? (
