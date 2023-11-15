@@ -9,10 +9,17 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useParams } from "react-router";
 import Post from "./Post";
 
+import CommentCreateForm from "../comments/CommentCreateForm";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
 function PostDetail() {
 
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
+
+  const currentUser = useCurrentUser();
+  const explorer_image = currentUser?.explorer_image;
+  const [comments, setComments] = useState({ results: [] });
   
   useEffect(() => {
     const handleMount = async () => {
@@ -37,7 +44,18 @@ function PostDetail() {
         <p>The hottest posts for mobile</p>
         <Post {...post.results[0]} setPosts={setPost} postDetail />
         <Container className={appStyles.Content}>
-          Comments
+          {currentUser ? (
+            <CommentCreateForm
+              explorer_id={currentUser.explorer_id}
+              explorerImage={explorer_image}
+              post={id}
+              setPost={setPost}
+              setComments={setComments}
+            />
+          ) : comments.results.length ? (
+            "Comments"
+          ) : null}
+  
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
