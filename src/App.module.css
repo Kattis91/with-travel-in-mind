@@ -1,6 +1,6 @@
 .App {
     font-family: "Ubuntu", sans-serif;
-    background-color: #f8f8f8;
+    background-color: rgb(231, 225, 225);
     min-height: 100vh;
 }
   
@@ -13,11 +13,11 @@
 }
 
 .Content {
-    background-color: rgb(214, 214, 240);
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 2px;
     border: 1px solid #dadadf;
-  }
+}
 
 .FillerImage {
     object-fit: cover;
