@@ -49,11 +49,13 @@ function CommentEditForm(props) {
       </Form.Group>
       <div className="text-right">
       <button
+          className={`${btnStyles.FormGreen} ${btnStyles.Button}`} 
           type="submit"
         >
           Update
         </button>
         <button
+          className={`${btnStyles.FormRed} ${btnStyles.Button}`} 
           onClick={() => setShowEditForm(false)}
           type="button"
         >
