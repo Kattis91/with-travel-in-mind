@@ -21,8 +21,8 @@ const Comment = (props) => {
           <Avatar src={explorer_image} />
         </Link>
         <Media.Body className="align-self-center ml-2">
-          <span>{owner}</span>
-          <span>{updated_at}</span>
+          <span className={styles.Owner}>{owner}</span>
+          <span className={styles.Date}><i className={`${styles.DateIcon} fa-regular fa-clock`}></i>{updated_at}</span>
           <p>{content}</p>
         </Media.Body>
       </Media>

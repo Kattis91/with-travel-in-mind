@@ -1,0 +1,14 @@
+.Owner {
+    margin-right: 10px;
+    color: #338f85;
+    font-weight: bold;
+}
+
+.Date {
+    font-weight: lighter;
+}
+
+.DateIcon {
+    font-size: smaller;
+    color: rgb(65, 65, 70);
+}
