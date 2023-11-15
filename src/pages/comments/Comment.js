@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
@@ -6,6 +6,7 @@ import styles from "../../styles/Comment.module.css";
 import { EditDeleteDropdown } from "../../components/EditDeleteDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
+import CommentEditForm from "./CommentEditForm";
 
 const Comment = (props) => {
   const { 
@@ -18,6 +19,8 @@ const Comment = (props) => {
     setPost,
     setComments
   } = props;
+
+  const [showEditForm, setShowEditForm] = useState(false);
   
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -42,7 +45,7 @@ const Comment = (props) => {
   };
 
   return (
-    <div>
+    <>
       <hr />
       <Media>
         <Link to={`/explorers/${explorer_id}`}>
@@ -51,16 +54,28 @@ const Comment = (props) => {
         <Media.Body className="align-self-center mr-2">
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}><i className={`${styles.DateIcon} fa-regular fa-clock`}></i>{updated_at}</span>
-          <p>{content}</p>
+          {showEditForm ? (
+            <CommentEditForm 
+              id={id}
+              explorer_id={explorer_id}
+              content={content}
+              explorerImage={explorer_image}
+              setComments={setComments}
+              setShowEditForm={setShowEditForm}
+            />
+          ) : (
+            <p>{content}</p>
+          )}
         </Media.Body>
-        {is_owner && (
-          <EditDeleteDropdown 
-            handleDelete={handleDelete}
-          /> 
-        )}  
+        {is_owner && !showEditForm && (
+        <EditDeleteDropdown
+          handleEdit={() => setShowEditForm(true)}
+          handleDelete={handleDelete}
+        />
+        )}
       </Media>
-    </div>
-  );
-};
+    </>
+  )
+}
 
 export default Comment;
