@@ -59,3 +59,7 @@ i:hover {
     transition: color ease-in-out 0.3s;
     color: #a78db6;
 }
+
+input[type="file"] {
+    display: none;
+}
