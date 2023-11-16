@@ -16,6 +16,8 @@ import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useExplorerData, useSetExplorerData } from "../../contexts/ExplorerDataContext";
 import { Button, Image } from "react-bootstrap";
+import Post from "../posts/Post";
+import NoResults from "../../assets/no-results.png";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -26,16 +28,21 @@ function ExplorerPage() {
   const [explorer] = pageExplorer.results;
   const is_owner = currentUser?.username === explorer?.owner;
 
+  const [explorerPosts, setExplorerPosts] = useState( { results: [] })
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageExplorer }] = await Promise.all([
-          axiosReq.get(`/explorers/${id}/`),
-        ]);
+        const [{ data: pageExplorer }, { data: explorerPosts }] = 
+          await Promise.all([
+            axiosReq.get(`/explorers/${id}/`),
+            axiosReq.get(`/posts/?owner__explorer=${id}`),
+          ]);
         setExplorerData((prevState) => ({
           ...prevState,
           pageExplorer: { results: [pageExplorer] },
         }));
+        setExplorerPosts(explorerPosts);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -129,6 +136,16 @@ function ExplorerPage() {
       <hr />
       <p className="text-center">Explorer's posts</p>
       <hr />
+      {explorerPosts.results.length ? (
+        explorerPosts.results.map((post) => (
+          <Post key={post.id} {...post} setPosts={setExplorerPosts} />
+        ))
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${explorer?.owner} hasn't posted yet.`}
+        />
+      )}
     </>
   );
 
