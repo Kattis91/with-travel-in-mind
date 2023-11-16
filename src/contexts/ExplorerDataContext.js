@@ -6,11 +6,12 @@ export const ExplorerDataContext = createContext();
 export const SetExplorerDataContext = createContext();
 
 export const useExplorerData = () => useContext(ExplorerDataContext);
-export const useSetExplorereData = () => useContext(SetExplorerDataContext);
+export const useSetExplorerData = () => useContext(SetExplorerDataContext);
 
 export const ExplorerDataProvider = ({ children }) => {
 
   const [explorerData, setExplorerData] = useState({
+    pageExplorer: { results: [] },
     popularExplorers: { results: [] },
   });
   
