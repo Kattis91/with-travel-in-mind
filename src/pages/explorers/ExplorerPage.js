@@ -12,14 +12,33 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import PopularExplorers from "./PopularExplorers";
+import { useParams } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
+import { useSetExplorerData } from "../../contexts/ExplorerDataContext";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
+  const { id } = useParams();
+  const setExplorerData = useSetExplorerData();
 
   useEffect(() => {
-    setHasLoaded(true);
-  }, [])
+    const fetchData = async () => {
+      try {
+        const [{ data: pageExplorer }] = await Promise.all([
+          axiosReq.get(`/explorers/${id}/`),
+        ]);
+        setExplorerData((prevState) => ({
+          ...prevState,
+          pageExplorer: { results: [pageExplorer] },
+        }));
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [id, setExplorerData]);
 
   const mainExplorer = (
     <>
