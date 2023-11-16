@@ -36,7 +36,12 @@
 - "Favorites" in the Navbar showed the list of all posts (however none of those posts were added to the favorite list). 
 
   - **Fix:** Add `owner__favorited__owner__explorer` into **filterset_fields** in the posts views in the Back-End [with-travel-in-mind-api](https://github.com/Kattis91/with-travel-in-mind-api).
-    
+
+- `Could not find a declaration file for module 'react-router-dom'` message was displayed when I was trying to import { NavLink }.
+
+  My preview didn't show anything at all.
+
+  - **Fix:** install types: `npm install --save @types/react-router`
 
 ## Deployment
 
