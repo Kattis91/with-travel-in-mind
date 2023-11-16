@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 const Explorer = (props) => {
 
   const { explorer, mobile, imageSize = 55 } = props;
-  const { id, following_id, image, owner } = explorer;
+  const { id, following_id, favoriting_id, image, owner } = explorer;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -41,6 +41,23 @@ const Explorer = (props) => {
               className={`${btnStyles.Button}`}
             >
               Follow
+            </Button>     
+          ))
+        }
+        </span>
+        <span className={styles.Inline}>
+        {!mobile && currentUser && !is_owner && (
+          favoriting_id ? (
+            <Button
+              className={`${btnStyles.Button}`}
+            >
+              Unfan
+            </Button>
+          ) : (
+            <Button
+              className={`${btnStyles.Button}`}
+            >
+              Fan
             </Button>     
           ))
         }
