@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import appStyles from '../../App.module.css'
 import { Container } from 'react-bootstrap'
 
-const PopularProfiles = () => {
+const PopularExplorers = () => {
 
   return (
     <Container className={appStyles.Content}>
@@ -11,4 +11,4 @@ const PopularProfiles = () => {
   );
 };
 
-export default PopularProfiles
+export default PopularExplorers
