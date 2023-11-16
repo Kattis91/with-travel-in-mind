@@ -14,13 +14,16 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import PopularExplorers from "./PopularExplorers";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-import { useSetExplorerData } from "../../contexts/ExplorerDataContext";
+import { useExplorerData, useSetExplorerData } from "../../contexts/ExplorerDataContext";
+import { Image } from "react-bootstrap";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const setExplorerData = useSetExplorerData();
+  const {pageExplorer} = useExplorerData();
+  const [explorer] = pageExplorer.results;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,11 +47,38 @@ function ExplorerPage() {
     <>
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
-          <p>Image</p>
+          <Image
+            className={styles.ExplorerImage}
+            roundedCircle
+            src={explorer?.image}
+          />
         </Col>
         <Col lg={6}>
-          <h3 className="m-2">Profile username</h3>
-          <p>Profile stats</p>
+          <h3 className="m-2">{explorer?.owner}</h3>
+          <Row className="justify-content-center no-gutters">
+            <Col xs={3} className="my-2">
+              <div>{explorer?.posts_count}</div>
+              <div>posts</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{explorer?.followers_count}</div>
+              <div>followers</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{explorer?.following_count}</div>
+              <div>following</div>
+            </Col>
+          </Row>
+          <Row className="justify-content-center no-gutters">
+            <Col xs={3} className="my-2">
+              <div>{explorer?.favourites_count}</div>
+              <div>fans</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{explorer?.favoriting_count}</div>
+              <div>favorites</div>
+            </Col>
+          </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
         <p>Follow button</p>
