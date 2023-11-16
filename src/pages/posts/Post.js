@@ -24,7 +24,7 @@ const Post = (props) => {
     title,
     description,
     image,
-    country,
+    place,
     region,
     updated_at,
     postDetail,
@@ -112,7 +112,7 @@ const Post = (props) => {
         <Card.Body>
           {title && <Card.Title className="text-center">{title}</Card.Title>}
           {description && <Card.Text className="text-center">{description}</Card.Text>}
-          {country && <Card.Text className="text-center"><i class="fa-solid fa-location-dot"></i>{country}</Card.Text>}
+          {place && <Card.Text className="text-center"><i class="fa-solid fa-location-dot"></i>{place}</Card.Text>}
           {region && <Card.Text className="text-center"><i class="fa-solid fa-globe"></i>{region}</Card.Text>}
           <div className={styles.Post}>
             <Link to={`/posts/${id}`}>

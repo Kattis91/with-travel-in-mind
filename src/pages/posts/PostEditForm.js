@@ -21,12 +21,12 @@ function PostEditForm() {
   const [postData, setPostData] = useState({
     title: '',
     description: '',
-    country: '',
+    place: '',
     region: '',
     image: ''
   });
 
-  const { title, description, country, region, image } = postData;
+  const { title, description, place, region, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -37,9 +37,9 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, description, country, region, image, is_owner } = data;
+        const { title, description, place, region, image, is_owner } = data;
 
-        is_owner ? setPostData({ title, description, country, region, image }) : history.push("/");
+        is_owner ? setPostData({ title, description, place, region, image }) : history.push("/");
       } catch(err) {
         console.log(err);
       }
@@ -71,7 +71,7 @@ function PostEditForm() {
 
     formData.append('title', title);
     formData.append('description', description);
-    formData.append('country', country);
+    formData.append('place', place);
     formData.append('region', region);
 
     if (imageInput?.current?.files[0]) {
@@ -120,16 +120,16 @@ function PostEditForm() {
           {message}
         </Alert>
       ))}
-      <Form.Group controlId="country">
-        <Form.Label>Country</Form.Label>
+      <Form.Group controlId="place">
+        <Form.Label>Place</Form.Label>
         <Form.Control 
           type="text" 
-          name="country"
-          value={country}
+          name="place"
+          value={place}
           onChange={handleChange}
         /> 
       </Form.Group>
-      {errors?.country?.map((message, idx) => (
+      {errors?.place?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>

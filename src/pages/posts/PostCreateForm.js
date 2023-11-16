@@ -24,12 +24,12 @@ function PostCreateForm() {
   const [postData, setPostData] = useState({
     title: '',
     description: '',
-    country: '',
+    place: '',
     region: '',
     image: ''
   });
 
-  const { title, description, country, region, image } = postData;
+  const { title, description, place, region, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -57,7 +57,7 @@ function PostCreateForm() {
 
     formData.append('title', title);
     formData.append('description', description);
-    formData.append('country', country);
+    formData.append('place', place);
     formData.append('region', region);
     formData.append('image', imageInput.current.files[0]);
 
@@ -103,12 +103,12 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-      <Form.Group controlId="country">
-        <Form.Label>Country</Form.Label>
+      <Form.Group controlId="place">
+        <Form.Label>Place</Form.Label>
         <Form.Control 
           type="text" 
-          name="country"
-          value={country}
+          name="place"
+          value={place}
           onChange={handleChange}
         /> 
       </Form.Group>
