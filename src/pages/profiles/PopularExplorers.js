@@ -5,7 +5,7 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosReq } from '../../api/axiosDefaults';
 import Asset from '../../components/Asset';
 
-const PopularExplorers = () => {
+const PopularExplorers = ({ mobile }) => {
 
   const [explorerData, setExplorerData] = useState({
     popularExplorers: { results: [] },
@@ -32,13 +32,21 @@ const PopularExplorers = () => {
   }, [currentUser]);
 
   return (
-    <Container className={appStyles.Content}>
+    <Container className={`${appStyles.Content} ${mobile && 'd-lg-none text-center mb-3'}`}>
       {popularExplorers.results.length ? (
         <>
-          <p>Most adventurous explorers:</p>    
-          {popularExplorers.results.map((explorer) => (
-            <p key={explorer.id}>{explorer.owner}</p>
-          ))}
+          <p>Check out these popular adventurous explorers:</p>
+          {mobile ? (
+            <div className="d-flex justify-content-around">
+              {popularExplorers.results.slice(0, 5).map((explorer) => (
+                <p key={explorer.id}>{explorer.owner}</p>
+              ))}
+            </div>
+          ) : (
+            popularExplorers.results.map((explorer) => (
+              <p key={explorer.id}>{explorer.owner}</p>
+            ))
+          )}
         </>
       ) : (
         <Asset spinner />
