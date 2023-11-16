@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosReq } from '../../api/axiosDefaults';
 import Asset from '../../components/Asset';
+import Explorer from './Explorer';
 
 const PopularExplorers = ({ mobile }) => {
 
@@ -39,12 +40,12 @@ const PopularExplorers = ({ mobile }) => {
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularExplorers.results.slice(0, 5).map((explorer) => (
-                <p key={explorer.id}>{explorer.owner}</p>
+                <Explorer key={explorer.id} explorer={explorer} mobile />
               ))}
             </div>
           ) : (
             popularExplorers.results.map((explorer) => (
-              <p key={explorer.id}>{explorer.owner}</p>
+              <Explorer key={explorer.id} explorer={explorer} />
             ))
           )}
         </>
