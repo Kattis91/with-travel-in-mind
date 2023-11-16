@@ -9,6 +9,9 @@ const ModalDeleteConfirmation = (props) => {
     showModal,
     handleClose,
     handleDelete,
+    handleCommentDelete,
+    type,
+    message,
   } = props
 
   return (
@@ -16,14 +19,28 @@ const ModalDeleteConfirmation = (props) => {
       <Modal.Header closeButton>
         <Modal.Title>Just to confirm..</Modal.Title>
       </Modal.Header>
-      <Modal.Body>{`Are you sure you want to delete this post?`}</Modal.Body>
+      <Modal.Body>{message}</Modal.Body>
       <Modal.Footer>
-        <Button className={`${btnStyles.Button} ${btnStyles.FormRed}`} onClick={handleDelete}>
-          Yes!
-        </Button>
-        <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} onClick={handleClose}>
-          Cancel
-        </Button>
+        {type === "post" && 
+          <>
+            <Button className={`${btnStyles.Button} ${btnStyles.FormRed}`} onClick={handleDelete}>
+              Yes!
+            </Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} onClick={handleClose}>
+              Cancel
+            </Button>
+          </>
+        }
+        {type === "comment" &&
+          <>
+            <Button className={`${btnStyles.Button} ${btnStyles.FormRed}`} onClick={handleCommentDelete}>
+              Yes!
+            </Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} onClick={handleClose}>
+              Cancel
+            </Button>
+          </>
+        }
       </Modal.Footer>
     </Modal>
   );
