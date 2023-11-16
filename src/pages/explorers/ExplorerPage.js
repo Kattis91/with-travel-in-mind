@@ -117,7 +117,9 @@ function ExplorerPage() {
             }
           </span>
         </Col>
-        <Col className="p-3">Profile content</Col>
+        {explorer?.bio && <Col className="text-center">{explorer.bio}</Col>}
+        {explorer?.region_you_would_like_to_explore && <Col className="text-center">{explorer. region_you_would_like_to_explore}</Col>}
+        {explorer?.dream_destination && <Col className="text-center">{explorer.dream_destination}</Col>}
       </Row>
     </>
   );
