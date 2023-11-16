@@ -4,6 +4,7 @@ import btnStyles from '../../styles/Button.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
+import { Button } from 'react-bootstrap';
 
 const Explorer = (props) => {
 
@@ -26,8 +27,27 @@ const Explorer = (props) => {
       <div className={styles.WordBreak}>
         <strong>{owner}</strong>
       </div>
+      <div className="text-right ml-auto">
+        <span className={styles.Inline}>
+        {!mobile && currentUser && !is_owner && (
+          following_id ? (
+            <Button
+              className={`${btnStyles.Button}`}
+            >
+              Unfollow
+            </Button>
+          ) : (
+            <Button
+              className={`${btnStyles.Button}`}
+            >
+              Follow
+            </Button>     
+          ))
+        }
+        </span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Explorer
