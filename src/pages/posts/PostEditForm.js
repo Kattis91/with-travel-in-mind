@@ -22,10 +22,11 @@ function PostEditForm() {
     title: '',
     description: '',
     country: '',
+    region: '',
     image: ''
   });
 
-  const { title, description, country, image } = postData;
+  const { title, description, country, region, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -36,9 +37,9 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, description, country, image, is_owner } = data;
+        const { title, description, country, region, image, is_owner } = data;
 
-        is_owner ? setPostData({ title, description, country, image }) : history.push("/");
+        is_owner ? setPostData({ title, description, country, region, image }) : history.push("/");
       } catch(err) {
         console.log(err);
       }
@@ -71,6 +72,7 @@ function PostEditForm() {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('country', country);
+    formData.append('region', region);
 
     if (imageInput?.current?.files[0]) {
         formData.append("image", imageInput.current.files[0]);
@@ -128,6 +130,28 @@ function PostEditForm() {
         /> 
       </Form.Group>
       {errors?.country?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group controlId="region">
+        <Form.Label>Region</Form.Label>
+        <Form.Control 
+          as="select"
+          name="region"
+          value={region}
+          onChange={handleChange}
+        > 
+          <option>Europe</option>
+          <option>Africa</option>
+          <option>North America</option>
+          <option>South America</option>
+          <option>Antarctica</option>
+          <option>Asia</option>
+          <option>Australien</option>
+        </Form.Control>
+      </Form.Group>
+      {errors?.region?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>

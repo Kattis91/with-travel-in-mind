@@ -25,10 +25,11 @@ function PostCreateForm() {
     title: '',
     description: '',
     country: '',
+    region: '',
     image: ''
   });
 
-  const { title, description, country, image } = postData;
+  const { title, description, country, region, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -57,6 +58,7 @@ function PostCreateForm() {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('country', country);
+    formData.append('region', region);
     formData.append('image', imageInput.current.files[0]);
 
     try {
@@ -110,7 +112,29 @@ function PostCreateForm() {
           onChange={handleChange}
         /> 
       </Form.Group>
-      {errors?.country?.map((message, idx) => (
+      {errors?.place?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group controlId="region">
+        <Form.Label>Region</Form.Label>
+        <Form.Control 
+          as="select"
+          name="region"
+          value={region}
+          onChange={handleChange}
+        > 
+          <option>Europe</option>
+          <option>Africa</option>
+          <option>North America</option>
+          <option>South America</option>
+          <option>Antarctica</option>
+          <option>Asia</option>
+          <option>Australien</option>
+        </Form.Control>
+      </Form.Group>
+      {errors?.region?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>

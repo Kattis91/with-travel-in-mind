@@ -25,6 +25,7 @@ const Post = (props) => {
     description,
     image,
     country,
+    region,
     updated_at,
     postDetail,
     setPosts,
@@ -112,6 +113,7 @@ const Post = (props) => {
           {title && <Card.Title className="text-center">{title}</Card.Title>}
           {description && <Card.Text className="text-center">{description}</Card.Text>}
           {country && <Card.Text className="text-center"><i class="fa-solid fa-location-dot"></i>{country}</Card.Text>}
+          {region && <Card.Text className="text-center"><i class="fa-solid fa-globe"></i>{region}</Card.Text>}
           <div className={styles.Post}>
             <Link to={`/posts/${id}`}>
               <i className="far fa-comments" />
