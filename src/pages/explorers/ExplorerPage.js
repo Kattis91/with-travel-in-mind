@@ -15,7 +15,7 @@ import PopularExplorers from "./PopularExplorers";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useExplorerData, useSetExplorerData } from "../../contexts/ExplorerDataContext";
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -24,6 +24,7 @@ function ExplorerPage() {
   const setExplorerData = useSetExplorerData();
   const {pageExplorer} = useExplorerData();
   const [explorer] = pageExplorer.results;
+  const is_owner = currentUser?.username === explorer?.owner;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -81,7 +82,40 @@ function ExplorerPage() {
           </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
-        <p>Follow button</p>
+          <span className={styles.Inline}>
+            {currentUser && !is_owner &&
+              (explorer?.following_id ? (
+                <Button
+                  className={btnStyles.Button}
+                >
+                  Unfollow
+                </Button>
+              ) : (
+                <Button
+                  className={btnStyles.Button}
+                >
+                  Follow
+                </Button>
+              ))
+            }
+          </span>
+          <span className={styles.Inline}>
+            {currentUser && !is_owner &&
+              (explorer?.favoriting_id ? (
+                <Button
+                  className={btnStyles.Button}
+                >
+                  Unfan
+                </Button>
+              ) : (
+                <Button
+                  className={btnStyles.Button}
+                >
+                  Fan
+                </Button>
+              ))
+            }
+          </span>
         </Col>
         <Col className="p-3">Profile content</Col>
       </Row>
