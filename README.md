@@ -4,9 +4,13 @@
 
 - NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
 
-  The error message: `failed to load resource: the server responded with a status of 401 (unauthorized)` was displayed in the console. 
+  The error message displayed in the console: 
+  
+  `failed to load resource: the server responded with a status of 401 (unauthorized)` 
+  
   API's message: `Authentication credentials were not provided`
-  - Fix:
+
+  - **Fix:**
     - Downgrade dj-rest-auth version in the API: 
       ````
       pip3 install dj-rest-auth==2.1.9
@@ -15,8 +19,11 @@
     - Deploy on Heroku.
     - See below.
 
-- Deployment failed due to following ImportError: `ImportError: allauth needs to be added to INSTALLED_APPS`
-  - Fix:
+- Deployment failed due to following ImportError:
+
+  `ImportError: allauth needs to be added to INSTALLED_APPS`
+
+  - **Fix:**
     - Downgrade django-allauth version in the API: 
       ````
       pip3 install django-allauth==0.54.0
