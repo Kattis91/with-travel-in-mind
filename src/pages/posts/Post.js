@@ -37,9 +37,16 @@ const Post = (props) => {
   const history = useHistory();
 
   const [show, setShow] = useState(false);
+  const [message, setMessage] = useState("");
+  const [type, setType] = useState("")
 
+  const handleShow = () => {
+    setShow(true);
+    setMessage(`Are you sure you want to delete ${title}?`);
+    setType("post");
+  };
+    
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
@@ -171,6 +178,8 @@ const Post = (props) => {
         showModal={show} 
         handleClose = {handleClose} 
         handleDelete = {handleDelete}
+        type={type}
+        message={message}
       />
     </>
   )
