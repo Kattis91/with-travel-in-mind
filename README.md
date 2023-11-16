@@ -33,9 +33,9 @@
 
   Source: [Stack Overflow](https://stackoverflow.com/questions/76969410/importerror-allauth-needs-to-be-added-to-installed-apps)
 
-- "Favorites" in the Navbar showed the list of all posts (however none of those posts were added to the favorite list). 
+- "Favorites" in the Navbar showed the list of all posts (however none of those posts have been added to the favorite list). 
 
-  - **Fix:** Add `owner__favorited__owner__explorer` into **filterset_fields** in the posts views in the Back-End [with-travel-in-mind-api](https://github.com/Kattis91/with-travel-in-mind-api).
+  - **Fix:** Add the missing `owner__favorited__owner__explorer` into **filterset_fields** in the posts views in the Back-End [with-travel-in-mind-api](https://github.com/Kattis91/with-travel-in-mind-api).
 
 - `Could not find a declaration file for module 'react-router-dom'` message was displayed when I was trying to import { NavLink }.
 
@@ -43,6 +43,16 @@
 
   - **Fix:** install types: `npm install --save @types/react-router`
 
+- When I was trying to pre-populate my PostEditForm and clicked on the "edit" icon for the post I had created, I was taken to the edit page but that was not pre-populated. Moreover, after a just a second, I was redirected to the homepage (like a user who is not an owner should be).
+
+  - **Fix:** Add the missing return statement (`return request.user == obj.owner`) to the get_is_ownwer method in posts serilaizers.py in the Back-End.
+    
+    ````
+    def get_is_owner(self, obj):
+        request = self.context['request']
+        return request.user == obj.owner
+    ````
+    
 ## Deployment
 
 ### Create Heroku App and connect it to GitHub
