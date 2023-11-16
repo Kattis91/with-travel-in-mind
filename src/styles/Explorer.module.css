@@ -1,0 +1,8 @@
+.WordBreak {
+    word-break: break-all;
+}
+
+.Inline {
+    display: inline-block;
+    margin-right: 5px;
+}
