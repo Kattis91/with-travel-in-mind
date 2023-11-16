@@ -7,6 +7,7 @@ import { EditDeleteDropdown } from "../../components/EditDeleteDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
+import ModalDeleteConfirmation from "../../components/ModalDeleteConfirmation";
 
 const Comment = (props) => {
   const { 
@@ -19,13 +20,25 @@ const Comment = (props) => {
     setPost,
     setComments
   } = props;
-
-  const [showEditForm, setShowEditForm] = useState(false);
   
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const handleDelete = async () => {
+  const [showEditForm, setShowEditForm] = useState(false);
+
+  const [show, setShow] = useState(false);
+  const [message, setMessage] = useState("");
+  const [type, setType] = useState("")
+
+  const handleShow = () => {
+    setShow(true);
+    setMessage("Are you sure you want to delete your comment?");
+    setType("comment");
+  };
+
+  const handleClose = () => setShow(false);
+
+  const handleCommentDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
       setPost((prevPost) => ({
@@ -70,10 +83,17 @@ const Comment = (props) => {
         {is_owner && !showEditForm && (
         <EditDeleteDropdown
           handleEdit={() => setShowEditForm(true)}
-          handleDelete={handleDelete}
+          handleDelete={handleShow} 
         />
         )}
       </Media>
+      <ModalDeleteConfirmation
+        showModal={show} 
+        handleClose = {handleClose} 
+        handleCommentDelete = {handleCommentDelete}
+        type={type}
+        message={message}
+      />
     </>
   )
 }
