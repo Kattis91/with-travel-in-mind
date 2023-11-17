@@ -27,6 +27,16 @@ export const ExplorerDataProvider = ({ children }) => {
     }
   };
 
+  const handleFan = async (clickedExplorer) => {
+    try {
+      const { data } = await axiosRes.post("/favourites/", {
+        favorited: clickedExplorer.id,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -47,7 +57,7 @@ export const ExplorerDataProvider = ({ children }) => {
 
   return (
     <ExplorerDataContext.Provider value={explorerData}>
-      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow}}>
+      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow, handleFan}}>
         {children}
       </SetExplorerDataContext.Provider>
     </ExplorerDataContext.Provider>

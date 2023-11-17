@@ -15,7 +15,7 @@ const Explorer = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const { handleFollow } = useSetExplorerData();
+  const { handleFollow, handleFan } = useSetExplorerData();
   
   
   return (
@@ -60,6 +60,7 @@ const Explorer = (props) => {
           ) : (
             <Button
               className={`${btnStyles.Button}`}
+              onClick={() => handleFan(explorer)}
             >
               Fan
             </Button>     

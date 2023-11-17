@@ -25,7 +25,7 @@ function ExplorerPage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
   
-  const {setExplorerData, handleFollow} = useSetExplorerData();
+  const {setExplorerData, handleFollow, handleFan} = useSetExplorerData();
   const {pageExplorer} = useExplorerData();
 
   const [explorer] = pageExplorer.results;
@@ -121,6 +121,7 @@ function ExplorerPage() {
               ) : (
                 <Button
                   className={btnStyles.Button}
+                  onClick={() => handleFan(explorer)}
                 >
                   Fan
                 </Button>
