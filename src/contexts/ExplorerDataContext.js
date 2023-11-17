@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
-import { axiosReq } from "../api/axiosDefaults";
+import { axiosReq, axiosRes } from "../api/axiosDefaults";
 
 export const ExplorerDataContext = createContext();
 export const SetExplorerDataContext = createContext();
@@ -16,6 +16,16 @@ export const ExplorerDataProvider = ({ children }) => {
   });
   
   const currentUser = useCurrentUser();
+
+  const handleFollow = async (clickedExplorer) => {
+    try {
+      const { data } = await axiosRes.post("/followers/", {
+        followed: clickedExplorer.id,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     const handleMount = async () => {
@@ -37,7 +47,7 @@ export const ExplorerDataProvider = ({ children }) => {
 
   return (
     <ExplorerDataContext.Provider value={explorerData}>
-      <SetExplorerDataContext.Provider value={setExplorerData}>
+      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow}}>
         {children}
       </SetExplorerDataContext.Provider>
     </ExplorerDataContext.Provider>

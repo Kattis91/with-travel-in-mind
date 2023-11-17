@@ -5,6 +5,7 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import { Button } from 'react-bootstrap';
+import { useSetExplorerData } from '../../contexts/ExplorerDataContext';
 
 const Explorer = (props) => {
 
@@ -13,6 +14,8 @@ const Explorer = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const { handleFollow } = useSetExplorerData();
   
   
   return (
@@ -39,6 +42,7 @@ const Explorer = (props) => {
           ) : (
             <Button
               className={`${btnStyles.Button}`}
+              onClick={() => handleFollow(explorer)}
             >
               Follow
             </Button>     

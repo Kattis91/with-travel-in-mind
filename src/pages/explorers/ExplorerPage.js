@@ -21,10 +21,13 @@ import NoResults from "../../assets/no-results.png";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
+
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const setExplorerData = useSetExplorerData();
+  
+  const {setExplorerData, handleFollow} = useSetExplorerData();
   const {pageExplorer} = useExplorerData();
+
   const [explorer] = pageExplorer.results;
   const is_owner = currentUser?.username === explorer?.owner;
 
@@ -100,6 +103,7 @@ function ExplorerPage() {
               ) : (
                 <Button
                   className={btnStyles.Button}
+                  onClick={() => handleFollow(explorer)}
                 >
                   Follow
                 </Button>
@@ -125,7 +129,7 @@ function ExplorerPage() {
           </span>
         </Col>
         {explorer?.bio && <Col className="text-center">{explorer.bio}</Col>}
-        {explorer?.region_you_would_like_to_explore && <Col className="text-center">{explorer. region_you_would_like_to_explore}</Col>}
+        {explorer?.region_you_would_like_to_explore && <Col className="text-center">{explorer.region_you_would_like_to_explore}</Col>}
         {explorer?.dream_destination && <Col className="text-center">{explorer.dream_destination}</Col>}
       </Row>
     </>
