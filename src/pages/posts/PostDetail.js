@@ -12,6 +12,7 @@ import Post from "./Post";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Comment from "../comments/Comment";
+import PopularExplorers from "../explorers/PopularExplorers";
 
 function PostDetail() {
 
@@ -42,7 +43,7 @@ function PostDetail() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Most adventurous explorers for mobile</p>
+        <PopularExplorers mobile />
         <p>The hottest posts for mobile</p>
         <Post {...post.results[0]} setPosts={setPost} postDetail />
         <Container className={appStyles.Content}>
@@ -75,7 +76,7 @@ function PostDetail() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Most adventurous explorers for desktop</p>
+        <PopularExplorers />
         <p>The hottest posts for desktop</p>
       </Col>
     </Row>
