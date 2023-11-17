@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
-import { fanHelper, followHelper, unfollowHelper } from "../utils/utils";
+import { fanHelper, followHelper, unfanHelper, unfollowHelper } from "../utils/utils";
 
 export const ExplorerDataContext = createContext();
 export const SetExplorerDataContext = createContext();
@@ -89,6 +89,28 @@ export const ExplorerDataProvider = ({ children }) => {
     }
   };
 
+  const handleUnfan = async (clickedExplorer) => {
+    try {
+      await axiosRes.delete(`/favourites/${clickedExplorer.favoriting_id}/`);
+      setExplorerData((prevState) => ({
+        ...prevState,
+        pageExplorer: {
+          results: prevState.pageExplorer.results.map((explorer) =>
+            unfanHelper(explorer, clickedExplorer)
+          ),
+        },
+        popularExplorers: {
+          ...prevState.popularExplorers,
+          results: prevState.popularExplorers.results.map((explorer) =>
+            unfanHelper(explorer, clickedExplorer)
+          ),
+        },
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -109,7 +131,7 @@ export const ExplorerDataProvider = ({ children }) => {
 
   return (
     <ExplorerDataContext.Provider value={explorerData}>
-      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow, handleUnfollow, handleFan}}>
+      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow, handleUnfollow, handleFan, handleUnfan}}>
         {children}
       </SetExplorerDataContext.Provider>
     </ExplorerDataContext.Provider>

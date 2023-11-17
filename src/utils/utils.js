@@ -40,6 +40,18 @@ export const fanHelper = (explorer, clickedExplorer, favoriting_id) => {
       explorer;
   };
 
+export const unfanHelper = (explorer, clickedExplorer) => {
+  return explorer.id === clickedExplorer.id
+    ? {
+        ...explorer,
+        favourites_count: explorer.favourites_count - 1,
+        favoriting_id: null,
+      }
+    : explorer.is_owner
+    ? { ...explorer, favoriting_count: explorer.favoriting_count - 1 }
+    : explorer;
+}
+
 
 export const fetchMoreData = async (resource, setResource) => {
   try {

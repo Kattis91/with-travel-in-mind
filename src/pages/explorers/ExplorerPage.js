@@ -27,7 +27,7 @@ function ExplorerPage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
   
-  const {setExplorerData, handleFollow, handleUnfollow, handleFan} = useSetExplorerData();
+  const {setExplorerData, handleFollow, handleUnfollow, handleFan, handleUnfan} = useSetExplorerData();
   const {pageExplorer} = useExplorerData();
 
   const [explorer] = pageExplorer.results;
@@ -118,6 +118,7 @@ function ExplorerPage() {
               (explorer?.favoriting_id ? (
                 <Button
                   className={btnStyles.Button}
+                  onClick={() => handleUnfan(explorer)}
                 >
                   Unfan
                 </Button>
