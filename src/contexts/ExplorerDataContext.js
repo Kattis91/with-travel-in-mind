@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
-import { followHelper } from "../utils/utils";
+import { fanHelper, followHelper } from "../utils/utils";
 
 export const ExplorerDataContext = createContext();
 export const SetExplorerDataContext = createContext();
@@ -47,6 +47,20 @@ export const ExplorerDataProvider = ({ children }) => {
       const { data } = await axiosRes.post("/favourites/", {
         favorited: clickedExplorer.id,
       });
+      setExplorerData((prevState) => ({
+        ...prevState,
+        pageExplorer: {
+          results: prevState.pageExplorer.results.map((explorer) =>
+            fanHelper(explorer, clickedExplorer, data.id)
+          ),
+        },
+        popularExplorers: {
+          ...prevState.popularExplorers,
+          results: prevState.popularExplorers.results.map((explorer) =>
+            fanHelper(explorer, clickedExplorer, data.id)
+          ),
+        },
+      }));
     } catch (err) {
       console.log(err);
     }
