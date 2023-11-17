@@ -139,7 +139,7 @@ function ExplorerPage() {
   const mainExplorerPosts = (
     <>
       <hr />
-      <p className="text-center">Explorer's posts</p>
+      <p className="text-center">{explorer?.owner}'s posts:</p>
       <hr />
       {explorerPosts.results.length ? (
         explorerPosts.results.map((post) => (
