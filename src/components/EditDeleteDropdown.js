@@ -1,6 +1,7 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import styles from '../styles/EditDeleteDropdown.module.css'
+import { useHistory } from "react-router";
 
 const Bars = React.forwardRef(({ onClick }, ref) => (
     <i
@@ -38,5 +39,36 @@ export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
     </Dropdown>
   );
 };
+
+export function ExplorerEditDropdown({ id }) {
+  const history = useHistory();
+  return (
+    <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+      <Dropdown.Toggle as={Bars} />
+      <Dropdown.Menu>
+        <Dropdown.Item
+          onClick={() => history.push(`/explorers/${id}/edit`)}
+          aria-label="edit-explorer"
+        >
+          <i className="fa-solid fa-pen-to-square" /> Edit explorer profile
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/explorers/${id}/edit/username`)}
+          aria-label="edit-username"
+        >
+          <i className="fa-solid fa-id-card" />
+          Change username
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/explorer/${id}/edit/password`)}
+          aria-label="edit-password"
+        >
+          <i className="fa-solid fa-key" />
+          Change password
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+}
   
  
