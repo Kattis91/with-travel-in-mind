@@ -49,6 +49,13 @@ const ExplorerEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+  const handleChange = (event) => {
+    setExplorerData({
+      ...explorerData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -60,7 +67,7 @@ const ExplorerEditForm = () => {
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
     }
-    
+
     try {
       const { data } = await axiosReq.put(`/explorers/${id}/`, formData);
       setCurrentUser((currentUser) => ({
@@ -82,6 +89,7 @@ const ExplorerEditForm = () => {
           value={bio}
           name="bio"
           rows={7}
+          onChange={handleChange}
         />
       </Form.Group>
       <Form.Group controlId="region">
@@ -90,6 +98,7 @@ const ExplorerEditForm = () => {
           as="select"
           name="region_you_would_like_to_explore"
           value={region_you_would_like_to_explore}
+          onChange={handleChange}
         > 
           <option>Europe</option>
           <option>Africa</option>
@@ -107,6 +116,7 @@ const ExplorerEditForm = () => {
           type="text"
           value={dream_destination}
           name="dream_destination"
+          onChange={handleChange}
         />
       </Form.Group>
       <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} type="submit">
@@ -140,6 +150,19 @@ const ExplorerEditForm = () => {
                   Change the image
                 </Form.Label>
               </div>
+              <Form.File
+                id="image-upload"
+                ref={imageFile}
+                accept="image/*"
+                onChange={(e) => {
+                  if (e.target.files.length) {
+                    setExplorerData({
+                      ...explorerData,
+                      image: URL.createObjectURL(e.target.files[0]),
+                    });
+                  }
+                }}
+              />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
           </Container>
