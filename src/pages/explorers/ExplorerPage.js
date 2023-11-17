@@ -18,6 +18,8 @@ import { useExplorerData, useSetExplorerData } from "../../contexts/ExplorerData
 import { Button, Image } from "react-bootstrap";
 import Post from "../posts/Post";
 import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -142,9 +144,15 @@ function ExplorerPage() {
       <p className="text-center">{explorer?.owner}'s posts:</p>
       <hr />
       {explorerPosts.results.length ? (
-        explorerPosts.results.map((post) => (
-          <Post key={post.id} {...post} setPosts={setExplorerPosts} />
-        ))
+        <InfiniteScroll
+          children={explorerPosts.results.map((post) => (
+            <Post key={post.id} {...post} setPosts={setExplorerPosts} />
+          ))}
+          dataLength={explorerPosts.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!explorerPosts.next}
+          next={() => fetchMoreData(explorerPosts, setExplorerPosts)}
+        />
       ) : (
         <Asset
           src={NoResults}
