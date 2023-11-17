@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useCurrentUser } from "./CurrentUserContext";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
-import { fanHelper, followHelper } from "../utils/utils";
+import { fanHelper, followHelper, unfollowHelper } from "../utils/utils";
 
 export const ExplorerDataContext = createContext();
 export const SetExplorerDataContext = createContext();
@@ -41,6 +41,29 @@ export const ExplorerDataProvider = ({ children }) => {
       console.log(err);
     }
   };
+
+  const handleUnfollow = async (clickedExplorer) => {
+    try {
+      await axiosRes.delete(`/followers/${clickedExplorer.following_id}/`);
+      setExplorerData((prevState) => ({
+        ...prevState,
+        pageExplorer: {
+          results: prevState.pageExplorer.results.map((explorer) =>
+            unfollowHelper(explorer, clickedExplorer)
+          ),
+        },
+        popularExplorers: {
+          ...prevState.popularExplorers,
+          results: prevState.popularExplorers.results.map((explorer) =>
+            unfollowHelper(explorer, clickedExplorer)
+          ),
+        },
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
 
   const handleFan = async (clickedExplorer) => {
     try {
@@ -86,7 +109,7 @@ export const ExplorerDataProvider = ({ children }) => {
 
   return (
     <ExplorerDataContext.Provider value={explorerData}>
-      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow, handleFan}}>
+      <SetExplorerDataContext.Provider value={{setExplorerData, handleFollow, handleUnfollow, handleFan}}>
         {children}
       </SetExplorerDataContext.Provider>
     </ExplorerDataContext.Provider>

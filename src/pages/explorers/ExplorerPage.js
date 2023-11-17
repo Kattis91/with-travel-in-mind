@@ -27,7 +27,7 @@ function ExplorerPage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
   
-  const {setExplorerData, handleFollow, handleFan} = useSetExplorerData();
+  const {setExplorerData, handleFollow, handleUnfollow, handleFan} = useSetExplorerData();
   const {pageExplorer} = useExplorerData();
 
   const [explorer] = pageExplorer.results;
@@ -99,6 +99,7 @@ function ExplorerPage() {
               (explorer?.following_id ? (
                 <Button
                   className={btnStyles.Button}
+                  onClick={() => handleUnfollow(explorer)}
                 >
                   Unfollow
                 </Button>

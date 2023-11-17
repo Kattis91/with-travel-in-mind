@@ -15,7 +15,7 @@ const Explorer = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const { handleFollow, handleFan } = useSetExplorerData();
+  const { handleFollow, handleUnfollow, handleFan } = useSetExplorerData();
   
   
   return (
@@ -36,6 +36,7 @@ const Explorer = (props) => {
           following_id ? (
             <Button
               className={`${btnStyles.Button}`}
+              onClick={() => handleUnfollow(explorer)}
             >
               Unfollow
             </Button>
