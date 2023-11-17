@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import { Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -29,6 +29,8 @@ const ExplorerEditForm = () => {
   });
 
   const { name, bio, region_you_would_like_to_explore, dream_destination, image } = explorerData;
+
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const handleMount = async () => {
@@ -77,6 +79,7 @@ const ExplorerEditForm = () => {
       history.goBack();
     } catch (err) {
       console.log(err);
+      setErrors(err.response?.data);
     }
   };
 
@@ -92,6 +95,11 @@ const ExplorerEditForm = () => {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.bio?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Form.Group controlId="region">
         <Form.Label>Region I would like to explore:</Form.Label>
         <Form.Control 
@@ -109,6 +117,11 @@ const ExplorerEditForm = () => {
           <option>Australien</option>
         </Form.Control>
       </Form.Group>
+      {errors?.region_you_would_like_to_explore?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Dream destination:</Form.Label>
@@ -119,6 +132,12 @@ const ExplorerEditForm = () => {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.dream_destination?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} type="submit">
         Save
       </Button>
@@ -142,6 +161,11 @@ const ExplorerEditForm = () => {
                   <Image src={image} fluid />
                 </figure>
               )}
+              {errors?.image?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                  {message}
+                </Alert>
+              ))}
               <div>
                 <Form.Label
                   className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
