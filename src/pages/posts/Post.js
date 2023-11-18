@@ -77,6 +77,22 @@ const Post = (props) => {
     }
   };
 
+  const handleBookmark = async () => {
+    try {
+      const { data } = await axiosRes.post("/bookmarks/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, bookmarks_count: post.bookmarks_count + 1, bookmark_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}`);
@@ -157,7 +173,7 @@ const Post = (props) => {
                 <i className="fa-solid fa-bookmark" />
               </span>
             ) : currentUser ? (
-              <span onClick={() => {}}>
+              <span onClick={handleBookmark}>
                 <i className="fa-regular fa-bookmark" />
               </span>   
             ) : (
