@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Alert, Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { useHistory, useParams } from 'react-router';
 import { axiosRes } from '../../api/axiosDefaults';
@@ -15,6 +15,8 @@ const UserPasswordForm = () => {
     new_password2: '',
   });
   const { new_password1, new_password2 } = userData;
+  
+  const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
     setUserData({
@@ -36,6 +38,7 @@ const UserPasswordForm = () => {
       history.goBack();
     } catch (err) {
       console.log(err);
+      setErrors(err.response?.data);
     }
   };
   
@@ -54,6 +57,11 @@ const UserPasswordForm = () => {
                 onChange={handleChange}
                 />
             </Form.Group>
+            {errors?.new_password1?.map((message, idx) => (
+              <Alert key={idx} variant="warning">
+                {message}
+              </Alert>
+            ))}
            
             <Form.Group>
               <Form.Label>Confirm password</Form.Label>
@@ -65,6 +73,11 @@ const UserPasswordForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors?.new_password2?.map((message, idx) => (
+              <Alert key={idx} variant="warning">
+                {message}
+              </Alert>
+            ))}
             
             <Button type="submit">
               Save
