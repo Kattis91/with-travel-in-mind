@@ -8,9 +8,12 @@ import Row from "react-bootstrap/Row";
 
 import { useHistory } from "react-router-dom";
 
-import appStyles from "../../App.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useParams } from "react-router";
+
+import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 const UsernameForm = () => {
 
@@ -20,6 +23,7 @@ const UsernameForm = () => {
   const [username, setUsername] = useState("");
 
   const history = useHistory();
+  const { id } = useParams();
 
   useEffect(() => {
     if (currentUser?.explorer_id?.toString() === id) {
@@ -55,15 +59,19 @@ const UsernameForm = () => {
               <Form.Control
                 placeholder="username"
                 type="text"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
               />
             </Form.Group>
           
-            <Button
+            <Button 
+              className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
               type="submit"
             >
               Save
             </Button>
             <Button
+              className={`${btnStyles.Button} ${btnStyles.FormRed}`}
               onClick={() => history.goBack()}
             >
               Cancel
