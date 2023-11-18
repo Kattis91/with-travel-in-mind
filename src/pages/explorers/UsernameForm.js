@@ -14,6 +14,7 @@ import { useParams } from "react-router";
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import { Alert } from "react-bootstrap";
 
 const UsernameForm = () => {
 
@@ -24,6 +25,8 @@ const UsernameForm = () => {
 
   const history = useHistory();
   const { id } = useParams();
+
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (currentUser?.explorer_id?.toString() === id) {
@@ -46,6 +49,7 @@ const UsernameForm = () => {
       history.goBack();
     } catch (err) {
       console.log(err);
+      setErrors(err.response?.data);
     }
   };
 
@@ -63,6 +67,11 @@ const UsernameForm = () => {
                 onChange={(event) => setUsername(event.target.value)}
               />
             </Form.Group>
+            {errors?.username?.map((message, idx) => (
+              <Alert key={idx} variant="warning">
+                {message}
+              </Alert>
+            ))}
           
             <Button 
               className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
