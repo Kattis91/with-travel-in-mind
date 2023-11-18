@@ -60,7 +60,7 @@ export function ExplorerEditDropdown({ id }) {
           Change username
         </Dropdown.Item>
         <Dropdown.Item
-          onClick={() => history.push(`/explorer/${id}/edit/password`)}
+          onClick={() => history.push(`/explorers/${id}/edit/password`)}
           aria-label="edit-password"
         >
           <i className="fa-solid fa-key" />
