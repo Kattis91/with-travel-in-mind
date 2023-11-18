@@ -4,6 +4,7 @@ import appStyles from '../../App.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosRes } from '../../api/axiosDefaults';
 import Asset from '../../components/Asset';
+import MostLikedPost from './MostLikedPost';
 
 
 const PopularPosts = () => {
@@ -39,7 +40,7 @@ const PopularPosts = () => {
         <>
           <p className='text-center'>Hottest posts right now:</p>
           {popularPosts.results.map((post) => (
-            <p key={post.id}>{post.title}</p>
+            <MostLikedPost key={post.id} post={post} />
           ))}
         </>
       ) : (
