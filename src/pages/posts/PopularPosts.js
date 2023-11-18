@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 import appStyles from '../../App.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosRes } from '../../api/axiosDefaults';
+import Asset from '../../components/Asset';
 
 
 const PopularPosts = () => {
@@ -34,10 +35,16 @@ const PopularPosts = () => {
 
   return (
     <Container className={`${appStyles.Content} mt-3`}>
-      <p className='text-center'>Hottest posts right now:</p>
-      {popularPosts.results.map((post) => (
-        <p key={post.id}>{post.title}</p>
-      ))}
+      {popularPosts.results.length ? (
+        <>
+          <p className='text-center'>Hottest posts right now:</p>
+          {popularPosts.results.map((post) => (
+            <p key={post.id}>{post.title}</p>
+          ))}
+        </>
+      ) : (
+        <Asset spinner />
+      )}
     </Container>
   );
 }
