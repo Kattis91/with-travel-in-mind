@@ -109,6 +109,22 @@ const Post = (props) => {
     }
   };
 
+  const handleUnbookmark = async () => {
+    try {
+      await axiosRes.delete(`/bookmarks/${bookmark_id}`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, bookmarks_count: post.bookmarks_count - 1, bookmark_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <Card className="mt-5 mb-3">
@@ -169,7 +185,7 @@ const Post = (props) => {
             )}
             {likes_count}
             {bookmark_id ? (
-              <span onClick={() => {}}>
+              <span onClick={handleUnbookmark}>
                 <i className="fa-solid fa-bookmark" />
               </span>
             ) : currentUser ? (
