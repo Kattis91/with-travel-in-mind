@@ -1,15 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import appStyles from '../../App.module.css'
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import { axiosRes } from '../../api/axiosDefaults';
 
 
 const PopularPosts = () => {
 
+  const [postData, setPostData] = useState({
+    popularPosts: { results: [] },
+  });
+
+  const { popularPosts } = postData;
+  const currentUser = useCurrentUser();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosRes.get(
+          "/posts/?ordering=-likes_count"
+        );
+        setPostData((prevState) => ({
+          ...prevState,
+          popularPosts: data,
+        }));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  
+    handleMount();
+  }, [currentUser]);
+
   return (
     <Container className={`${appStyles.Content} mt-3`}>
-      <p className='text-center'>Hottest posts right now:</p> 
+      <p className='text-center'>Hottest posts right now:</p>
+      {popularPosts.results.map((post) => (
+        <p key={post.id}>{post.title}</p>
+      ))}
     </Container>
   );
-};
+}
 
 export default PopularPosts
