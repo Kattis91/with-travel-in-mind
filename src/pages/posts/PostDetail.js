@@ -13,6 +13,7 @@ import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Comment from "../comments/Comment";
 import PopularExplorers from "../explorers/PopularExplorers";
+import PopularPosts from "./PopularPosts";
 
 function PostDetail() {
 
@@ -77,7 +78,7 @@ function PostDetail() {
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularExplorers />
-        <p>The hottest posts for desktop</p>
+        <PopularPosts />
       </Col>
     </Row>
   );

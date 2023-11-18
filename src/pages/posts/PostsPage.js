@@ -14,7 +14,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
 import { Form } from "react-bootstrap";
-import PopularExplorers from "../profiles/PopularExplorers";
+import PopularExplorers from "../explorers/PopularExplorers";
+import PopularPosts from "./PopularPosts";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -81,6 +82,7 @@ function PostsPage({ message, filter = "" }) {
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularExplorers />
+        <PopularPosts />
       </Col>
     </Row>
   );
