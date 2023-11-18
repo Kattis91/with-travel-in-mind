@@ -4,6 +4,9 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { useHistory, useParams } from 'react-router';
 import { axiosRes } from '../../api/axiosDefaults';
 
+import btnStyles from "../../styles/Button.module.css";
+import appStyles from "../../App.module.css";
+
 const UserPasswordForm = () => {
 
   const history = useHistory();
@@ -45,12 +48,12 @@ const UserPasswordForm = () => {
   return (
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
-        <Container>
+        <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label>New password</Form.Label>
               <Form.Control
-                placeholder="new password"
+                placeholder="New password"
                 type="password"
                 name="new_password1"
                 value={new_password1}
@@ -66,7 +69,7 @@ const UserPasswordForm = () => {
             <Form.Group>
               <Form.Label>Confirm password</Form.Label>
               <Form.Control
-                placeholder="confirm new password"
+                placeholder="Confirm new password"
                 type="password"
                 name="new_password2"
                 value={new_password2}
