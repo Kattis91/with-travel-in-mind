@@ -29,7 +29,7 @@ function App() {
             exact 
             path="/" 
             render={() => (
-              <PostsPage message="No results found. Adjust the search keyword.."/>
+              <PostsPage message="No results found. Adjust the search keyword or choose another region.."/>
             )} 
           />
           <Route 
@@ -37,7 +37,7 @@ function App() {
             path="/bookmarks" 
             render={() => (
               <PostsPage 
-                message="No results found. Adjust the search keyword or bookmark a post.."
+                message="No results found. You need to bookmark some posts to get them displayed here.."
                 filter={`bookmarks__owner__explorer=${explorer_id}&ordering=-bookmarks__created_at&`}
               />
             )} 
@@ -47,7 +47,8 @@ function App() {
             path="/favorites" 
             render={() => (
               <PostsPage 
-                message="No results found. Adjust the search keyword or add a user into your favorite list.."
+                message="It seems that you have no users on your favorite list.
+                  Go to the profiles you like the most and click the 'Fan' button to see their posts here.."
                 filter={`owner__favorited__owner__explorer=${explorer_id}&`}
               />
             )} 
@@ -57,7 +58,7 @@ function App() {
             path="/following" 
             render={() => (
               <PostsPage 
-                message="No results found. Adjust the search keyword or follow a user.."
+                message="No results found. Either you are not following anyone, or those you follow haven't posted anything yet."
                 filter={`owner__followed__owner__explorer=${explorer_id}&`}
               />
             )} 
