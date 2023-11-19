@@ -20,6 +20,8 @@ import Post from "../posts/Post";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { ExplorerEditDropdown } from "../../components/EditDeleteDropdown";
+import PopularPosts from "../posts/PopularPosts";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -58,85 +60,86 @@ function ExplorerPage() {
 
   const mainExplorer = (
     <>
-      <Row noGutters className="px-3 text-center">
-        <Col lg={3} className="text-lg-left">
-          <Image
-            className={styles.ExplorerImage}
-            roundedCircle
-            src={explorer?.image}
-          />
-        </Col>
-        <Col lg={6}>
-          <h3 className="m-2">{explorer?.owner}</h3>
-          <Row className="justify-content-center no-gutters">
-            <Col xs={3} className="my-2">
-              <div>{explorer?.posts_count}</div>
-              <div>posts</div>
-            </Col>
-            <Col xs={3} className="my-2">
-              <div>{explorer?.followers_count}</div>
-              <div>followers</div>
-            </Col>
-            <Col xs={3} className="my-2">
-              <div>{explorer?.following_count}</div>
-              <div>following</div>
-            </Col>
-          </Row>
-          <Row className="justify-content-center no-gutters">
-            <Col xs={3} className="my-2">
-              <div>{explorer?.favourites_count}</div>
-              <div>fans</div>
-            </Col>
-            <Col xs={3} className="my-2">
-              <div>{explorer?.favoriting_count}</div>
-              <div>favorites</div>
-            </Col>
-          </Row>
-        </Col>
-        <Col lg={3} className="text-lg-right">
-          <span className={styles.Inline}>
+      {explorer?.is_owner && <ExplorerEditDropdown id={explorer?.id} />}
+        <Row noGutters className="px-3 text-center">
+          <Col lg={3} className="text-lg-left">
+            <Image
+              className={styles.ExplorerImage}
+              roundedCircle
+              src={explorer?.image}
+            />
+          </Col>
+          <Col lg={6}>
+            <h3 className="m-2">{explorer?.owner}</h3>
+            <Row className="justify-content-center no-gutters">
+              <Col xs={3} className="my-2">
+                <div>{explorer?.posts_count}</div>
+                <div>posts</div>
+              </Col>
+              <Col xs={3} className="my-2">
+                <div>{explorer?.followers_count}</div>
+                <div>followers</div>
+              </Col>
+              <Col xs={3} className="my-2">
+                <div>{explorer?.following_count}</div>
+                <div>following</div>
+              </Col>
+            </Row>
+            <Row className="justify-content-center no-gutters">
+              <Col xs={3} className="my-2">
+                <div>{explorer?.favourites_count}</div>
+                <div>fans</div>
+              </Col>
+              <Col xs={3} className="my-2">
+                <div>{explorer?.favoriting_count}</div>
+                <div>favorites</div>
+              </Col>
+            </Row>
+          </Col>
+          <Col lg={3} className="text-lg-right">
             {currentUser && !is_owner &&
               (explorer?.following_id ? (
                 <Button
-                  className={btnStyles.Button}
+                  className={btnStyles.Unfollow}
                   onClick={() => handleUnfollow(explorer)}
                 >
                   Unfollow
                 </Button>
               ) : (
                 <Button
-                  className={btnStyles.Button}
+                  className={btnStyles.Follow}
                   onClick={() => handleFollow(explorer)}
                 >
                   Follow
                 </Button>
               ))
             }
-          </span>
-          <span className={styles.Inline}>
-            {currentUser && !is_owner &&
-              (explorer?.favoriting_id ? (
-                <Button
-                  className={btnStyles.Button}
-                  onClick={() => handleUnfan(explorer)}
-                >
-                  Unfan
-                </Button>
-              ) : (
-                <Button
-                  className={btnStyles.Button}
-                  onClick={() => handleFan(explorer)}
-                >
-                  Fan
-                </Button>
-              ))
-            }
-          </span>
-        </Col>
-        {explorer?.bio && <Col className="text-center">{explorer.bio}</Col>}
-        {explorer?.region_you_would_like_to_explore && <Col className="text-center">{explorer.region_you_would_like_to_explore}</Col>}
-        {explorer?.dream_destination && <Col className="text-center">{explorer.dream_destination}</Col>}
-      </Row>
+          </Col>
+          <Col>
+            <span className="text-center">
+              {currentUser && !is_owner &&
+                (explorer?.favoriting_id ? (
+                  <Button
+                    className={btnStyles.Unfollow}
+                    onClick={() => handleUnfan(explorer)}
+                  >
+                    Unfan
+                  </Button>
+                ) : (
+                  <Button
+                    className={btnStyles.FormRed}
+                    onClick={() => handleFan(explorer)}
+                  >
+                    Fan
+                  </Button>
+                ))
+              }
+            </span>
+          </Col>
+        </Row>
+      {explorer?.bio && <Col className="text-center mt-3">{explorer.bio}</Col>}
+      {explorer?.region_you_would_like_to_explore && <Col className="text-center mt-3">{explorer.region_you_would_like_to_explore}</Col>}
+      {explorer?.dream_destination && <Col className="text-center mt-3">{explorer.dream_destination}</Col>}
     </>
   );
 
@@ -181,6 +184,7 @@ function ExplorerPage() {
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularExplorers />
+        <PopularPosts />
       </Col>
     </Row>
   );
