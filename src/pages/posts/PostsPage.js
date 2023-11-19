@@ -23,11 +23,12 @@ function PostsPage({ message, filter = "" }) {
   const { pathname } = useLocation();
 
   const [search, setSearch] = useState("");
+  const [region, setRegion] = useState("");
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${search}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}search=${search}&region=${region}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -43,25 +44,49 @@ function PostsPage({ message, filter = "" }) {
       clearTimeout(timer)
     }
     
-  }, [filter, search, pathname]);
+  }, [filter, search, region, pathname]);
 
   return (
+    <>
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularExplorers mobile />
-        <i className={`fa-solid fa-magnifying-glass ${styles.SearchIcon}`}></i>
-        <Form 
-          className={styles.SearchBar}
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Form.Control
-            type="text"
-            className="mr-sm-2"
-            placeholder="Search posts by the title or the name of the explorer" 
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-          />
-        </Form>
+          <Row>
+            <Col lg={4} xs={4}>
+            <Form>
+              <Form.Control
+                as="select"
+                placeholder="Choose..."
+                value={region}
+                onChange={(event) => setRegion(event.target.value)}
+              >
+                <option hidden>Region</option>
+                <option>Europe</option>
+                <option>Africa</option>
+                <option>Asia</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Antarctica</option>
+                <option>Australien</option>
+              </Form.Control>
+            </Form>
+          </Col>
+          <Col lg={8} xs={8}>
+              <i className={`fa-solid fa-magnifying-glass ${styles.SearchIcon}`}></i>
+              <Form 
+                className={styles.SearchBar}
+                onSubmit={(event) => event.preventDefault()}
+              >
+                <Form.Control
+                  type="text"
+                  placeholder="Search posts by the title or the name of the explorer" 
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                />
+              </Form>
+            </Col>
+        </Row>
+  
         {hasLoaded ? (
           <>
             {posts.results.length ? (
@@ -85,6 +110,7 @@ function PostsPage({ message, filter = "" }) {
         <PopularPosts />
       </Col>
     </Row>
+    </>
   );
 }
 
