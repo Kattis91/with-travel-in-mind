@@ -1,5 +1,48 @@
 # With Travel In Mind
 
+## Features
+
+### Existing Features
+
+#### Navigation Bar
+
+- The navigation bar is complete and responsive. It appears consistently on every page, making navigation more convenient.
+
+- This section facilitates seamless navigation between pages, eliminating the need to rely on the "back" button.
+
+- Clicking on the Logo and "Home" will always redirect the user to the home page.
+
+- Logo and links to the home page are **available for all users**. However, there are some differences in how the navigation bar looks for non-logged and logged-in users.
+ 
+  - **Non-logged users:**
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700430296/navbar-logged-out_kvjjih.png)
+    
+    - The navigation bar consists of the Logo, Home, Sign In, and Sign Up links. 
+    - Clicking on "Sign In" or "Sign Up" directs users to their respective pages.
+
+  - **Logged-in users:**
+    
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700430296/navbar-logged-in_rp6sbg.png)
+
+    - The navigation bar includes the Logo, "Add Post" link, "For You" dropdown menu, and links to Sign Out and Explorer's profile.
+    
+    - Clicking "Add Post" takes the user to a page where they can fill in a form to publish a post.
+    
+    - Clicking "For you" opens the dropdown menu.
+      
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700430296/dropdown-links_ztluhx.png)
+      
+      - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
+      
+      - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
+     
+      - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
+    
+    - Clicking "Sign out" logs out the user and directs to the home page.
+    
+    - The avatar and "Explorer" takes the user to their explorer profile.
+
 ## Fixed Bugs
 
 - NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
