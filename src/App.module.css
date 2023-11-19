@@ -1,7 +1,7 @@
 .App {
     font-family: "Ubuntu", sans-serif;
-    background-color: rgb(231, 225, 225);
     min-height: 100vh;
+    background-color: #338f85;
 }
   
 .Main {
@@ -43,7 +43,7 @@ a:hover {
 }
 
 a:hover i {
-    color: #a78db6;
+    color: #6C63FF;
     transition: color ease-in-out 0.3s;
 } 
 
@@ -57,7 +57,7 @@ i {
 i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: #a78db6;
+    color: #6C63FF;
 }
 
 input[type="file"] {
