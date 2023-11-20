@@ -75,6 +75,22 @@ const Comment = (props) => {
     }
   };
 
+  const handleCommentUnlike = async () => {
+    try {
+      await axiosRes.delete(`/commentlikes/${commentlike_id}`);
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: prevComments.results.map((comment) => {
+          return comment.id === id
+            ? { ...comment, commentlikes_count: comment.commentlikes_count - 1, commentlike_id: null }
+            : comment;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <hr />
@@ -93,7 +109,7 @@ const Comment = (props) => {
               <i className="fa-regular fa-heart" />
             </OverlayTrigger>
           ) : commentlike_id ? (
-            <span>
+            <span onClick={handleCommentUnlike}>
               <i className="fa-solid fa-heart" />
             </span>
           ) : currentUser ? (
