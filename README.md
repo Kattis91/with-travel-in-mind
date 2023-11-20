@@ -54,6 +54,24 @@
 - **Search by typing in**:
   - The user can search posts by post title or the name of the author/explorer.
 
+## Testing
+
+### Manual Testing
+
+<details><summary>Navigation bar</summary>
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| **Logo** (available for all users) | When the user clicks on the Logo, they should be redirected to the home page of the site. | Click on "With Travel In Mind" in the navigation bar at the top of the page. | The user is redirected to the home page of the site. | Pass |
+| **Home** (available for all users) | Clicking "Home" should redirect the user to the homepage of the site. | Click on Home in the navigation bar at the top of the page. | The user is redirected to the home page of the site. | Pass |
+| **Sign in** (available for all users) | When the user clicks "Sign In" they should be redirected to the sign in page. | Click on Sign In in the navigation bar at the top of the page. | The user is redirected to the sign in page. | Pass |
+| **Sign Up** (available for all users) | Clicking "Sign Up" should redirect the user to the registration page. | Click on Sign Up in the navigation bar at the top of the page | The user is redirected to the registration page. | Pass |
+| **Add Post** (available for only logged-in users) | When the user clicks "Add Post", they should be redirected to a form page their they can fill in data and publish a post. | Click on Add Post in the navigation bar at the top of the page. | The user is redirected to the form page. | Pass |
+| **Sign out** (available for only logged-in users) | Clicking "Sign out" should log the user out and redirect them to the home page. | Click on Sign out in the navigation bar at the top of the page. | The user is logged out and redirected to the home page. | Pass |
+| **Explorer** (available for only logged in users) | When the user clicks "Explorer", they should be redirected to their own explorer profile. | Click on Explorer in the navigation bar at the top of the page. | The user is redirected to their profile page. | Pass
+
+</details>
+
 ## Fixed Bugs
 
 - NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
