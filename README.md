@@ -31,7 +31,7 @@
     
     - Clicking "For you" opens the dropdown menu.
       
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700430296/dropdown-links_ztluhx.png)
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435181/dropdown-menu_ucqlzm.png)
       
       - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
       
@@ -42,6 +42,17 @@
     - Clicking "Sign out" logs out the user and directs to the home page.
     
     - The avatar and "Explorer" takes the user to their explorer profile.
+
+#### Search
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435547/search_ietn9p.png)
+
+- **Filter posts by region**:
+ 
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700436195/search-by-region_vgnqrj.png)
+
+- **Search by typing in**:
+  - The user can search posts by post title or the name of the author/explorer.
 
 ## Fixed Bugs
 
