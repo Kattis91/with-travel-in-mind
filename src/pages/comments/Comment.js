@@ -106,15 +106,15 @@ const Comment = (props) => {
               placement="top"
               overlay={<Tooltip>You can't like your own comment!</Tooltip>}
             >
-              <i className="fa-regular fa-heart" />
+              <i className={`${styles.LikeUnlike} fa-regular fa-heart`} />
             </OverlayTrigger>
           ) : commentlike_id ? (
             <span onClick={handleCommentUnlike}>
-              <i className="fa-solid fa-heart" />
+              <i className={`${styles.LikeUnlike} fa-solid fa-heart`}  />
             </span>
           ) : currentUser ? (
             <span onClick={handleCommentLike}>
-              <i className="fa-regular fa-heart" />
+              <i className={`${styles.LikeUnlike} fa-regular fa-heart`} />
             </span>   
           ) : (
             <span>
@@ -122,7 +122,7 @@ const Comment = (props) => {
                 placement="top"
                 overlay={<Tooltip>Log in to like comments!</Tooltip>}
               >
-                <i className="fa-regular fa-heart" />
+                <i className={`${styles.LikeUnlike} fa-regular fa-heart`} />
               </OverlayTrigger>
             </span>
           )}

@@ -12,3 +12,12 @@
     font-size: smaller;
     color: rgb(65, 65, 70);
 }
+
+.LikeUnlike {
+    font-size: smaller;
+    color: #c43a51;
+}
+
+.LikeUnlike:hover {
+    color: #c43a51;
+}
