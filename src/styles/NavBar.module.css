@@ -9,7 +9,7 @@
 }
 
 .Active i {
-    color: #a78db6;
+    color: #6C63FF;
 } 
 
 #dropdownMenu {
@@ -17,4 +17,12 @@
     padding: 5px;
     margin-top: -5px;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 992px) {
+
+    .NavLink {
+        margin-right: 0px;
+        letter-spacing: 0;
+    }
 }
