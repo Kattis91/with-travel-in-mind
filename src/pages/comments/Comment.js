@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Media } from "react-bootstrap";
+import { Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
@@ -17,8 +17,10 @@ const Comment = (props) => {
     updated_at, 
     content,
     id,
+    commentlike_id,
+    commentlikes_count,
     setPost,
-    setComments
+    setComments, 
   } = props;
   
   const currentUser = useCurrentUser();
@@ -56,6 +58,22 @@ const Comment = (props) => {
       }));
     } catch (err) {}
   };
+  
+  const handleCommentLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/commentlikes/", { comment: id });
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: prevComments.results.map((comment) => {
+          return comment.id === id
+            ? { ...comment, commentlikes_count: comment.commentlikes_count + 1, commentlike_id: data.id }
+            : comment;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -67,6 +85,32 @@ const Comment = (props) => {
         <Media.Body className="align-self-center mr-2">
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}><i className={`${styles.DateIcon} fa-regular fa-clock`}></i>{updated_at}</span>
+          {is_owner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't like your own comment!</Tooltip>}
+            >
+              <i className="fa-regular fa-heart" />
+            </OverlayTrigger>
+          ) : commentlike_id ? (
+            <span>
+              <i className="fa-solid fa-heart" />
+            </span>
+          ) : currentUser ? (
+            <span onClick={handleCommentLike}>
+              <i className="fa-regular fa-heart" />
+            </span>   
+          ) : (
+            <span>
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to like comments!</Tooltip>}
+              >
+                <i className="fa-regular fa-heart" />
+              </OverlayTrigger>
+            </span>
+          )}
+          {commentlikes_count}
           {showEditForm ? (
             <CommentEditForm 
               id={id}
@@ -94,7 +138,7 @@ const Comment = (props) => {
         type={type}
         message={message}
       />
-    </>
+    </> 
   )
 }
 
