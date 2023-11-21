@@ -84,6 +84,62 @@
 
 - When the user clicks on the **Cancel** button, they are redirected back to the page they were on before clicking "Add Post".
 
+#### Sign Up
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700606692/sign-up-form_ruamir.png)
+
+- The form enables users to register and create an account.
+
+- The form includes following **mandatory** fields:
+  - Username
+  - Password
+  - Confirm Password
+
+- Validation:
+
+  - If the user misses to fill in a field.
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700601821/alert-message_oa6r3d.png)
+
+  - If a username is already taken:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608092/username-already-exists_zg5ccb.png)
+
+  - If passwords do not match:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608092/passwords-do-not-match_ypw7dh.png)
+
+#### Sign In
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700606692/sign-in-form_ofjnqa.png)
+
+- The form enables users to log in.
+
+- When a user logs in, they gain the ability to:
+
+  - **Posts:** Add posts | Edit their own posts | Delete their own posts.
+  - **Likes:** Like posts | Unlike posts.
+  - **Bookmarks:** Bookmark posts | Remove bookmarks from posts.
+  - **Comments:** Comment on posts | Edit their own comments | Delete their own comments | Like comments | Unlike comments.
+  - **Follow:** Follow other users | Unfollow other users
+  - **Favorites:** Add other users to their favorite list | Remove other users from the favorite list.
+  - **Explorer profiles:** Visit and update their own explorer profile.
+
+- Validation:
+
+  - Trying to login in with only the username:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700609368/field-is-required_crfday.png)
+
+  - Trying to log in with only password:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608749/username_and_password_uqwvqt.png)
+  
+  - Trying to login with a non-existing username-password combination:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608749/credentials_t7lbfm.png)
+  
+
 ## Testing
 
 ### Manual Testing
