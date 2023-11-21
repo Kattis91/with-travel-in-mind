@@ -13,7 +13,7 @@ const PopularExplorers = ({ mobile }) => {
     <Container className={`${appStyles.Content} ${mobile && 'd-lg-none text-center mb-3'}`}>
       {popularExplorers.results.length ? (
         <>
-          <p>Check out these popular adventurous explorers:</p>
+          <p className='text-center'>Follow these popular explorers &#11088;</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularExplorers.results.slice(0, 5).map((explorer) => (

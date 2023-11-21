@@ -38,7 +38,7 @@ const PopularPosts = () => {
     <Container className={`${appStyles.Content} mt-3`}>
       {popularPosts.results.length ? (
         <>
-          <p className='text-center'>Hottest posts right now:</p>
+          <p className='text-center'>Hottest posts right now &#128293;</p>
           {popularPosts.results.map((post) => (
             <MostLikedPost key={post.id} post={post} />
           ))}
