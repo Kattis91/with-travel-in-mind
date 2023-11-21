@@ -36,32 +36,13 @@
     display: inline-block;
     background-color: #6C63FF; 
     color: black; 
+    border: none;
 }
 
 .Purple:hover,
 .Purple:hover:active {
-    background-color: #8b86e4!important;
+    background-color: #afade0!important;
     color: black!important;
-    border: none;
-    font-weight: bold;
-}
-
-.Unfollow,
-.Unfollow:focus,
-.Unfollow:active,
-.Unfan,
-.Unfan:focus,
-.Unfan:active {
-    background-color: grey;
-    color: black;    
-}
-
-.Unfollow:hover,
-.Unfollow:hover:active,
-.Unfan:hover,
-.Unfan:hover:active {
-    background-color: #b3a8a8!important;
-    color: black!important;  
     border: none;
     font-weight: bold;
 }
@@ -72,6 +53,7 @@
     display: inline-block;
     background-color: #c43a51;
     color: white;
+    border: none;
 }
 
 .Red:hover,
@@ -80,4 +62,34 @@
     color: white!important;
     border: none;
     font-weight: bold;
+}
+
+.Unfollow,
+.Unfollow:focus,
+.Unfollow:active {
+    background-color: #afade0;
+    color: black; 
+    border: none;   
+}
+
+.Unfollow:hover,
+.Unfollow:hover:active {
+    background-color: #6C63FF!important;
+    color: black!important;  
+    border: none;
+    font-weight: bold;
+}
+
+.Unfan,
+.Unfan:focus,
+.Unfan:active {
+    background-color: pink;
+    color: black;
+    border: none;
+}
+
+.Unfan:hover,
+.Unfan:hover:active {
+    background-color: #c43a51!important;
+    color: white;
 }
