@@ -138,11 +138,11 @@ const ExplorerEditForm = () => {
         </Alert>
       ))}
 
-      <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} type="submit">
+      <Button className={`${btnStyles.Button} ${btnStyles.Purple} mr-3`} type="submit">
         Save
       </Button>
       <Button
-        className={`${btnStyles.Button} ${btnStyles.FormRed}`}
+        className={`${btnStyles.Button} ${btnStyles.Red}`}
         onClick={() => history.goBack()}
       >
         Cancel
@@ -168,7 +168,7 @@ const ExplorerEditForm = () => {
               ))}
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.FormGreen}`}
+                  className={`${btnStyles.Button} ${btnStyles.ChangeImage}`}
                   htmlFor="image-upload"
                 >
                   Change the image

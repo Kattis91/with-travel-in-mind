@@ -107,7 +107,7 @@ function ExplorerPage() {
                 </Button>
               ) : (
                 <Button
-                  className={btnStyles.Follow}
+                  className={btnStyles.Purple}
                   onClick={() => handleFollow(explorer)}
                 >
                   Follow
@@ -120,14 +120,14 @@ function ExplorerPage() {
               {currentUser && !is_owner &&
                 (explorer?.favoriting_id ? (
                   <Button
-                    className={btnStyles.Unfollow}
+                    className={btnStyles.Unfan}
                     onClick={() => handleUnfan(explorer)}
                   >
                     Unfan
                   </Button>
                 ) : (
                   <Button
-                    className={btnStyles.FormRed}
+                    className={`${btnStyles.Button} ${btnStyles.Red}`}
                     onClick={() => handleFan(explorer)}
                   >
                     Fan

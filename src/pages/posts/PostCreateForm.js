@@ -144,10 +144,10 @@ function PostCreateForm() {
       ))}
     
       <Button
-        className={`${btnStyles.FormGreen} ${btnStyles.Button}`} type="submit">
+        className={`${btnStyles.Button} ${btnStyles.Purple} mr-3`} type="submit">
         Create
       </Button>
-      <Button className={`${btnStyles.FormRed} ${btnStyles.Button}`}
+      <Button className={`${btnStyles.Button} ${btnStyles.Red}`}
       onClick={() => history.goBack()}
       >
         Cancel
@@ -207,7 +207,7 @@ function PostCreateForm() {
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
       </Row>
-    </Form>
+    </Form>   
   );
 }
 
