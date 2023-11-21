@@ -15,8 +15,10 @@ const MostLikedPost = (props) => {
           <Image src={image} height={imageSize} width={width} rounded />
         </Link>
       </div>
-      <div className={styles.WordBreak}>
-        <strong className="ml-3">{post.title}</strong>
+      <div>
+        <Link className={`${styles.Links} ${styles.WordBreak}`} to={`/posts/${id}`}>
+          <p className={"ml-3"}>{post.title}</p>
+        </Link>
       </div>
     </div>
   );
