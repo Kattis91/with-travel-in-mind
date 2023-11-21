@@ -5,12 +5,8 @@
     min-width: 75px;
     display: flex;
     justify-content:center;
-    width: 30%;
+    width: auto;
     border: none;
-}
-
-.Button:hover:active{
-    background-color: #338f85!important;
 }
 
 .Button:focus {
@@ -25,28 +21,63 @@
 .Bright:hover {
     background-color: #338f85;
     color: white;
-}
+} 
 
-.FormGreen {
+.ChangeImage,
+.ChangeImage:hover {
     display: inline-block; 
-    margin-right: 20px;
     background-color: #338f85;
-    color: white;
+    color: white
 }
 
-.FormRed {
-    display: inline-block; 
-    margin-right: 20px;
-    background-color: rgb(196, 58, 81);
-    color: white;
+.Purple,
+.Purple:focus,
+.Purple:active {
+    display: inline-block;
+    background-color: #6C63FF; 
+    color: black; 
 }
 
-.FormGreen:hover {
-    background-color: #338f85;
+.Purple:hover,
+.Purple:hover:active {
+    background-color: #8b86e4!important;
+    color: black!important;
+    border: none;
     font-weight: bold;
 }
 
-.FormRed:hover {
-    background-color: rgb(196, 58, 81);
+.Unfollow,
+.Unfollow:focus,
+.Unfollow:active,
+.Unfan,
+.Unfan:focus,
+.Unfan:active {
+    background-color: grey;
+    color: black;    
+}
+
+.Unfollow:hover,
+.Unfollow:hover:active,
+.Unfan:hover,
+.Unfan:hover:active {
+    background-color: #b3a8a8!important;
+    color: black!important;  
+    border: none;
+    font-weight: bold;
+}
+
+.Red,
+.Red:focus,
+.Red:active {
+    display: inline-block;
+    background-color: #c43a51;
+    color: white;
+}
+
+.Red:hover,
+.Red:hover:active {
+    background-color: #e02141!important;
+    color: white!important;
+    border: none;
     font-weight: bold;
 }
