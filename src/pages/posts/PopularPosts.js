@@ -7,7 +7,7 @@ import Asset from '../../components/Asset';
 import MostLikedPost from './MostLikedPost';
 
 
-const PopularPosts = () => {
+const PopularPosts = ({ mobile }) => {
 
   const [postData, setPostData] = useState({
     popularPosts: { results: [] },
@@ -35,13 +35,21 @@ const PopularPosts = () => {
   }, [currentUser]);
 
   return (
-    <Container className={`${appStyles.Content} mt-3`}>
+    <Container className={`${appStyles.Content} ${mobile && 'd-lg-none text-center mb-3'} mt-3`}>
       {popularPosts.results.length ? (
         <>
           <p className='text-center'>Hottest posts right now &#128293;</p>
-          {popularPosts.results.map((post) => (
-            <MostLikedPost key={post.id} post={post} />
-          ))}
+          {mobile ? (
+            <div className="d-flex justify-content-around">
+              {popularPosts.results.slice(0, 3).map((post) => (
+               <MostLikedPost key={post.id} post={post} mobile />
+              ))}
+            </div>
+          ) : (
+            popularPosts.results.map((post) => (
+              <MostLikedPost key={post.id} post={post} />
+            ))
+          )}
         </>
       ) : (
         <Asset spinner />
