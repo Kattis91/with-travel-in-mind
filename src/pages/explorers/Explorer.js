@@ -26,8 +26,10 @@ const Explorer = (props) => {
           <Avatar src={image} height={imageSize} />
         </Link>
       </div>
-      <div className={styles.WordBreak}>
-        <strong>{owner}</strong>
+      <div>
+        <Link className={`${styles.Links} ${styles.WordBreak}`} to={`/explorers/${id}`}>
+          <span>{owner}</span>
+        </Link>
       </div>
       <div className="text-right ml-auto">
         {!mobile && currentUser && !is_owner && (
