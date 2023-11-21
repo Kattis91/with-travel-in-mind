@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/Explorer.module.css'
+import styles from '../../styles/ExplorerAndMostLikedPost.module.css'
 import btnStyles from '../../styles/Button.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
@@ -10,13 +10,12 @@ import { useSetExplorerData } from '../../contexts/ExplorerDataContext';
 const Explorer = (props) => {
 
   const { explorer, mobile, imageSize = 55 } = props;
-  const { id, following_id, favoriting_id, image, owner } = explorer;
+  const { id, following_id, image, owner } = explorer;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const { handleFollow, handleUnfollow, handleFan, handleUnfan } = useSetExplorerData();
-  
+  const { handleFollow, handleUnfollow } = useSetExplorerData();
   
   return (
     <div
@@ -31,44 +30,23 @@ const Explorer = (props) => {
         <strong>{owner}</strong>
       </div>
       <div className="text-right ml-auto">
-        <span className={styles.Inline}>
         {!mobile && currentUser && !is_owner && (
           following_id ? (
             <Button
-              className={`${btnStyles.Button}`}
+              className={btnStyles.Unfollow}
               onClick={() => handleUnfollow(explorer)}
             >
               Unfollow
             </Button>
           ) : (
             <Button
-              className={`${btnStyles.Button}`}
+              className={btnStyles.Purple}
               onClick={() => handleFollow(explorer)}
             >
               Follow
             </Button>     
           ))
         }
-        </span>
-        <span className={styles.Inline}>
-        {!mobile && currentUser && !is_owner && (
-          favoriting_id ? (
-            <Button
-              className={`${btnStyles.Button}`}
-              onClick={() => handleUnfan(explorer)}
-            >
-              Unfan
-            </Button>
-          ) : (
-            <Button
-              className={`${btnStyles.Button}`}
-              onClick={() => handleFan(explorer)}
-            >
-              Fan
-            </Button>     
-          ))
-        }
-        </span>
       </div>
     </div>
   );
