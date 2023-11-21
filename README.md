@@ -54,6 +54,36 @@
 - **Search by typing in**:
   - The user can search posts by post title or the name of the author/explorer.
 
+#### Add Post
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700599677/add-post_h8xke0.png)
+
+- This page includes a form that allows users who are logged in to publish their posts.
+
+- In order to ensure an optimal user experience for everyone, it is necessary to fill out all required fields. The more information about the post the better! 
+
+- An alert message appears on the screen when the user misses to fill in some field:
+  
+  - Title:
+    
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700601821/alert-message_oa6r3d.png)
+  
+  - Description:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700601821/alert-message_oa6r3d.png)
+
+  - Place:
+    
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700601821/alert-message_oa6r3d.png)
+
+  - Image:
+   
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700601821/alert-for-the-image-field_boihzg.png)
+
+- After correctly submitting the form, the user is redirected to their newly created post's detailed page upon clicking the **Create** button.
+
+- When the user clicks on the **Cancel** button, they are redirected back to the page they were on before clicking "Add Post".
+
 ## Testing
 
 ### Manual Testing
