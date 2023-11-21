@@ -127,7 +127,7 @@ function ExplorerPage() {
                   </Button>
                 ) : (
                   <Button
-                    className={`${btnStyles.Button} ${btnStyles.Red}`}
+                    className={`${btnStyles.Red} mt-2`}
                     onClick={() => handleFan(explorer)}
                   >
                     Fan
