@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
@@ -45,7 +45,7 @@ const NavBar = () => {
         id={styles.dropdownMenu}
         title=
           <span >
-            <i className="fa-solid fa-heart-circle-plus"></i>
+            <i className="fa-solid fa-heart-circle-plus" />
             For you
           </span>
       >
@@ -77,7 +77,6 @@ const NavBar = () => {
 
       <NavLink 
         className={styles.NavLink} 
-        activeClassName={styles.Active} 
         to="/"
         onClick={handleSignOut}
       >
