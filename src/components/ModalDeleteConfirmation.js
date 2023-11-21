@@ -23,20 +23,20 @@ const ModalDeleteConfirmation = (props) => {
       <Modal.Footer>
         {type === "post" && 
           <>
-            <Button className={`${btnStyles.Button} ${btnStyles.FormRed}`} onClick={handleDelete}>
+            <Button className={`${btnStyles.Button} ${btnStyles.Purple}`} onClick={handleDelete}>
               Yes!
             </Button>
-            <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} onClick={handleClose}>
+            <Button className={`${btnStyles.Button} ${btnStyles.Red}`} onClick={handleClose}>
               Cancel
             </Button>
           </>
         }
         {type === "comment" &&
           <>
-            <Button className={`${btnStyles.Button} ${btnStyles.FormRed}`} onClick={handleCommentDelete}>
+            <Button className={`${btnStyles.Button} ${btnStyles.Purple}`} onClick={handleCommentDelete}>
               Yes!
             </Button>
-            <Button className={`${btnStyles.Button} ${btnStyles.FormGreen}`} onClick={handleClose}>
+            <Button className={`${btnStyles.Button} ${btnStyles.Red}`} onClick={handleClose}>
               Cancel
             </Button>
           </>
