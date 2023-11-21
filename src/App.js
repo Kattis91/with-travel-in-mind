@@ -47,8 +47,9 @@ function App() {
             path="/favorites" 
             render={() => (
               <PostsPage 
-                message="It seems that you have no users on your favorite list.
-                  Go to the profiles you like the most and click the 'Fan' button to see their posts here.."
+                message="It seems that you don't have any users on your favorite list or the ones you have added
+                haven't posted anything yet. Go to the profiles you like the most and click the 'Fan' button to get 
+                their posts displayed here."
                 filter={`owner__favorited__owner__explorer=${explorer_id}&`}
               />
             )} 
