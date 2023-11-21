@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
@@ -9,7 +9,6 @@ import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContex
 import { NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
 import Avatar from './Avatar';
-import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 import { Link } from 'react-router-dom';
 
 
@@ -18,12 +17,13 @@ const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
-  const {expanded, setExpanded, ref} = useClickOutsideToggle();
-
+  const [expanded, setExpanded] = useState(false);
+  
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      setExpanded(!expanded);
     } catch (err) {
       console.log(err);
     }
@@ -43,17 +43,21 @@ const NavBar = () => {
     <>
       <NavDropdown 
         id={styles.dropdownMenu}
-        title=
+        title={
           <span >
             <i className="fa-solid fa-heart-circle-plus" />
             For you
           </span>
+        }
       >
         <NavDropdown.Item
           className={styles.NavLink} 
           activeClassName={styles.Active} 
           to="/bookmarks"
           as={Link}        
+          onClick={() => {
+            setExpanded(!expanded);
+          }}
         >
           <i className="fa-solid fa-book-bookmark"></i>Bookmarks
         </NavDropdown.Item>
@@ -62,6 +66,9 @@ const NavBar = () => {
           activeClassName={styles.Active} 
           to="/favorites"
           as={Link}
+          onClick={() => {
+            setExpanded(!expanded);
+          }}
         >
           <i className="fa-solid fa-heart"></i>Favorites
         </NavDropdown.Item>
@@ -70,6 +77,9 @@ const NavBar = () => {
           activeClassName={styles.Active} 
           to="/following"
           as={Link}
+          onClick={() => {
+            setExpanded(!expanded);
+          }}
         >
           <i className="fa-solid fa-star"></i>Following
         </NavDropdown.Item>
@@ -85,6 +95,9 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         to={`/explorers/${currentUser?.explorer_id}`}
+        onClick={() => {
+          setExpanded(!expanded);
+        }}
       >
        <Avatar src={currentUser?.explorer_image} text="Explorer" height={40} />
       </NavLink>
@@ -97,6 +110,9 @@ const NavBar = () => {
         className={styles.NavLink} 
         activeClassName={styles.Active} 
         to="/signin"
+        onClick={() => {
+          setExpanded(!expanded);
+        }}
       >
         <i className="fa-solid fa-right-to-bracket"></i>Sign in
       </NavLink>
@@ -104,6 +120,9 @@ const NavBar = () => {
         className={styles.NavLink} 
         activeClassName={styles.Active} 
         to="/signup"
+        onClick={() => {
+          setExpanded(!expanded);
+        }}
       >
         <i className="fa-solid fa-user-plus"></i>Sign up
       </NavLink>
@@ -120,8 +139,9 @@ const NavBar = () => {
         </NavLink>
         {currentUser && addPostIcon}
         <Navbar.Toggle 
-          ref={ref}
-          onClick={() => setExpanded(!expanded)}
+          onClick={() => {
+            setExpanded(!expanded);
+          }}
           aria-controls="basic-navbar-nav"
         />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -131,6 +151,9 @@ const NavBar = () => {
               className={styles.NavLink} 
               activeClassName={styles.Active} 
               to="/"
+              onClick={() => {
+                setExpanded(!expanded);
+              }}
             >
               <i class="fa-solid fa-house-user"></i>Home
             </NavLink>
