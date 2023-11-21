@@ -26,7 +26,7 @@ const Post = (props) => {
     image,
     place,
     region,
-    updated_at,
+    created_at,
     postDetail,
     setPosts,
   } = props;
@@ -127,15 +127,15 @@ const Post = (props) => {
 
   return (
     <>
-      <Card className="mt-5 mb-3">
+      <Card className="mb-3">
         <Card.Body>
           <Media className="align-items-center justify-content-between">
             <Link to={`/explorers/${explorer_id}`}>
               <Avatar src={explorer_image} height={55} />
               {owner}
             </Link>
-            <div className='d-flex align-items-center'>
-              <span>{updated_at}</span>
+            <div className="d-flex align-items-center">
+              <p>{created_at}</p>
               {is_owner && postDetail && (
                 <EditDeleteDropdown 
                   handleEdit={handleEdit} 
