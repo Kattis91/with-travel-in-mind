@@ -51,6 +51,7 @@ function PostsPage({ message, filter = "" }) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularExplorers mobile />
+        <PopularPosts mobile />
           <Row>
             <Col lg={4} xs={4}>
             <Form>

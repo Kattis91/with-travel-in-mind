@@ -171,6 +171,7 @@ function ExplorerPage() {
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularExplorers mobile />
+        <PopularPosts mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
