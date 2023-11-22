@@ -149,6 +149,7 @@
 
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608749/credentials_t7lbfm.png)
   
+- Clicking on **Sign up now!** takes th user to the Sign up form.
 
 ## Testing
 
