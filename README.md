@@ -197,8 +197,10 @@ The post information remains the same, but extra features are now available:
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671196/comments_oar9ef.png)
   - Users who are not logged in are prompted to log in if they want to leave comments:
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671314/no-comments-unlogged-user_ia4pub.png)
-  - Logged-in users can leave comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
+  - Logged-in users can:
+      - Like/unlike comments left by other explorers.
+      - Leave comments:
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
   - Comment owners can update/delete their comments:
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700670772/edit-delete-comment_dmxi9c.png)
 
