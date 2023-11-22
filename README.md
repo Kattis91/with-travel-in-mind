@@ -164,6 +164,28 @@
   
 - Clicking on **Sign up now!** takes th user to the Sign up form.
 
+#### Posts page
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658316/post-header_psllue.png)
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658317/post-image_rj77dw.png)
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658317/post-info_f0liak.png)
+
+Each post contains the following features:
+
+- Avatar and the username of the author/explorer.
+- The date the post was published.
+- Post image.
+- Post title.
+- Post description.
+- Place/location the image where the image was captured.
+- The region in which the image was taken.
+- Comment icon with the number of comments.
+- Like icon with the number of likes.
+  - Logged in users can like/unlike posts.
+- Bookmark icon with the number of bookmarks.
+  - Logged in users can bookmark posts/remove bookmarks from posts.
+
+
 #### Popular explorers
 
 - All users, including non-logged in users, can view a list of the most popular profiles (explorers).
@@ -205,6 +227,7 @@
   - **Mobile**(displayed at the top of the page, between popular explorers container and the search bar):
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700649268/hottest-posts-mobile_zl8mpd.png)
   The number of posts shown is limited to **three**.
+
 
 ## Testing
 
