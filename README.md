@@ -60,6 +60,10 @@
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435547/search_ietn9p.png)
 
+The message displayed when there are no results found:
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700678762/no-results-search_iyl2lc.png)
+
 - **Filter posts by region**:
  
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700436195/search-by-region_vgnqrj.png)
