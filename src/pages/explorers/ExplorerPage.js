@@ -138,8 +138,14 @@ function ExplorerPage() {
           </Col>
         </Row>
       {explorer?.bio && <Col className="text-center mt-3">{explorer.bio}</Col>}
-      {explorer?.region_you_would_like_to_explore && <Col className="text-center mt-3">{explorer.region_you_would_like_to_explore}</Col>}
-      {explorer?.dream_destination && <Col className="text-center mt-3">{explorer.dream_destination}</Col>}
+      {explorer?.region_you_would_like_to_explore ? (
+        <Col className="text-center mt-3"><p>The region I want to explore more of: 
+          <i className={styles.ExplorerDetails}>{explorer.region_you_would_like_to_explore}</i></p></Col>
+      ) : null }
+      {explorer?.dream_destination ? (
+        <Col className="text-center mt-3">My dream destination is: 
+          <i className={styles.ExplorerDetails}>{explorer.dream_destination}</i></Col>
+      ) : null }       
     </>
   );
 
