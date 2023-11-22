@@ -97,17 +97,27 @@
 
 - Validation:
 
-  - If the user misses to fill in a field.
+  - When the user misses to fill in the username or "confirm password" fields.
 
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700601821/alert-message_oa6r3d.png)
 
-  - If a username is already taken:
+  - When the user misses to fill in the password field:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700609368/field-is-required_crfday.png)
+
+  - When the username is already taken:
 
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608092/username-already-exists_zg5ccb.png)
 
-  - If passwords do not match:
+  - When the password is too short:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700611340/password-is-too-short_earapl.png)
+
+  - When two passwords do not match:
 
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700608092/passwords-do-not-match_ypw7dh.png)
+
+- Clicking on **Sign in** takes th user to the Sign in form.
 
 #### Sign In
 
@@ -185,6 +195,7 @@
 | The username is already taken | When trying to submit the form with the username that already exists on the site, the user should get a message saying that. | Try to sign in with the username that you know you or somebody else has. | The "A user with that username already exists." message appears on the screen. | Pass |
 | Too short password | When trying to submit the form with a password that contains less than 8 characters, an error message should be displayed to the user. | Type in a password that contains less than 8 characters. | The "This password is too short. It must contain at least 8 characters." message is displayed. | Pass |
 | Passwords do not match | When attepmting to submit the form with two passwords that do not much, the user should get an error message saying that. | Type in two different passwords and click "Sign up". | The "The two password fields didn't match." message is displayed. | Pass |
+| Sign in | Clicking on the "Sign in" link below the form should take the user to the sign in form. | Click the "Sign in" link. | The user is redirected to the sign in page. | Pass |
 
 </details>
 
