@@ -185,6 +185,54 @@ Each post contains the following features:
 - Bookmark icon with the number of bookmarks.
   - Logged in users can bookmark posts/remove bookmarks from posts.
 
+#### Post Detail page
+
+When the user clicks on the post, they are redirected to the post's detail page.
+
+The post information remains the same, but extra features are now available:
+
+- **Comments:**
+
+  - All the users get access to the comments:
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700660496/comments_zm1epp.png)
+  - Users who are not logged in are prompted to log in if they want to leave comments:
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700660495/no-comments-unlogged-users_dtdmkm.png)
+  - Logged-in users can leave comments:
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700660495/no-comments-logged-in-users_qbkmgs.png)
+  - Comment owners can update/delete their comments:
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700663077/edit-delete-comment_fett89.png)
+
+    - **Edit:**
+    
+      Clicking the "edit" icon, the user is redirected to the pre-populated comment edit page.
+    
+    - **Delete:**
+      
+      Clicking the "delete" icon, a delete confirmation modal appears on the screen.
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700663077/comment-delete-confirmation_bnahim.png)
+
+      - Clicking the "Yes!" button deletes the comment and removes it from the post detail page.
+
+      - Clicking "Cancel" closes the modal, keeping the user on selected posts detail page.    
+
+- **Edit/delete functionality for the post owners:**
+
+  The dropdown menu is displayed just beside the "created_at" date:
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700661325/edit-delete-post_sfaoni.png)
+  
+  - **Edit:**
+    
+    Clicking the "edit" icon, the user is redirected to the pre-populated post edit page.
+    
+  - **Delete:**
+      
+    Clicking the "delete" icon, a delete confirmation modal appears on the screen.
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700661325/post-delete-confirmation_txizxk.png)
+
+    - Clicking the "Yes!" button deletes the post and removes it from the posts page. The user gets redirected to the home page.
+
+    - Clicking "Cancel" closes the modal, keeping the user on selected posts page.
+
 
 #### Popular explorers
 
