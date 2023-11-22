@@ -29,15 +29,28 @@
     
     - Clicking "Add Post" takes the user to a page where they can fill in a form to publish a post.
     
-    - Clicking "For you" opens the dropdown menu.
+    - Clicking "For you" opens the dropdown menu shown below.
+
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700657695/dropdown-menu_utcrpv.png)
       
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435181/dropdown-menu_ucqlzm.png)
+      - **Bookmarks:**
       
-      - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
+        - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
+
+        - If the user hasn't bookmarked any posts, a message saying that appears on the screen:
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-bookmarks_fsntzf.png)
       
-      - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
+      - **Favorites:**
+
+        - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
+
+          ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-favorites_umb7g0.png)
      
-      - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
+      - **Following:**
+
+        - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
+
+          ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-following_w9a3tl.png)
     
     - Clicking "Sign out" logs out the user and directs to the home page.
     
