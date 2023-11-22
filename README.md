@@ -223,7 +223,7 @@
   
   API's message: `Authentication credentials were not provided`
 
-  - **Fix:**
+  **Fix:**
     - Downgrade dj-rest-auth version in the API: 
       ````
       pip3 install dj-rest-auth==2.1.9
@@ -236,7 +236,7 @@
 
   `ImportError: allauth needs to be added to INSTALLED_APPS`
 
-  - **Fix:**
+  **Fix:**
     - Downgrade django-allauth version in the API: 
       ````
       pip3 install django-allauth==0.54.0
@@ -248,24 +248,34 @@
 
 - "Favorites" in the Navbar showed the list of all posts (however none of those posts have been added to the favorite list). 
 
-  - **Fix:** Add the missing `owner__favorited__owner__explorer` into **filterset_fields** in the posts views in the Back-End [with-travel-in-mind-api](https://github.com/Kattis91/with-travel-in-mind-api).
+  **Fix:** Add the missing `owner__favorited__owner__explorer` into **filterset_fields** in the posts views in the Back-End [with-travel-in-mind-api](https://github.com/Kattis91/with-travel-in-mind-api).
 
 - `Could not find a declaration file for module 'react-router-dom'` message was displayed when I was trying to import { NavLink }.
 
   My preview didn't show anything at all.
 
-  - **Fix:** install types: `npm install --save @types/react-router`
+  **Fix:** install types: `npm install --save @types/react-router`
 
 - When I was trying to pre-populate my PostEditForm and clicked on the "edit" icon for the post I had created, I was taken to the edit page but that was not pre-populated. Moreover, after a just a second, I was redirected to the homepage (like a user who is not an owner should be).
 
-  - **Fix:** Add the missing return statement (`return request.user == obj.owner`) to the get_is_ownwer method in posts serilaizers.py in the Back-End.
+  **Fix:** Add the missing return statement (`return request.user == obj.owner`) to the get_is_ownwer method in posts serilaizers.py in the Back-End.
     
     ````
     def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner
     ````
-    
+
+- When I tried to like a comment, the number of likes displayed as "NaN" instead of an actual number. The same happened when I tried to remove the like. 
+
+  **Fix**: After checking everything a bunch of times, I got support from Oisin on the Tutor Assistance who noticed that the annotate method in the comment views was missing. Adding commentlikes_count to the queryset and importing **Count** from _django.db.models_ solved the issue.
+
+    ````
+    queryset = Comment.objects.annotate(
+          commentlikes_count=Count('commentlikes', distinct=True)
+    )
+    ````
+
 ## Deployment
 
 ### Create Heroku App and connect it to GitHub
