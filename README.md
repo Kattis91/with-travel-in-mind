@@ -151,6 +151,20 @@
   
 - Clicking on **Sign up now!** takes th user to the Sign up form.
 
+#### Popular explorers
+
+- All users, including non-logged in users, can view a list of the most popular profiles (explorers).
+
+- Profiles are listed in descending order from most popular to least popular.
+
+- The list is displayed in different ways depending on the screen size.
+
+  - **Desktop** (displayed to the right at the top of the page):
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700648334/popular-explorers-desktop_bguwnd.png)
+
+  - **Mobile** (displayed at the top of the page below navbar):
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700648334/popular-explorers-mobile_ujvh4o.png)
+
 ## Testing
 
 ### Manual Testing
