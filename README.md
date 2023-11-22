@@ -165,6 +165,21 @@
   - **Mobile** (displayed at the top of the page below navbar):
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700648334/popular-explorers-mobile_ujvh4o.png)
 
+#### Hottest posts
+
+- All users, including non-logged in users, can view a list of the most hottest posts.
+
+- Posts are listed in descending order starting with the one with most likes.
+
+- The list is updated whenever there is a change in the number of likes affecting the order.
+
+- The list is displayed in different ways depending on the screen size.
+  - **Desktop**(displayed to the right of the page, just below the popular profiles container):
+ ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700649269/hottest-posts-desktop_d74py1.png)
+  - **Mobile**(displayed at the top of the page, between popular explorers container and the search bar):
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700649268/hottest-posts-mobile_zl8mpd.png)
+  The number of posts shown is limited to **three**.
+
 ## Testing
 
 ### Manual Testing
