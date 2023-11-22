@@ -194,13 +194,13 @@ The post information remains the same, but extra features are now available:
 - **Comments:**
 
   - All the users get access to the comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700660496/comments_zm1epp.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671196/comments_oar9ef.png)
   - Users who are not logged in are prompted to log in if they want to leave comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700660495/no-comments-unlogged-users_dtdmkm.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671314/no-comments-unlogged-user_ia4pub.png)
   - Logged-in users can leave comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700660495/no-comments-logged-in-users_qbkmgs.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
   - Comment owners can update/delete their comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700663077/edit-delete-comment_fett89.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700670772/edit-delete-comment_dmxi9c.png)
 
     - **Edit:**
     
@@ -209,7 +209,7 @@ The post information remains the same, but extra features are now available:
     - **Delete:**
       
       Clicking the "delete" icon, a delete confirmation modal appears on the screen.
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700663077/comment-delete-confirmation_bnahim.png)
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671870/comment-delete-confirmation_lg2xax.png)
 
       - Clicking the "Yes!" button deletes the comment and removes it from the post detail page.
 
@@ -218,7 +218,7 @@ The post information remains the same, but extra features are now available:
 - **Edit/delete functionality for the post owners:**
 
   The dropdown menu is displayed just beside the "created_at" date:
-  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700661325/edit-delete-post_sfaoni.png)
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671525/edit-delete-post_xrksgl.png)
   
   - **Edit:**
     
@@ -227,7 +227,7 @@ The post information remains the same, but extra features are now available:
   - **Delete:**
       
     Clicking the "delete" icon, a delete confirmation modal appears on the screen.
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700661325/post-delete-confirmation_txizxk.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671722/post-delete-confirmation_nwr1qi.png)
 
     - Clicking the "Yes!" button deletes the post and removes it from the posts page. The user gets redirected to the home page.
 
