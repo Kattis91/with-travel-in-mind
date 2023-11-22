@@ -235,7 +235,6 @@ The post information remains the same, but extra features are now available:
 
     - Clicking "Cancel" closes the modal, keeping the user on selected posts page.
 
-
 #### Popular explorers
 
 - All users, including non-logged in users, can view a list of the most popular profiles (explorers).
@@ -278,6 +277,45 @@ The post information remains the same, but extra features are now available:
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700649268/hottest-posts-mobile_zl8mpd.png)
   The number of posts shown is limited to **three**.
 
+#### Explorer profiles
+
+- All the explorer profiles have the same structure. 
+
+- Bio, region, and dream destination are optional fields.
+
+- There are a few discrepancies between the user's profile and profiles of other explorers.
+
+  - **User's own profile** (_with the optional fields filled in_):
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700676004/own-profile-with-details_zwzub1.png)
+    
+    - It is not possible for the user to follow themselves.
+
+    - The user cannot either add themselves to their favorite list.
+
+    - They can update their profile by clicking on the hamburger menu at the right top of the page.
+    
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700677087/profile-edit-functionality_mt1rge.png)
+      
+      - Choosing to edit the explorer profile, the user is redirected to the explorer edit page with pre-populated fields.
+
+      - Choosing to change the username takes the user to the form below.
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700676004/change-username_kyqwmn.png)
+
+      - When choosing to change password, the user redirects to the form below.
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700676004/change-password_zemrds.png)
+
+      - Clicking the "Save" button (in all the edit forms) saves the user's changes and takes the user back to their profile.
+
+      - Clicking the "Cancel" button just takes the user back to their profile.
+
+  - **Other explorer's profiles** (_this explorer chose not to fill in the optional fields_):
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700676004/others-profiles_yf7oxm.png)
+
+    - The user can follow/unfollow other explorers.
+
+    - The user can even add other explorers into their favorite list by clicking the "Fan" button. They can remove other explorers from the list by clicking the "Unfan" button.
+
+    - It is NOT possible to edit another explorer's profile.
 
 ## Testing
 
