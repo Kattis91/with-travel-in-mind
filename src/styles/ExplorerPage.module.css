@@ -4,15 +4,15 @@
     width: 120px;
     margin: 4px;
 }
+
+.ExplorerDetails {
+    font-size: large;
+    color: rgb(65, 65, 70);
+}
   
 @media screen and (max-width: 991px) {
     .ExplorerImage {
       width: 250px;
       height: 250px;
     }
-}
-
-.Inline {
-  display: inline-block;
-  margin-right: 5px;
 }
