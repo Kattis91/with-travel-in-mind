@@ -205,12 +205,13 @@ The post information remains the same, but extra features are now available:
       - Like/unlike comments left by other explorers.
       - Leave comments:
       ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
+
   - Comment owners can update/delete their comments:
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700670772/edit-delete-comment_dmxi9c.png)
 
     - **Edit:**
     
-      Clicking the "edit" icon, the user is redirected to the pre-populated comment edit page.
+      - Clicking the "edit" icon, the user is redirected to the pre-populated comment edit page.
     
     - **Delete:**
       
@@ -228,8 +229,8 @@ The post information remains the same, but extra features are now available:
   
   - **Edit:**
     
-    Clicking the "edit" icon, the user is redirected to the pre-populated post edit page.
-    
+    - Clicking the "edit" icon, the user is redirected to the pre-populated post edit page.
+   
   - **Delete:**
       
     Clicking the "delete" icon, a delete confirmation modal appears on the screen.
@@ -320,6 +321,63 @@ The post information remains the same, but extra features are now available:
     - The user can even add other explorers into their favorite list by clicking the "Fan" button. They can remove other explorers from the list by clicking the "Unfan" button.
 
     - It is NOT possible to edit another explorer's profile.
+
+
+#### Success messages
+
+The user gets feedback on their successful actions. Feedback is provided for the actions performed with posts, comments, and explorer profile. Please find additional information and images displaying the exact messages below.
+
+- **Posts:**
+  
+  <details><summary>Creating</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-create-post_aqyvum.png)
+  </details>
+
+  <details><summary>Updating</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700768000/success-edit-post_huo5gn.png)
+  </details>
+
+  <details><summary>Deleting</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-delete-post_cwqcy6.png)
+  </details>
+
+- **Comments:**
+  
+  <details><summary>Creating</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-create-comment_wvciyu.png)
+  </details>
+
+  <details><summary>Updating</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-edit-comment_gyregg.png)
+  </details>
+
+  <details><summary>Deleting</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-delete-comment_vmeqdy.png)
+  </details>
+
+- **Profile:**
+
+  <details><summary>Editing an explorer profile</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700768000/success-edit-profile_vusdrx.png)
+  </details>
+
+  <details><summary>Changing username</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700768000/success-edit-username_mdjjim.png)
+  </details>
+
+  <details><summary>Changing password</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-edit-password_bcoe4r.png)
+  </details>
+
 
 ## Testing
 
