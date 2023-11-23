@@ -120,7 +120,7 @@ function ExplorerPage() {
               {currentUser && !is_owner &&
                 (explorer?.favoriting_id ? (
                   <Button
-                    className={btnStyles.Unfan}
+                  className={`${btnStyles.Unfan} mt-2`}
                     onClick={() => handleUnfan(explorer)}
                   >
                     Unfan
