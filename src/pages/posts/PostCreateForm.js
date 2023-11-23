@@ -17,6 +17,8 @@ import { Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
+import Swal from 'sweetalert2';
+
 
 function PostCreateForm() {
   
@@ -67,6 +69,12 @@ function PostCreateForm() {
     try {
       const { data } = await axiosReq.post('/posts/', formData);
       history.push(`/posts/${data.id}`);
+      Swal.fire({
+        title: 'Congratulations!',
+        text: 'You have successfully created a post',
+        icon: 'success',
+        timer: 3000
+      })
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
