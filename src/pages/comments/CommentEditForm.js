@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 
 import btnStyles from "../../styles/Button.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
+import Swal from "sweetalert2";
 
 function CommentEditForm(props) {
     const { id, content, setShowEditForm, setComments } = props;
@@ -19,6 +20,11 @@ function CommentEditForm(props) {
       await axiosRes.put(`/comments/${id}/`, {
         content: formContent.trim(),
       });
+      Swal.fire({
+        text: 'You have successfully updated your comment!',
+        icon: 'success',
+        timer: 3000
+      })
       setComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.map((comment) => {
