@@ -8,6 +8,7 @@ import { axiosRes } from '../../api/axiosDefaults';
 import { EditDeleteDropdown } from '../../components/EditDeleteDropdown';
 import { useHistory } from 'react-router';
 import ModalDeleteConfirmation from '../../components/ModalDeleteConfirmation';
+import Swal from 'sweetalert2';
 
 const Post = (props) => {
 
@@ -55,6 +56,11 @@ const Post = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}`);
+      Swal.fire({
+        text: 'You have successfully deleted your post!',
+        icon: 'success',
+        timer: 3000
+      })
       history.goBack();
     } catch(err) {
       console.log(err);
