@@ -15,6 +15,7 @@ import { useParams } from "react-router";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { Alert } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 const UsernameForm = () => {
 
@@ -42,6 +43,11 @@ const UsernameForm = () => {
       await axiosRes.put("/dj-rest-auth/user/", {
         username,
       });
+      Swal.fire({
+        text: 'Your username has been updated successfully! Your new username is now visible for all the users',
+        icon: 'success',
+        timer: 3000
+      })
       setCurrentUser((prevUser) => ({
         ...prevUser,
         username,

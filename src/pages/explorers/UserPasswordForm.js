@@ -6,6 +6,7 @@ import { axiosRes } from '../../api/axiosDefaults';
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import Swal from 'sweetalert2';
 
 const UserPasswordForm = () => {
 
@@ -39,6 +40,11 @@ const UserPasswordForm = () => {
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
+      Swal.fire({
+        text: 'Your password is updated successfully! Sign in with you new password next time',
+        icon: 'success',
+        timer: 3000
+      })
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);

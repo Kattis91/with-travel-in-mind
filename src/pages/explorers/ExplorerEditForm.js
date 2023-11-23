@@ -12,6 +12,7 @@ import { Alert, Button } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";
+import Swal from "sweetalert2";
 
 const ExplorerEditForm = () => {
   const currentUser = useCurrentUser();
@@ -76,6 +77,11 @@ const ExplorerEditForm = () => {
         ...currentUser,
         explorer_image: data.image,
       }));
+      Swal.fire({
+        text: 'Your profile has been updated successfully!',
+        icon: 'success',
+        timer: 3000
+      })
       history.goBack();
     } catch (err) {
       console.log(err);
