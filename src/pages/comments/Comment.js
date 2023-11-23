@@ -8,6 +8,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
 import ModalDeleteConfirmation from "../../components/ModalDeleteConfirmation";
+import Swal from 'sweetalert2';
 
 const Comment = (props) => {
   const { 
@@ -56,6 +57,11 @@ const Comment = (props) => {
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
+      Swal.fire({
+        text: 'You have successfully deleted your comment!',
+        icon: 'success',
+        timer: 3000
+      })
     } catch (err) {}
   };
   
