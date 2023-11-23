@@ -8,6 +8,8 @@ import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+import Swal from 'sweetalert2';
+
 function CommentCreateForm(props) {
   const { post, setPost, setComments, explorerImage, explorer_id } = props;
   const [content, setContent] = useState("");
@@ -23,6 +25,11 @@ function CommentCreateForm(props) {
         content,
         post,
       });
+      Swal.fire({
+        text: 'Your comment has successfully been published!',
+        icon: 'success',
+        timer: 3000
+      })
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
