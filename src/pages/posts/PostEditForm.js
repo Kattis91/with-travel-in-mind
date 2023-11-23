@@ -13,6 +13,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { Alert, Image } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import Swal from 'sweetalert2';
 
 function PostEditForm() {
 
@@ -81,6 +82,11 @@ function PostEditForm() {
     try {
       await axiosReq.put(`/posts/${id}/`, formData);
       history.push(`/posts/${id}`);
+      Swal.fire({
+        text: 'You have successfully updated your post',
+        icon: 'success',
+        timer: 3000
+      })
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
