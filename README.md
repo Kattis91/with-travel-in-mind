@@ -1,5 +1,9 @@
 # With Travel In Mind
 
+"With Travel In Mind" is an online application designed to foster a community of travelers who share their experiences and knowledge about various destinations. The platform allows users to interact with each other by following, adding to favorites, commenting, bookmarking, and liking posts and comments. Whether you're a seasoned traveler or a novice explorer, With Travel In Mind is the perfect platform to connect with like-minded wanderers and discover new destinations.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700774762/am-i-responsive_mqr0hk.png)
+
 ## Features
 
 ### Existing Features
