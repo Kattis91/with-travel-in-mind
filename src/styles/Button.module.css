@@ -93,3 +93,17 @@
     background-color: #c43a51!important;
     color: white;
 }
+
+.Reset {
+    background-color: white;
+    color: rgb(65, 65, 70);
+    margin: 0 auto;
+    border: none;
+}
+
+.Reset:hover {
+    background-color: white;
+    color: rgb(65, 65, 70);
+    font-weight: bold;
+    border: none;
+}
