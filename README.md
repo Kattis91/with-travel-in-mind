@@ -472,15 +472,27 @@ The user gets feedback on their successful actions. Feedback is provided for the
 </details>
 
 <details> 
-<summary>Sign In</summary>
+<summary>Success messages</summary>
+
+*All the messages automatically disappear after 3 seconds.
+
+Images of the success messages can be found [here](#success-messages).
+
 | Feature | Expect | Action | Result | Pass/Fail |
 |---------|--------|--------|--------|-----------|
-| Sign Up / Login | When a user successfully signs up, a message indicating success should appear and disappear automatically*. | Click the Sign Up link in the navbar. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633883/static/images/successfully_sign_up.49295a9b72d4.png) |
-| Login | When a user successfully logs in, a message indicating success should appear and disappear automatically*. | Click the Login link in the navbar. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633883/static/images/successfully_sign_up.49295a9b72d4.png) | 
-| Logout | When a user successfully logs out, a message indicating success should appear and disappear automatically*. | Click the Logout link in the navbar. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633877/static/images/successfull_sign_out.53051a45d433.png) | 
-| Posting a recipe | When a user successfully posts a recipe, a message indicating success should appear and disappear automatically*. | Go to the "Add Recipe" page, fill out each field accurately, and press "SAVE". | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633883/static/images/successfully_posted_recipe.e8901f32c626.png) | 
-| Updating a recipe | When a user successfully updates a recipe, a message indicating success should appear and disappear automatically*. | Go to one of the recipes posted by you, click the "EDIT" button, make some changes and press "UPDATE". | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633892/static/images/successfully_updated_recipe.70906eac43ec.png) |
-| Deleting a recipe | When a user successfully deletes a recipe, a message indicating success should appear and disappear automatically*. | Go to one of the recipes posted by you, click the "DELETE" button, and then "DELETE RECIPE" when being asked if you are sure. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633862/static/images/successfully_deleted_recipe.8f4288c27d72.png) | 
+| Sign up | When a user successfully signs up, a message indicating success should appear and disappear automatically*. | Click the Sign Up link in the navbar. | The "Thanks for signing up, ${username}! Nice to have you here! Please sign in to get access to your profile and other site features." message appears on the screen. | Pass |
+| Sign in | When a user successfully signs in, a message indicating success should appear and disappear automatically*. | Click the Sign in link in the navbar. | The "Welcome ${username}! Nice to see you here!" message appears on the screen. | Pass | 
+| Sign out | When a user successfully signs out, a message indicating success should appear and disappear automatically*. | Click the Sign out link in the navbar. | The "You have successfully signed out!" message appears on the screen. | Pass | 
+| Publishing a post | When a user successfully publish a post, a message indicating success should appear and disappear automatically*. | Go to the "Add Post" page, fill out each field accurately, and press "Create". | The "You have successfully created a post" message appears on the screen. | Pass | 
+| Editing a post | When a user successfully updates a post, a message indicating success should appear and disappear automatically*. | Go to one of the posts published by you, click on the dropdown menu, choose the "Edit" icon, make some changes and press "Save". | The "You have successfully updated your post" message appears on the screen. | Pass |
+| Deleting a post | When a user successfully deletes a post, a message indicating success should appear and disappear automatically*. | Go to one of the posts published by you, click on the dropdown menu, choose the "Delete" icon, and click the "Yes!" button when being asked if you are sure. | The "You have successfully deleted your post!" message appears on the screen. | Pass |
+| Posting a comment | When a user successfully posts a comment, a message indicating success should appear and disappear automatically*. | Go to the post detail page, type your comment and press "Post". | The "Your comment has successfully been published!" message appears on the screen. | Pass | 
+| Updating a comment | When a user successfully updates a comment, a message indicating success should appear and disappear automatically*. | Go to one of the comments posted by you, click on the dropdown menu, choose the "Edit" icon, make some changes and press "Update". | The "You have successfully updated your comment!" message appears on the screen. | Pass |
+| Deleting a comment | When a user successfully deletes a comment, a message indicating success should appear and disappear automatically*. | Go to one of the comments posted by you, click on the dropdown menu, choose the "Delete" icon, and click the "Yes!" button when being asked if you are sure. | The "You have successfully deleted your comment!" message appears on the screen. | Pass |
+| Editing explorer profile | When a user successfully edits their explorer profile, a message indicating success should appear and disappear automatically*. | Go to your explorer profile, click on the dropdown menu located in the left top corner, choose the "Edit explorer profile" option, make some changes and press "Save". | The "Your profile has been updated successfully!" message appears on the screen. | Pass |
+| Changing username | When a user successfully changes their username, a message indicating success should appear and disappear automatically*. | Go to your explorer profile, click on the dropdown menu located in the left top corner, choose the "Change username" option, make some changes and press "Save". | The "Your username has been updated successfully! Your new username is now visible for all the users." message appears on the screen. | Pass |
+| Changing password | When a user successfully changes their password, a message indicating success should appear and disappear automatically*. | Go to your explorer profile, click on the dropdown menu located in the left top corner, choose the "Change password" option, change your password and press "Save". | The "Your password is updated successfully! Sign in with your new password next time." message appears on the screen. | Pass |
+
 
 </details>
 
