@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useHistory } from 'react-router';
 import { useRedirect } from '../../hooks/useRedirect';
+import Swal from 'sweetalert2';
 
 const SignUpForm = () => {
 
@@ -38,6 +39,12 @@ const SignUpForm = () => {
     try {
       await axios.post('/dj-rest-auth/registration/', signUpData)
       history.push('/signin');
+      Swal.fire({
+        text: `Thanks for signing up, ${username}! Nice to have you here!
+             Please sign in to get access to your profile and other site features.`,
+        icon: 'success',
+        timer: 3000        
+      })
     } catch (err){
       setErrors(err.response?.data)
     }

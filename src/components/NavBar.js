@@ -10,6 +10,7 @@ import { NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
 import Avatar from './Avatar';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const NavBar = () => {
@@ -24,6 +25,11 @@ const NavBar = () => {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
       setExpanded(!expanded);
+      Swal.fire({
+        text: 'You have successfully signed out!',
+        icon: 'success',
+        timer: 3000
+      })
     } catch (err) {
       console.log(err);
     }

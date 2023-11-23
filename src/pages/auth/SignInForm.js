@@ -9,6 +9,7 @@ import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
 import { useRedirect } from '../../hooks/useRedirect';
+import Swal from 'sweetalert2';
 
 function SignInForm() {
 
@@ -40,6 +41,11 @@ function SignInForm() {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
       history.goBack();
+      Swal.fire({
+        text: `Welcome ${username}! Nice to see you here!`,
+        icon: 'success',
+        timer: 3000
+      })
     } catch (err) {
       setErrors(err.response?.data);
     }
