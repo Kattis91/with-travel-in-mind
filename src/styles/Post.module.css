@@ -2,3 +2,8 @@
     margin-bottom: 10px;
     text-align: center;
 }
+
+.Link:hover,
+.Link:active {
+    color: #338f85!important;
+}

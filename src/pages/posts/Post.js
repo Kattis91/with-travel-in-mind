@@ -155,7 +155,9 @@ const Post = (props) => {
           <Card.Img src={image} alt={title} />
         </Link>
         <Card.Body>
-          {title && <Card.Title className="text-center">{title}</Card.Title>}
+          <Link className={styles.Links} to={`/posts/${id}`}>
+            {title && <Card.Title className="text-center">{title}</Card.Title>}
+          </Link>
           {description && <Card.Text className="text-center">{description}</Card.Text>}
           {place && <Card.Text className="text-center"><i class="fa-solid fa-location-dot"></i>{place}</Card.Text>}
           {region && <Card.Text className="text-center"><i class="fa-solid fa-globe"></i>{region}</Card.Text>}
