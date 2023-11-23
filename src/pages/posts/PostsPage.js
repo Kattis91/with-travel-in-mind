@@ -9,11 +9,13 @@ import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
+import btnStyles from "../../styles/Button.module.css";
+
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import PopularExplorers from "../explorers/PopularExplorers";
 import PopularPosts from "./PopularPosts";
 
@@ -46,6 +48,11 @@ function PostsPage({ message, filter = "" }) {
     
   }, [filter, search, region, pathname]);
 
+  const clearFilters = () => {
+    setSearch("")
+    setRegion("")
+  }
+   
   return (
     <>
     <Row className="h-100">
@@ -87,6 +94,19 @@ function PostsPage({ message, filter = "" }) {
               </Form>
             </Col>
         </Row>
+        <Row>
+          <Col md={{ span: 4, offset: 4 }} xs={{ span: 6, offset: 3 }}>
+            {search || region ? (
+              <Button
+                onClick={() => {
+                  clearFilters();
+                }}
+              >
+                Reset your search filter
+              </Button>
+            ) : null }  
+          </Col>   
+        </Row>   
   
         {hasLoaded ? (
           <>
