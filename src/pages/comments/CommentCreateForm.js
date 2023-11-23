@@ -65,7 +65,7 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`${btnStyles.Button} ${btnStyles.Purple} btn d-block ml-auto`}
+        className={`${btnStyles.Button} ${btnStyles.Purple} btn d-block ml-auto mb-2`}
         type="submit"
       >
         Post
