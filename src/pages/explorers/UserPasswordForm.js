@@ -41,9 +41,9 @@ const UserPasswordForm = () => {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
       Swal.fire({
-        text: 'Your password is updated successfully! Sign in with you new password next time',
+        text: 'Your password is updated successfully! Sign in with your new password next time.',
         icon: 'success',
-        timer: 3000
+        timer: 3000        
       })
     } catch (err) {
       console.log(err);

@@ -44,7 +44,7 @@ const UsernameForm = () => {
         username,
       });
       Swal.fire({
-        text: 'Your username has been updated successfully! Your new username is now visible for all the users',
+        text: 'Your username has been updated successfully! Your new username is now visible for all the users.',
         icon: 'success',
         timer: 3000
       })
