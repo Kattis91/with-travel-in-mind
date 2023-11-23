@@ -64,12 +64,22 @@ The message displayed when there are no results found:
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700678762/no-results-search_iyl2lc.png)
 
-- **Filter posts by region**:
+- **Filter posts by region:**
  
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700436195/search-by-region_vgnqrj.png)
 
-- **Search by typing in**:
-  - The user can search posts by post title or the name of the author/explorer.
+- **Search by typing in:**
+
+  The user can search posts by post title or the name of the author/explorer.
+
+- **Reset your search filter:**
+  
+  When the user chooses some region from the dropdown menu or types something in the search bar, "Reset your search filter" button appears on the screen.
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700773158/reset-your-search-filter_a6hrv2.png)
+
+    By clicking the button, the user resets the search.
+
 
 #### Add Post
 
