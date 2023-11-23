@@ -339,7 +339,7 @@ The post information remains the same, but extra features are now available:
 
 #### Success messages
 
-The user gets feedback on their successful actions. Feedback is provided for the actions performed with posts, comments, and explorer profile. Please find additional information and images displaying the exact messages below.
+The user gets feedback on their successful actions. Feedback is provided for the actions performed with posts, comments, and explorer profile. The user gets a feedback even when signing up, signing in and signing out. Please find additional information and images displaying the exact messages below.
 
 - **Posts:**
   
@@ -392,6 +392,22 @@ The user gets feedback on their successful actions. Feedback is provided for the
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700767999/success-edit-password_bcoe4r.png)
   </details>
 
+- **Authentication:**
+  
+  <details><summary>Signing up</summary>
+  
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700779156/success-sign-up_zn6r0o.png)
+  </details>
+
+  <details><summary>Signing in</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700779156/success-sign-in_ya80ah.png)
+  </details>
+
+  <details><summary>Signing out</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700779156/success-sign-out_qlg9wm.png)
+  </details>
 
 ## Testing
 
@@ -452,6 +468,19 @@ The user gets feedback on their successful actions. Feedback is provided for the
 | Sign in with the password only | When a user tries to submit the form without filling in the username, an error message should be displayed to that user. | Click on the "Sign in" link in the navigation bar, fill in the password and click the "Sign in" button. | The "Must include 'username" and "password'." error message is displayed to the user. | Pass |
 | Sign in with a non-existing username-password combination | When a user tries to submit the form with an incorrect username or password or both, an error message should be displayed to the user. | Click on the "Sign in" link in the navigation bar, fill in some random username and password, and click the "Sign in" button. | The "Unable to log in with provided credentials." error message appears on the screen. | Pass |
 | **Sign up now!** | Clicking on the "Sign up now!" link below the form should take the user to the sign up form. | Click the "Sign up now!" link. | The user is redirected to the sign up page. | Pass |
+
+</details>
+
+<details> 
+<summary>Sign In</summary>
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Sign Up / Login | When a user successfully signs up, a message indicating success should appear and disappear automatically*. | Click the Sign Up link in the navbar. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633883/static/images/successfully_sign_up.49295a9b72d4.png) |
+| Login | When a user successfully logs in, a message indicating success should appear and disappear automatically*. | Click the Login link in the navbar. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633883/static/images/successfully_sign_up.49295a9b72d4.png) | 
+| Logout | When a user successfully logs out, a message indicating success should appear and disappear automatically*. | Click the Logout link in the navbar. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633877/static/images/successfull_sign_out.53051a45d433.png) | 
+| Posting a recipe | When a user successfully posts a recipe, a message indicating success should appear and disappear automatically*. | Go to the "Add Recipe" page, fill out each field accurately, and press "SAVE". | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633883/static/images/successfully_posted_recipe.e8901f32c626.png) | 
+| Updating a recipe | When a user successfully updates a recipe, a message indicating success should appear and disappear automatically*. | Go to one of the recipes posted by you, click the "EDIT" button, make some changes and press "UPDATE". | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633892/static/images/successfully_updated_recipe.70906eac43ec.png) |
+| Deleting a recipe | When a user successfully deletes a recipe, a message indicating success should appear and disappear automatically*. | Go to one of the recipes posted by you, click the "DELETE" button, and then "DELETE RECIPE" when being asked if you are sure. | ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697633862/static/images/successfully_deleted_recipe.8f4288c27d72.png) | 
 
 </details>
 
