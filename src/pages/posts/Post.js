@@ -194,11 +194,21 @@ const Post = (props) => {
             {likes_count}
             {bookmark_id ? (
               <span onClick={handleUnbookmark}>
-                <i className="fa-solid fa-bookmark" />
+                <OverlayTrigger
+                  placement="top"
+                  overlay={<Tooltip>Remove from bookmarks!</Tooltip>}
+                >
+                   <i className="fa-solid fa-bookmark" />
+                </OverlayTrigger>
               </span>
             ) : currentUser ? (
               <span onClick={handleBookmark}>
-                <i className="fa-regular fa-bookmark" />
+                <OverlayTrigger
+                  placement="top"
+                  overlay={<Tooltip>Click to bookmark this post!</Tooltip>}
+                >
+                   <i className="fa-regular fa-bookmark" />
+                </OverlayTrigger>
               </span>   
             ) : (
               <span>
