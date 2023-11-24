@@ -159,8 +159,8 @@ const Post = (props) => {
             {title && <Card.Title className="text-center">{title}</Card.Title>}
           </Link>
           {description && <Card.Text className="text-center">{description}</Card.Text>}
-          {place && <Card.Text className="text-center"><i class="fa-solid fa-location-dot"></i>{place}</Card.Text>}
-          {region && <Card.Text className="text-center"><i class="fa-solid fa-globe"></i>{region}</Card.Text>}
+          {place && <Card.Text className="text-center"><i className="fa-solid fa-location-dot"></i>{place}</Card.Text>}
+          {region && <Card.Text className="text-center"><i className="fa-solid fa-globe"></i>{region}</Card.Text>}
           <div className={styles.Post}>
             <Link to={`/posts/${id}`}>
               <i className="far fa-comments" />
