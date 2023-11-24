@@ -4,7 +4,38 @@
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700774762/am-i-responsive_mqr0hk.png)
 
-## Design
+## User Experience
+
+I employed the design thinking process to create a website with only essential information, resulting in easy navigation for users.
+
+Throughout the entire development process, I followed the Agile methodology, which involved careful planning and continuous improvement until the final product was completed. To stay organized and on track, I made use of a GitHub project and a [Kanban board](https://github.com/users/Kattis91/projects/4). For more details on the User Stories, please refer to the subsection below ⇩.
+
+### Strategy
+
+All my User Stories can be found [here](https://github.com/Kattis91/with-travel-in-mind/issues).
+
+During the planning process, the project was divided into 39 User Stories, each belonging to an Epic and labeled according to MoSCoW Prioritization, indicating the importance of the feature. 
+
+To manage and structure the workload, the User Stories were grouped into three iterations. Each iteration was carefully planned to ensure that no more than 60% of the must-have User Stories were included. 
+
+During the development, I had to make some adjustments to the plan and rearrange some items to achieve better workflow. However, I was still able to maintain control of the situation and ensure that everything was completed on time.
+
+All the User Stories include Acceptance Criteria and Tasks.
+
+Once a User Story was completed, it was marked as closed to keep track of the progress.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700864751/user-story_snskaa.png)
+
+#### Key Project Goal
+
+The goal is to create a community platform that connects travelers and allows them to share their experiences and the excitement of discovering new destinations. The platform is designed to be user-friendly and fosters a sense of community among travelers. Everybody should feel welcome!
+
+#### Target Audience
+
+Are you an experienced traveler and have lots to share? Feel free to share your treasures with others here.
+Or are you busy with other things right now and only have travel in mind?
+Join the community and gain inspiration for your upcoming travels. 
+
 
 ### Colour Scheme
 
@@ -77,7 +108,7 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ## Wireframes
 
-I created wireframes using [Figma](https://www.figma.com/).
+I created Wireframes using [Figma](https://www.figma.com/).
 
 <details>
 <summary>Home page</summary>
