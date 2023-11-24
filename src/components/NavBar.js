@@ -19,7 +19,7 @@ const NavBar = () => {
   const setCurrentUser = useSetCurrentUser();
 
   const [expanded, setExpanded] = useState(false);
-  
+
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
@@ -35,21 +35,18 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
-    <NavLink 
-      className={styles.NavLink} 
-      activeClassName={styles.Active} 
-      to="/posts/create"
-      onClick={() => {
-        setExpanded(!expanded);
-      }}
-    >
-      <i className="fa-solid fa-folder-plus"></i> Add Post
-    </NavLink>
-  )
-
   const loggedInIcons = (
     <>
+      <NavLink 
+        className={styles.NavLink} 
+        activeClassName={styles.Active} 
+        to="/posts/create"
+        onClick={() => {
+          setExpanded(!expanded);
+        }}      
+      >
+        <i className="fa-solid fa-folder-plus"></i> Add Post
+      </NavLink>
       <NavDropdown 
         id={styles.dropdownMenu}
         title={
@@ -146,7 +143,6 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="75" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
         <Navbar.Toggle 
           onClick={() => {
             setExpanded(!expanded);
@@ -164,7 +160,7 @@ const NavBar = () => {
                 setExpanded(!expanded);
               }}
             >
-              <i class="fa-solid fa-house-user"></i>Home
+              <i className="fa-solid fa-house-user"></i>Home
             </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
