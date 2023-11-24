@@ -40,6 +40,9 @@ const NavBar = () => {
       className={styles.NavLink} 
       activeClassName={styles.Active} 
       to="/posts/create"
+      onClick={() => {
+        setExpanded(!expanded);
+      }}
     >
       <i className="fa-solid fa-folder-plus"></i> Add Post
     </NavLink>
