@@ -61,7 +61,7 @@ const Post = (props) => {
         icon: 'success',
         timer: 3000
       })
-      history.goBack();
+      history.push('/');
     } catch(err) {
       console.log(err);
     }
