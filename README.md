@@ -18,18 +18,18 @@
 
 - Logo and links to the home page are **available for all users**. However, there are some differences in how the navigation bar looks for non-logged and logged-in users.
  
-  - **Non-logged users:**
+  **Non-logged users:**
 
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700430296/navbar-logged-out_kvjjih.png)
     
     - The navigation bar consists of the Logo, Home, Sign In, and Sign Up links. 
     - Clicking on "Sign In" or "Sign Up" directs users to their respective pages.
 
-  - **Logged-in users:**
+  **Logged-in users:**
     
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700430296/navbar-logged-in_rp6sbg.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837390/navbar-logged-in_ctonuw.png)
 
-    - The navigation bar includes the Logo, "Add Post" link, "For You" dropdown menu, and links to Sign Out and Explorer's profile.
+    - The navigation bar includes the Logo, "Home" and Add Post" links, "For You" dropdown menu, and links to Sign Out and Explorer's profile.
     
     - Clicking "Add Post" takes the user to a page where they can fill in a form to publish a post.
     
@@ -37,20 +37,20 @@
 
       ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700657695/dropdown-menu_utcrpv.png)
       
-      - **Bookmarks:**
+    - **Bookmarks:**
       
         - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
 
         - If the user hasn't bookmarked any posts, a message saying that appears on the screen:
       ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-bookmarks_fsntzf.png)
       
-      - **Favorites:**
+    - **Favorites:**
 
         - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
 
           ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-favorites_umb7g0.png)
      
-      - **Following:**
+    - **Following:**
 
         - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
 
@@ -59,6 +59,16 @@
     - Clicking "Sign out" logs out the user and directs to the home page.
     
     - The avatar and "Explorer" takes the user to their explorer profile.
+  
+- On smaller devices, the navigation bar is displayed using a hamburger menu:
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837644/hamburger-menu-logged-out_gsr683.png)
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837821/hamburger-menu-with-dropdown-closed_s0gyjr.png)
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837390/hamburger-menu-with-dropdown-opened_lirn9t.png)
+
+
 
 #### Search
 
