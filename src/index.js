@@ -8,15 +8,13 @@ import { CurrentUserProvider } from './contexts/CurrentUserContext';
 import { ExplorerDataProvider } from './contexts/ExplorerDataContext';
 
 ReactDOM.render(
-  <React.StrictMode>
     <Router>
       <CurrentUserProvider>
         <ExplorerDataProvider>
           <App />
         </ExplorerDataProvider>
       </CurrentUserProvider>
-    </Router>
-  </React.StrictMode>,
+    </Router>,
   document.getElementById('root')
 );
 
