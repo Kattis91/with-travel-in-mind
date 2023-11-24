@@ -25,4 +25,10 @@
         margin-right: 0px;
         letter-spacing: 0;
     }
+
+    .NavLink:hover,
+    #dropdownMenu{
+        font-weight: normal;
+        color: black;
+    }
 }
