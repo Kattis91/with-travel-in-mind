@@ -4,6 +4,77 @@
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700774762/am-i-responsive_mqr0hk.png)
 
+## Design
+
+### Colour Scheme
+
+The choice of colors depends on the background image chosen for home, sign up, login, and logout pages.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700841747/colour_scheme_rhyczb.png)
+
+- **`338F85`** - primary color. The color appears:
+  - As background color for all the pages. 
+  - When hovering over:
+    - post titles.
+    - usernames in the popular explorers container.
+  - Navbar icons when they are not active.
+  - Font Awesome icons (place, region, comments, likes and bookmarks).  
+
+  All the icons are contained in a white box, creating contrast and enhancing visual appeal.
+
+- **`6C63FF`** is another color that appears consistently on all pages. The color appears:
+  
+  - In the logo:
+    
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700844762/logo_mafegk.png)
+
+  - Buttons:
+  
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700844385/follow-button_kjcrwt.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700844385/create-button_qdhbdp.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700844385/save-button_rz8qzf.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700844385/update-button_x72hfz.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700844522/post-button_h3blch.png)
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845468/yes-button_rv3srg.png)
+
+  - Hovering over the "Unfollow" button.
+
+  - When hovering over the icons.
+
+  - When the navbar link is active.
+
+- **`AFADE0`** appears:
+  
+  - "Unfollow" button:
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700846564/unfollow-button_rlmqvd.png)
+
+  - When hovering over the "Follow" button.
+
+- **`C43A51`** used for the buttons.
+   
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845357/sign-in-button_us36n5.png)
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845357/sign-up-button_v81fk1.png)
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845357/cancel-button_sd1ug5.png)
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845631/fun-button_b8qtpw.png)
+
+  The color is chosen for contrast and to match the image on the sign up and sign in pages.
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845782/sign-in-image_ifs3iv.png)
+
+- **`FFC0CB`** is used for the unfan button for the contrast with the fan button.
+  
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700845963/unfan-button_o8qutx.png)
+
+- **`FFFFFF`** is used as a "container" color on all features and pages, creating contrast and enhancing visual appeal with the background. It is also used as a text color on the buttons shown above.
+
+- **`414146`** is the primary text color used throughout the pages.
+
+### Typography
+
+The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Serif in case Ubuntu fails to load. This font is easy to read despite the platform's low usage of text.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700847347/ubuntu-font_psl0k6.png)
+
 ## Features
 
 ### Existing Features
