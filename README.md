@@ -75,6 +75,56 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700847347/ubuntu-font_psl0k6.png)
 
+## Wireframes
+
+I created wireframes using [Figma](https://www.figma.com/).
+
+<details>
+<summary>Home page</summary>
+LEFT: all users | RIGHT: logged-in users.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-homepage_dfcdre.png)
+
+</details>
+
+<details>
+<summary>Post detail page</summary>
+LEFT: all users | RIGHT: logged-in users.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-detail-page_zprbxh.png)
+
+</details>
+
+<details>
+<summary>Add a Post | Edit a Post</summary>
+Add and edit post pages share the same wireframe, with the only difference being that the edit form is pre-populated with existing post data.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-add-post-page_do9liq.png)
+
+</details>
+
+<details>
+<summary>Explorer Profile Page</summary>
+LEFT: all users | RIGHT: logged-in users.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-explorer-page_dtu42y.png)
+
+</details>
+
+<details>
+<summary>Sign Up Page</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-sign-up-page_zmse4u.png)
+
+</details>
+
+<details>
+<summary>Sign In Page</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-sign-in-page_e2vfgz.png)
+
+</details>
+
 ## Features
 
 ### Existing Features
