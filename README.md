@@ -39,22 +39,22 @@
       
     - **Bookmarks:**
       
-        - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
+      - When the user clicks on "Bookmarks", they will be directed to a page where they can find all the posts they have previously bookmarked.
 
-        - If the user hasn't bookmarked any posts, a message saying that appears on the screen:
+      - If the user hasn't bookmarked any posts, a message saying that appears on the screen:
       ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-bookmarks_fsntzf.png)
       
     - **Favorites:**
 
-        - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
+      - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
 
-          ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-favorites_umb7g0.png)
+        ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-favorites_umb7g0.png)
      
     - **Following:**
 
-        - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
+      - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
 
-          ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-following_w9a3tl.png)
+        ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-following_w9a3tl.png)
     
     - Clicking "Sign out" logs out the user and directs to the home page.
     
@@ -67,8 +67,6 @@
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837821/hamburger-menu-with-dropdown-closed_s0gyjr.png)
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837390/hamburger-menu-with-dropdown-opened_lirn9t.png)
-
-
 
 #### Search
 
