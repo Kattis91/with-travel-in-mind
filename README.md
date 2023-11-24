@@ -4,6 +4,34 @@
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700774762/am-i-responsive_mqr0hk.png)
 
+# Table of Contents
+
+- [User Experience](#user-experience)
+  - [Strategy](#strategy)
+  - [Structure](#structure)
+  - [Skeleton](#skeleton)
+  - [Surface](#surface)
+
+- [Existing Features](#existing-features)
+  - [Navigation Bar](#navigation-bar)
+  - [Search](#search)
+  - [Add Post](#add-post)
+  - [Sign Up](#sign-up)
+  - [Sign In](#sign-in)
+  - [Posts Page](#posts-page)
+  - [Post Detail page](#post-detail-page)
+  - [Popular Explorer](#popular-explorers)
+  - [Hottest Posts](#hottest-posts)
+  - [Explorer Profiles](#explorer-profiles)
+  - [Success messages](#success-messages)
+
+- [Testing](#testing)
+  
+- [Fixed Bugs](#fixed-bugs)
+
+- [Deployment](#deployment)
+
+
 ## User Experience
 
 I employed the design thinking process to create a website with only essential information, resulting in easy navigation for users.
@@ -42,7 +70,59 @@ The website is organized into several sections, including some that are only ava
 
 For more detailed information about mentioned features and all the other features see section [Existing Features](#existing-features).
 
-### Colour Scheme
+### Skeleton
+
+I created Wireframes using [Figma](https://www.figma.com/).
+
+<details>
+<summary>Home page</summary>
+LEFT: all users | RIGHT: logged-in users.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-homepage_dfcdre.png)
+
+</details>
+
+<details>
+<summary>Post detail page</summary>
+LEFT: all users | RIGHT: logged-in users.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-detail-page_zprbxh.png)
+
+</details>
+
+<details>
+<summary>Add a Post | Edit a Post</summary>
+Add and edit post pages share the same wireframe, with the only difference being that the edit form is pre-populated with existing post data.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-add-post-page_do9liq.png)
+
+</details>
+
+<details>
+<summary>Explorer Profile Page</summary>
+LEFT: all users | RIGHT: logged-in users.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-explorer-page_dtu42y.png)
+
+</details>
+
+<details>
+<summary>Sign Up Page</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-sign-up-page_zmse4u.png)
+
+</details>
+
+<details>
+<summary>Sign In Page</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-sign-in-page_e2vfgz.png)
+
+</details>
+
+### Surface
+
+#### Colour Schema
 
 The choice of colors depends on the background image chosen for home, sign up, login, and logout pages.
 
@@ -105,67 +185,16 @@ The choice of colors depends on the background image chosen for home, sign up, l
 
 - **`414146`** is the primary text color used throughout the pages.
 
-### Typography
+#### Typography
 
 The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Serif in case Ubuntu fails to load. This font is easy to read despite the platform's low usage of text.
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700847347/ubuntu-font_psl0k6.png)
 
-## Wireframes
 
-I created Wireframes using [Figma](https://www.figma.com/).
+## Existing Features
 
-<details>
-<summary>Home page</summary>
-LEFT: all users | RIGHT: logged-in users.
-
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-homepage_dfcdre.png)
-
-</details>
-
-<details>
-<summary>Post detail page</summary>
-LEFT: all users | RIGHT: logged-in users.
-
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-detail-page_zprbxh.png)
-
-</details>
-
-<details>
-<summary>Add a Post | Edit a Post</summary>
-Add and edit post pages share the same wireframe, with the only difference being that the edit form is pre-populated with existing post data.
-
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-add-post-page_do9liq.png)
-
-</details>
-
-<details>
-<summary>Explorer Profile Page</summary>
-LEFT: all users | RIGHT: logged-in users.
-
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-explorer-page_dtu42y.png)
-
-</details>
-
-<details>
-<summary>Sign Up Page</summary>
-
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-sign-up-page_zmse4u.png)
-
-</details>
-
-<details>
-<summary>Sign In Page</summary>
-
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700854853/wireframes-sign-in-page_e2vfgz.png)
-
-</details>
-
-## Features
-
-### Existing Features
-
-#### Navigation Bar
+### Navigation Bar
 
 - The navigation bar is complete and responsive. It appears consistently on every page, making navigation more convenient.
 
@@ -225,7 +254,7 @@ LEFT: all users | RIGHT: logged-in users.
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837390/hamburger-menu-with-dropdown-opened_lirn9t.png)
 
-#### Search
+### Search
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435547/search_ietn9p.png)
 
@@ -250,7 +279,7 @@ The message displayed when there are no results found:
     By clicking the button, the user resets the search.
 
 
-#### Add Post
+### Add Post
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700599677/add-post_h8xke0.png)
 
@@ -280,7 +309,7 @@ The message displayed when there are no results found:
 
 - When the user clicks on the **Cancel** button, they are redirected back to the page they were on before clicking "Add Post".
 
-#### Sign Up
+### Sign Up
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700606692/sign-up-form_ruamir.png)
 
@@ -315,7 +344,7 @@ The message displayed when there are no results found:
 
 - Clicking on **Sign in** takes th user to the Sign in form.
 
-#### Sign In
+### Sign In
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700606692/sign-in-form_ofjnqa.png)
 
@@ -347,7 +376,7 @@ The message displayed when there are no results found:
   
 - Clicking on **Sign up now!** takes th user to the Sign up form.
 
-#### Posts page
+### Posts page
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658316/post-header_psllue.png)
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658317/post-image_rj77dw.png)
@@ -368,7 +397,7 @@ Each post contains the following features:
 - Bookmark icon with the number of bookmarks.
   - Logged in users can bookmark posts/remove bookmarks from posts.
 
-#### Post Detail page
+### Post Detail page
 
 When the user clicks on the post, they are redirected to the post's detail page.
 
@@ -419,7 +448,7 @@ The post information remains the same, but extra features are now available:
 
     - Clicking "Cancel" closes the modal, keeping the user on selected posts page.
 
-#### Popular explorers
+### Popular explorers
 
 - All users, including non-logged in users, can view a list of the most popular profiles (explorers).
 
@@ -442,7 +471,7 @@ The post information remains the same, but extra features are now available:
   - **Mobile** (displayed at the top of the page below navbar):
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700648334/popular-explorers-mobile_ujvh4o.png)
 
-#### Hottest posts
+### Hottest posts
 
 - All users, including non-logged in users, can view a list of the most hottest posts.
 
@@ -461,7 +490,7 @@ The post information remains the same, but extra features are now available:
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700649268/hottest-posts-mobile_zl8mpd.png)
   The number of posts shown is limited to **three**.
 
-#### Explorer profiles
+### Explorer profiles
 
 - All the explorer profiles have the same structure. 
 
@@ -502,7 +531,7 @@ The post information remains the same, but extra features are now available:
     - It is NOT possible to edit another explorer's profile.
 
 
-#### Success messages
+### Success messages
 
 The user gets feedback on their successful actions. Feedback is provided for the actions performed with posts, comments, and explorer profile. The user gets a feedback even when signing up, signing in and signing out. Please find additional information and images displaying the exact messages below.
 
