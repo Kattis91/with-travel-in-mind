@@ -36,6 +36,11 @@ Are you an experienced traveler and have lots to share? Feel free to share your 
 Or are you busy with other things right now and only have travel in mind?
 Join the community and gain inspiration for your upcoming travels. 
 
+### Structure
+
+The website is organized into several sections, including some that are only available to logged-in users. All visitors can view detailed information about each post. However, logged-in users have additional privileges, such as publishing, editing, and deleting their own posts, as well as interacting with other posts by liking, bookmarking, and commenting on them. The website is designed to facilitate easy searches for posts by allowing users to search by post title or author username or by sorting posts by region. Logged-in users can even sort posts by going to the page with only bookmarked posts or posts by people they follow or have in their favorite list.
+
+For more detailed information about mentioned features and all the other features see section [Existing Features](#existing-features).
 
 ### Colour Scheme
 
