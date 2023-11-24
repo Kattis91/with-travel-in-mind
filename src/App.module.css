@@ -32,14 +32,14 @@
 }
 
 a {
-    color: rgb(65, 65, 70);
+    color: #414146;
     transition: color ease-in-out 0.3s;
 }
 
 a:hover {
     text-decoration: none;
     font-weight: bold;
-    color: rgb(65, 65, 70);
+    color: #414146;
 }
 
 a:hover i {

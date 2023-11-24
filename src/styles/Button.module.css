@@ -10,11 +10,11 @@
 }
 
 .Button:focus {
-    background-color: rgb(196, 58, 81);
+    background-color: #c43a51;
 }
 
 .Bright {
-    background-color: rgb(196, 58, 81);
+    background-color: #c43a51;
     color: white;
 }
 
@@ -83,7 +83,7 @@
 .Unfan,
 .Unfan:focus,
 .Unfan:active {
-    background-color: pink;
+    background-color: #ffc0cb;
     color: black;
     border: none;
 }
