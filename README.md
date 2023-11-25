@@ -687,8 +687,26 @@ Images of the success messages can be found [here](#success-messages).
 | Changing username | When a user successfully changes their username, a message indicating success should appear and disappear automatically*. | Go to your explorer profile, click on the dropdown menu located in the left top corner, choose the "Change username" option, make some changes and press "Save". | The "Your username has been updated successfully! Your new username is now visible for all the users." message appears on the screen. | Pass |
 | Changing password | When a user successfully changes their password, a message indicating success should appear and disappear automatically*. | Go to your explorer profile, click on the dropdown menu located in the left top corner, choose the "Change password" option, change your password and press "Save". | The "Your password is updated successfully! Sign in with your new password next time." message appears on the screen. | Pass |
 
-
 </details>
+
+### Testing of User Stories
+
+#### Iteration 1
+
+| User Story | How are they achieved? | EPIC | Label |
+|------------|------------------------|------|-------|
+| As a User I can sign up so that I can create a profile. | The user can easily register by creating a username and password, and then confirming the password. After successful registration, the user is provided with feedback and redirected to the sign-in page. | Authentication | Must-Have |
+| As a User I can sign into my account so that I can access all the site's features. | The user can log in by entering their registered username and password. The "Add Post" link, "For You" dropdown menu, and a link to the user's explorer profile appear in the navbar. The user gets the opportunity to like, comment, and bookmark posts, follow other users and add them into the favorite list, like comments, and update/delete comments/posts, as well as update explorer profile, username, and password. | | Authentication | Must-Have | 
+| As a User I can sign out of my account so that I can close the application and navigate away from the page. | The user can easily sign out by clickin the "Sign out" link in the navigation bar. After successful sign out, the user is redirected to the home page of the site. | Authentication | Must-Have |
+| As a User I can view a navbar from every page so that I can easily navigate between pages. | Navbar links at the top of the page have easily understandable names. The navbar looks different for logged-in and unlogged users(see below for more details). It appears consistently on every page, making navigation more convenient. The navbar is responsive and is presented in the form of a hamburger menu on smaller devices. | Navigation Bar | Must-Have |
+| As a User I can see the appropriate site access options so that I can easily access links to change my login status. | When a user is logged in, the navigation bar displays links to "Add Post", profile and Sign out pages, along with the "For You" dropdown menu containing links to bookmarks, following, favorites feeds. | Navigation Bar | Must-Have |
+| As a logged-in User I can post an image so that I can share my travel experience with others. | When logged in, the user can easily publish a post by clicking the "Add Post" link in the navbar and filling out the form. | Posts | Must-Have |
+| As a User I can navigate through pages quickly so that I can view content seamlessly without page refresh. | All the links work as they should. Clicking the links, the user is redirected to the pages the links are for. | Navigation Bar | Should-Have | 
+| As a User I can click on a post to view the full post details so that I can find out more information about the post | All the posts are displayed on the homepage and are accessible to all users. When a user clicks on either the post image or the post title, they will be redirected to a new page where they can view comments related to the post, as well the post information that was previously visible on the homepage. | Posts | Should-Have |
+| As a User I can search for posts with keywords so that I can find the posts and explorers I am curious about at the moment.| The search functionality is accessible to all users on all post pages. The user can search post by the author/title/place or filter them by choosing a region in the dropdown menu. | Posts | Should-Have |
+| As a User I can use a default profile image so that I don’t have to upload my own. | Upon signing up, users receive a default profile image which they can later choose to change by uploading their own. They can also keep the default image. | Explorer | Should-Have |
+| As a logged-in User I can like other users' posts so that I can show my appreciation to the author. | All logged-in users, except the post owner, can like posts, which increases the number of likes. | Likes | Should-Have |
+| As a logged-in User I can unlike a post so that I can remove a like if I don't want to like the post anymore. | All users who previously liked the post can unlike it, causing the number of likes to decrease by one (per like). | Likes | Could-Have |
 
 ## Fixed Bugs
 
