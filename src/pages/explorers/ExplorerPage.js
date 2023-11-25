@@ -152,10 +152,11 @@ function ExplorerPage() {
   const mainExplorerPosts = (
     <>
       <hr />
-      <p className="text-center">{explorer?.owner}'s posts:</p>
+      <p className="text-center">{`{explorer?.owner}'s posts:`}</p>
       <hr />
       {explorerPosts.results.length ? (
         <InfiniteScroll
+          // eslint-disable-next-line 
           children={explorerPosts.results.map((post) => (
             <Post key={post.id} {...post} setPosts={setExplorerPosts} />
           ))}

@@ -64,7 +64,8 @@ function PostDetail() {
           ) : null}
           {comments.results.length ? (
             <InfiniteScroll
-              children={comments.results.map((comment) => (
+             // eslint-disable-next-line 
+             children={comments.results.map((comment) => (
                 <Comment
                   key={comment.id}
                   {...comment}

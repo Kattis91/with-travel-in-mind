@@ -3,16 +3,19 @@ import { Dropdown } from "react-bootstrap";
 import styles from '../styles/EditDeleteDropdown.module.css'
 import { useHistory } from "react-router";
 
+// The forwardRef is important!!
+// Dropdown needs access to the DOM node in order to position the Menu
+// eslint-disable-next-line 
 const Bars = React.forwardRef(({ onClick }, ref) => (
-    <i
-      className="fa-solid fa-bars"
-      ref={ref}
-      onClick={(e) => {
-        e.preventDefault();
-        onClick(e);
-      }}
-    />
-  ));
+  <i
+    className="fa-solid fa-bars"
+    ref={ref}
+    onClick={(e) => {
+      e.preventDefault();
+      onClick(e);
+    }}
+  />
+));
 
 export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
   return (

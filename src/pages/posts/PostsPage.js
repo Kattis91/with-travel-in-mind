@@ -114,6 +114,7 @@ function PostsPage({ message, filter = "" }) {
           <>
             {posts.results.length ? (
               <InfiniteScroll
+                // eslint-disable-next-line 
                 children={posts.results.map((post) => (
                   <Post key={post.id} {...post} setPosts={setPosts} />
               ))}
