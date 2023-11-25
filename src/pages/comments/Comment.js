@@ -62,7 +62,9 @@ const Comment = (props) => {
         icon: 'success',
         timer: 3000
       })
-    } catch (err) {}
+    } catch (err) {
+      console.log(err)
+    }
   };
   
   const handleCommentLike = async () => {
@@ -110,7 +112,7 @@ const Comment = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own comment!</Tooltip>}
+              overlay={<Tooltip>{`You can't like your own comment!`}</Tooltip>}
             >
               <i className={`${styles.LikeUnlike} fa-regular fa-heart`} />
             </OverlayTrigger>
