@@ -785,6 +785,58 @@ All the pages passed through the validator without any errors and warnings to sh
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
 
+#### CSS
+
+Validator: [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator).
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/css-validator_md8sv5.png)
+
+
+#### JavaScript
+
+Validator: [ESLint](https://eslint.org/).
+
+All JavaScript files in the "With Travel In Mind" project have been run through the JavaScript ESLinter. 
+
+The following errors were corrected:
+
+- **`'React' must be in scope when using JSX`**
+  
+  _The solution_:
+
+  Update the extends to look like below:
+
+  ````
+  module.exports = {
+    extends: [
+      'plugin:react/recommended',
+      'plugin:react/jsx-runtime',
+    ]
+  }
+  ````
+
+- **`'React' is defined but never used`**
+
+  _The solution_: 
+    
+  Install the following module `npm install --save-dev eslint-plugin-react`. 'plugin:react/recommended is already added ino extends in the .eslintrc.js file.
+    
+- **`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`**. 
+  
+  _The solution_:
+
+  Take the text inside template literals: `{`${explorer?.owner}'s posts:`}`
+  
+  Click [here](https://stackoverflow.com/questions/73271987/19259-error-can-be-escaped-with-apos-lsquo-39-rsquo-r) to come to the source.
+
+- **`Do not pass children as props. Instead, nest children between the opening and closing tags`**
+  
+  _The solution_:
+
+  As the code is based on the code provided by Code Institute I chose to ignore that by disable the line: `eslint-disable-next-line` 
+
+  Click [here](https://stackoverflow.com/questions/71097299/how-can-i-resolve-reactmarkdown-that-uses-children-as-a-prop-w-error-do-not-p) to come to the source.
+
 ## Fixed Bugs
 
 - NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
