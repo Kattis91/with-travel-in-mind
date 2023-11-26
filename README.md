@@ -646,6 +646,17 @@ The user gets feedback on their successful actions. Feedback is provided for the
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700779156/success-sign-out_qlg9wm.png)
   </details>
 
+## Testing and Validation
+
+Detailed testing of the site can be found at [TESTING.md](TESTING.md). 
+
+Testing includes following:
+
+- Validator testing
+- Responsivness & Browser Compability Testing
+- Manual Testing
+- Testing of User Stories
+
 ## Fixed Bugs
 
 - NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
