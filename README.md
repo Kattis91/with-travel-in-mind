@@ -575,7 +575,6 @@ The post information remains the same, but extra features are now available:
 
     - It is NOT possible to edit another explorer's profile.
 
-
 ### Success messages
 
 The user gets feedback on their successful actions. Feedback is provided for the actions performed with posts, comments, and explorer profile. The user gets a feedback even when signing up, signing in and signing out. Please find additional information and images displaying the exact messages below.
@@ -647,6 +646,56 @@ The user gets feedback on their successful actions. Feedback is provided for the
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700779156/success-sign-out_qlg9wm.png)
   </details>
+
+## Reusable Components
+
+Several reusable React components were created to reduce code duplication.
+
+**`Asset.js`**
+
+The asset component is utilized throughout the site to display a loading spinner from react-bootstrap while content is being processed.
+The component is used on the following pages:
+
+- ExplorerPage.js
+- PopularExplorers.js
+- PopularPosts.js
+- PostCreateForm.js
+- PostDetail.js
+- PostsPage.js
+
+**`Avatar.js`**
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701030956/avatar_ya1mft.png)
+
+This component displays the user's profile image, which can be customized or set to the default image. The default height is set to 55. The component is used on the following pages:
+
+- Comment.js
+- CommentCreateForm.js
+- Explorer.js
+- Post.js
+
+**`EditDeleteDropdown.js`**
+
+ The component is accessed for editing or deleting posts and comments, and for updating the explorer profile. 
+
+**`ModalDeleteConfirmation.js`**
+
+To enhance the defensive design of the website, I implemented a validation check to ensure that data is not deleted accidentally. To achieve this, I have created a modal component that prompts the user to confirm their choice before deleting data from the site. The modal component is triggered when the user clicks on the delete icon in the hamburger menu (EditDeleteDropdown component) for a post or a comment. This component verifies the type of data that the user intends to delete and customizes the confirmation message accordingly. Once the user clicks on the "Yes!" button, the corresponding handleDelete function is executed, and the data is permanently removed from the site.
+
+**When choosing to delete a post:**
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671722/post-delete-confirmation_nwr1qi.png)
+
+**When choosing to delete a comment:**
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671870/comment-delete-confirmation_lg2xax.png)
+
+
+**`Navbar.js`**
+
+The nav bar component is a crucial element of the website that manages the main site navigation menu. It incorporates a function to sign out the user. The icons are sorted into two groups, one for logged-out users and the other for logged-in users. The appropriate icons are displayed based on whether the user is authenticated or not.
+
+Click [here](#navigation-bar) to find more information about Navigation bar.
 
 ## Testing and Validation
 
