@@ -25,7 +25,7 @@
   - [Explorer Profiles](#explorer-profiles)
   - [Success messages](#success-messages)
 
-- [Testing](#testing)
+- [Testing and Validation](#testing-and-validation)
   
 - [Fixed Bugs](#fixed-bugs)
 
@@ -538,6 +538,8 @@ The post information remains the same, but extra features are now available:
 - All the explorer profiles have the same structure. 
 
 - Bio, region, and dream destination are optional fields.
+
+- This section will showcase the posts published by the user.
 
 - There are a few discrepancies between the user's profile and profiles of other explorers.
 
