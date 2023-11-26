@@ -16,12 +16,12 @@ const PopularExplorers = ({ mobile }) => {
           <p className='text-center'>Follow these popular explorers &#11088;</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
-              {popularExplorers.results.slice(0, 5).map((explorer) => (
+              {popularExplorers.results.slice(0, 4).map((explorer) => (
                 <Explorer key={explorer.id} explorer={explorer} mobile />
               ))}
             </div>
           ) : (
-            popularExplorers.results.map((explorer) => (
+            popularExplorers.results.slice(0, 10).map((explorer) => (
               <Explorer key={explorer.id} explorer={explorer} />
             ))
           )}
