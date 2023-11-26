@@ -25,6 +25,8 @@
   - [Explorer Profiles](#explorer-profiles)
   - [Success messages](#success-messages)
 
+- [Reusable Components](#reusable-components)
+
 - [Testing and Validation](#testing-and-validation)
   
 - [Fixed Bugs](#fixed-bugs)
