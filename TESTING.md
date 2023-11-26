@@ -94,6 +94,58 @@ The following errors were corrected:
 
   Click [here](https://stackoverflow.com/questions/71097299/how-can-i-resolve-reactmarkdown-that-uses-children-as-a-prop-w-error-do-not-p) to come to the source.
 
+## Responsivness & Browser Compability Testing
+
+- In order to thoroughly test my website, I conducted a series of tests on various browsers including Google Chrome, Safari, and Mozilla Firefox.
+
+- I also tested on multiple devices such as:
+  - Laptop:
+    - Dell xps 13.
+  - Mobile Devices:
+    - iPhone XS, 
+    - Google Pixel 6a, 
+    - Samsung Galaxy S10,
+    - iPhone 15.
+
+- I made sure to check every page using Google Chrome developer tools to confirm their responsiveness on various screen sizes.
+
+- I used [Responsive Design Checker](https://www.responsivedesignchecker.com/) to check the site on the range of different devices.
+
+  <details>
+  <summary>Check the results here</summary>
+
+  | Screen | Result |
+  |--------|--------|
+  | 24" Desktop | :white_check_mark: |
+  | 23" Desktop | :white_check_mark: |
+  | 22" Desktop | :white_check_mark: |
+  | 20" Desktop | :white_check_mark: |
+  | 19" Desktop | :white_check_mark: |
+  | 15" Desktop | :white_check_mark: |
+  | 13" Notebook | :white_check_mark: |
+  | 10" Notebook | :white_check_mark: |
+  | Apple iPad Mini | :white_check_mark: |
+  | Apple iPad Retina | :white_check_mark: |
+  | Apple iPad Pro | :white_check_mark: |
+  | Amazon Kindle Fire | :white_check_mark: |
+  | Amazon Kindle Fire HD | :white_check_mark: |
+  | Asus Eee 1000 | :white_check_mark: |
+  | Nexus 7 | :white_check_mark: |
+  | Nexus 9 | :white_check_mark: |
+  | Samsung Galaxy Tab 10 | :white_check_mark: |
+  | Apple iPhone 3/4/4s | :white_check_mark: |
+  | Apple iPhone 5/5s | :white_check_mark: |
+  | Apple iPhone 6/6s/7 | :white_check_mark: |
+  | Apple iPhone 6s Plus/7 Plus | :white_check_mark: |
+  | Samsung Galaxy S5/S6/S7 | :white_check_mark: |
+  | Sony Xperia Z2/Z3 | :white_check_mark: |
+  | Google Pixel | :white_check_mark: |
+  | Nexus 4 | :white_check_mark: |
+  | Nexus 5 | :white_check_mark: |
+  | Nexus 6 | :white_check_mark: |
+
+  </details>
+
 ## Manual Testing
 
 <details><summary>Navigation bar</summary>
