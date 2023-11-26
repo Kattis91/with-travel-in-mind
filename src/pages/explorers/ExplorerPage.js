@@ -152,7 +152,7 @@ function ExplorerPage() {
   const mainExplorerPosts = (
     <>
       <hr />
-      <p className="text-center">{`${explorer?.owner}'s posts:`}</p>
+      <p className="text-center"><strong>{`${explorer?.owner}'s posts:`}</strong></p>
       <hr />
       {explorerPosts.results.length ? (
         <InfiniteScroll
