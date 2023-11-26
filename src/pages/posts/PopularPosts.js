@@ -46,7 +46,7 @@ const PopularPosts = ({ mobile }) => {
               ))}
             </div>
           ) : (
-            popularPosts.results.map((post) => (
+            popularPosts.results.slice(0, 10).map((post) => (
               <MostLikedPost key={post.id} post={post} />
             ))
           )}
