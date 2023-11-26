@@ -165,7 +165,7 @@ The choice of colors depends on the background image chosen for home, sign up, l
 
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700846564/unfollow-button_rlmqvd.png)
 
-  - When hovering over the "Follow" button.
+  - When hovering over the | "Follow" | "Create" | "Save" | "Update" | "Post" | "Yes" | buttons. 
 
 - **`C43A51`** used for the buttons.
    
@@ -899,6 +899,20 @@ The following errors were corrected:
           commentlikes_count=Count('commentlikes', distinct=True)
     )
     ````
+
+- It has been identified that the React Bootstrap mobile Navbar has an issue where the Collapse burger menu does not automatically close after a selection is made. I tried using the solution suggested in the CI Moments walkthrough by creating the useClickOutsideToggle.js component. However, I found that this solution only works for a simple list of links and not for additional dropdown menus. I have three links in the dropdown menu, and I couldn't reach them because the navbar closed automatically when clicking on the dropdown header.
+
+  My first solution was to delete UseClickOutsideToggle.js and toggle the links manually by using onClick event.
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701010028/on-click_ikhpz5.png)
+
+  However, it caused another issue, which was poor cooperation with the "Add Post" link.
+  When the user clicked on the "Add Post" link, the entire hamburger menu opened and was over the "Add Post" form.
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701009310/hamburger-menu-bug_qkfce9.png)
+
+  The menu toggled again when the user clicked the "Add Post" link one more time or when it was clicked after first opening the hamburger menu, but it was a poor user experience.
+
+  **Fix:** Move the "Add Post" link to loggedInIcons so it ends up in the hamburger menu along with the other links. The burger menu only closes when some link is clicked; clicking outside the menu does not close it, but I find this behavior acceptable, at least for now.
 
 ## Deployment
 
