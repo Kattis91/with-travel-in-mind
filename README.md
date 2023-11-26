@@ -745,6 +745,46 @@ Images of the success messages can be found [here](#success-messages).
 | As a logged-in User I can change my username so that other users will see my updated username on my profile. | Logged-in users can edit their username. They can do so by selecting the hamburger menu while being on their Explorer page and choosing the "Change username" option. | Explorers | Could-Have |
 | As a User I can filter the posts list by category so that I can easily see all posts relating to one particular category. | All users can filter posts by choosing a region in the dropdown menu at the top of all posts pages. If no posts match the selected region, a message will inform the user. | Posts | Could-Have |
 
+### Validator Testing
+
+#### HTML
+
+Validator: [W3C Validator](https://validator.w3.org/)
+
+All the pages passed through the validator without any errors and warnings to show.
+
+- **Home Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Explorer Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Edit Explorer Page | Edit username Page | Edit password Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Add Post Page | Edit Post Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Post Detail Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Bookmarks Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Following Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
+- **Favorites Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
 ## Fixed Bugs
 
 - NavBar logged-in and logged-out view failed upon signing in. The user was directed to the homepage, but the navbar showed the links for logged out users.
