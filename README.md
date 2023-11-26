@@ -191,6 +191,49 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700847347/ubuntu-font_psl0k6.png)
 
+## Technologies Used
+
+### Languages
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - defines the meaning and structure of web content.
+
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - provides the styling for the website.
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - provideds the interactivity and front-end functionality for the website.
+
+### Frameworks, Libraries & Programs
+
+- [React](https://react.dev/) - a free and open-source front-end JavaScript library for building user interfaces based on components. 
+
+- [React Bootstrap](https://react-bootstrap-v4.netlify.app/) - one of the oldest React libraries that helps to build solid, responsive, mobile-first sites.
+
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the chrome browser. Used to test responsiveness and debug.
+
+- [Google Fonts](https://fonts.google.com/) - A web based font service by Google used to supply the site typography.
+
+- [Font Awesome](https://fontawesome.com/) - A font and icon toolkit used for the "With Travel In Mind" icons.
+
+- [Responsive Design Checker](https://www.responsivedesignchecker.com/) - used to check the site's responsiveness on the range of different devices.
+
+- [Am I Responsive?](https://ui.dev/amiresponsive) - used to see how the site looks on four different screen sizes. 
+  <details>
+  <summary>The screen sizes</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701019154/responsiveness_diepvr.png)
+
+  </details>
+
+- [FreeLogoDesign](https://www.freelogodesign.org/) - used to create the "With Travel In Mind" logo.
+
+- [Cloudinary](https://cloudinary.com/) - The cloud platform used to store the images.
+
+- [Git](https://git-scm.com/) - Version control system used in this project.
+
+- [GitPod](https://www.gitpod.io/) - The IDE used to create the project.
+
+- [GitHub](https://github.com/) - The code hosting platform used to save and store the files for this repository.
+
+- [Heroku](https://www.heroku.com/) - The cloud platform used to deploy the project into live environment.
 
 ## Existing Features
 
