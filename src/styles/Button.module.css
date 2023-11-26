@@ -13,16 +13,6 @@
     background-color: #c43a51;
 }
 
-.Bright {
-    background-color: #c43a51;
-    color: white;
-}
-
-.Bright:hover {
-    background-color: #338f85;
-    color: white;
-} 
-
 .ChangeImage,
 .ChangeImage:hover {
     display: inline-block; 
