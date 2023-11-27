@@ -14,6 +14,7 @@ import ExplorerPage from "./pages/explorers/ExplorerPage";
 import ExplorerEditForm from "./pages/explorers/ExplorerEditForm";
 import UsernameForm from "./pages/explorers/UsernameForm";
 import UserPasswordForm from "./pages/explorers/UserPasswordForm";
+import NotFound from "./components/NotFound";
 
 function App() {
 
@@ -73,7 +74,7 @@ function App() {
           <Route exact path="/explorers/:id/edit" render={() => <ExplorerEditForm />} />
           <Route exact path="/explorers/:id/edit/username" render={() => <UsernameForm /> } />
           <Route exact path="/explorers/:id/edit/password" render={() => <UserPasswordForm /> } />
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render={() => <NotFound /> } />
         </Switch>
       </Container>
     </div>
