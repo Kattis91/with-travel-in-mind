@@ -230,6 +230,21 @@ Images of the success messages can be found [here](#success-messages).
 
 </details>
 
+<details> 
+<summary>Search functionality</summary>
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Filter posts by category | By selecting a region in the dropdown menu, all posts belonging to the selected region should be displayed on the page. | Visit the posts page to view represented regions. Choose one of those regions in the dropdown menu. | ONLY posts within the selected region are displayed on the screen. | Pass |
+| Filter posts by category. No posts to show | If there are no posts to show within the selected region, the user should get a message saying that. | Visit the posts page to view represented regions. Find a region that is NOT represented among posts. Choose that region in the dropdown menu. | The "No results found. Adjust the search keyword or choose another region.." message appears on the screen. | Pass
+| Search by keyword | The user should be able to search posts by the post title, place and the name of the author/explorer. | Visit the posts page to view represented posts. Find some title/place/author you like and type that title/place/author or just some first letters of one of them in the search bar. | ONLY post with that title/place/author and posts containing the typed-in letters in either title, place or the author's name (in the exact order the user typed them in) appears on the screen. | Pass |
+| Search by keyword. No posts to show | If there are no posts that matches the typed-in keyword, the user should get a message saying that. | _Quick test:_ Type some very random and strange letter combination. _Some research:_ You can also go to the posts page and check what titles/authors/places are represented so you can exclude them from your search. | The "No results found. Adjust the search keyword or choose another region.." message appears on the screen. | Pass |
+| Reset your search filter | When choosing a region from the dropdown menu or typing in the keyword in the search bar, the "Reset your search filter" button should be displayed on the screen. | Choose a region in the dropdown menu or type something in into the search bar. | The "Reset your search filter" button appears on the screen just below the search bar. | Pass |
+| "Reset your search filter" functionality. The dropdown menu. | When the "Reset your search filter" button is clicked, the dropdown menu should be reset automatically without requiring the user to refresh the page. Once the button is clicked, it should disappear immediately. | Choose a region from the dropdown menu. Click the "Reset your search filter" button. | The search filter is reset, causing the region dropdown menu to display the default "Region". The button is gone. | Pass |
+| "Reset your search filter" functionality. The search bar. | When the "Reset your search filter" button is clicked, the search bar  should be reset automatically without requiring the user to refresh the page. Once the button is clicked, it should disappear immediately. | Type something into the search bar. Click the "Reset your search filter" button. | The search filter is reset, causing the search bar to become cleared. The button is gone. | Pass |
+
+</details>
+
 ## Testing of User Stories
 
 ### Iteration 1
