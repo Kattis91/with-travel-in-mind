@@ -313,7 +313,7 @@ The message displayed when there are no results found:
 
 - **Search by typing in:**
 
-  The user can search posts by post title or the name of the author/explorer.
+  The user can search posts by post title, place or the name of the author/explorer.
 
 - **Reset your search filter:**
   
@@ -786,6 +786,19 @@ Testing includes following:
   The menu toggled again when the user clicked the "Add Post" link one more time or when it was clicked after first opening the hamburger menu, but it was a poor user experience.
 
   **Fix:** Move the "Add Post" link to loggedInIcons so it ends up in the hamburger menu along with the other links. The burger menu only closes when some link is clicked; clicking outside the menu does not close it, but I find this behavior acceptable, at least for now.
+
+- If the user did not refresh the page, the search filter was not reset. I considered it a poor user experience because if the user didn't know they needed to refresh the page, they could be confused and think that the site had hanged. Additionally, if the user navigated to some of feed pages (Bookmarks | Following | Favorites) without refreshing the page beforehand, the previous search parameters would carry over and restrict the results. For instance, if the user performed a search for posts tagged with the region "Africa" and then proceeded to the bookmarks page, they would only be able to view bookmarked posts that belonged to the selected region.
+
+  **Fix:**
+  
+  - Create the clearFilters function:
+  
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701099827/createFilters_bwkhyx.png)
+
+  - Add a ternary condition to call the function and display "Reset your search filter" button only on region selection or keyword input.
+  
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701099827/reset-filter-button_m0ykav.png)
+
 
 ## Deployment
 
