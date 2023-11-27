@@ -303,6 +303,16 @@ If I have bookmarked the post - ![image](https://res.cloudinary.com/dx0imlozl/im
 
 </details>
 
+<details> 
+<summary>Follow | Unfollow (available for logged-in users only)</summary>
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Follow | The user should be able to follow another explorer by clicking the "Follow" button either in the "Check these popular explorers" container or by visiting the explorer's profile. The user who clicks the "Follow" button should increase the number of followers for the chosen explorer by one, as well as their own "following" count. The posts of the followed explorer should now be visible on the "Following" page. | Log in and choose an explorer to follow. | The number of followers for the chosen explorer increases by one, the "following" count of the user who is now following another explorer is increased by one. The posts published by the followed explorer, if any, can be found in the following feed.
+| Unfollow | The user should be able to unfollow another explorer by clicking the "Unfollow" button either in the "Check these popular explorers" container or by visiting the explorer's profile. The user who clicks the "Unfollow" button should decrease the number of followers for the chosen explorer by one, as well as their own "following" count. The posts of the followed explorer should be removed from the "Following" page. | Log in and choose an explorer you want to unfollow. | The number of followers for the chosen explorer decreases by one, the "following" count of the user who has just unfollowed another explorer is decreased by one. The posts published by the unfollowed explorer, if any, are removed from the following feed.
+
+</details>
+
 ## Automated Testing
 
 As part of the project, I conducted automated testing towards the end.
