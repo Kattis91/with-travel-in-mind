@@ -289,6 +289,20 @@ If I have liked the post - ![image](https://res.cloudinary.com/dx0imlozl/image/u
 
 </details>
 
+<details> 
+<summary>Bookmark | Remove bookmark (available for logged-in users only)</summary>
+
+When I haven't bookmarked a post yet - ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701122021/unbookmarked_xgq7dq.png)
+If I have bookmarked the post - ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701122021/bookmarked_qcjxbf.png)
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Bookmaring a post | Logged-in users should be able to bookmark all the posts, even the one's published by them. Clicking the bookmark icon should increase the number of bookmrks by one, and the post should be added to the bookmarks page. | Log in and bookmark a post. | The number of bookmarks is increased by one. The post is now visible in the bookmarks feed. | Pass |
+| Removing bookmark from a post | Logged in users should be able to remove bookmarks from the posts they earlier have bookmarked. Clicking the bookmark icon should decrease the number of bookmarks by one, the post should be removed from the user' bookmarks page. | The number of bookmarks is decreased by one, the post is no longer in the bookmarks feed. | Pass |
+| Trying to bookmark a post when not logged in | It shouldn't be possible for unlogged users to bookmark posts. | Log out and try to click the bookmark icon. | The "Log in to bookmark posts!" message appears above the bookmark icon. | Pass | 
+
+</details>
+
 ## Automated Testing
 
 As part of the project, I conducted automated testing towards the end.
