@@ -258,6 +258,18 @@ Images of the success messages can be found [here](#success-messages).
 
 </details>
 
+<details> 
+<summary>Hottest posts</summary>
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Hottest posts. Desktop | Only top ten hottest posts should be displayed in the "Hottest posts right now" container. | Create more than ten posts and check that only ten of them are displayed in the container. | Only ten posts are shown. | Pass |
+| Popular posts. Mobile | Only top three hottest posts should be displayed in the "Hottest posts right now" container. | Create more than three posts and check that only three of them are displayed in the container. | Only three posts are shown. | Pass |
+| Popular posts. Functionality | Hottest posts should be displayed in descending order, with the post with most likes at the top. | 1.Create a few profiles (I have five that are my "own") and like different posts a different number of times. Refresh the page and check that the post with the most likes is at the top. 2. Like another post more times than the one  that is currently at the top. Refresh the page to check if the order has changed. | The posts are displayed in the descending order, with the post with most followers on top. |  
+| Redirecting | Clicking on both the post image and title should take the user to the selected post's detail page.| 1. Choose a post and click on the post's image. 2. Click on the post's title. | The user is redirectd to the selected post's detail page. | Pass | 
+
+</details>
+
 ## Testing of User Stories
 
 ### Iteration 1
