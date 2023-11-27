@@ -24,6 +24,7 @@
   - [Hottest Posts](#hottest-posts)
   - [Explorer Profiles](#explorer-profiles)
   - [Success messages](#success-messages)
+  - [Not Found page](#not-found-page)
 
 - [Reusable Components](#reusable-components)
 
@@ -310,9 +311,9 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435547/search_ietn9p.png)
 
-The message displayed when there are no results found:
+The message and the image are displayed when there are no results found: 
 
-![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700678762/no-results-search_iyl2lc.png)
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701111223/no-results-found_uxom2i.png)
 
 - **Filter posts by region:**
  
@@ -655,6 +656,14 @@ The user gets feedback on their successful actions. Feedback is provided for the
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700779156/success-sign-out_qlg9wm.png)
   </details>
+
+### Not Found page
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701110791/not-found-page_xsgz54.png)
+
+- When the user ends up on the page that doesn't exist, they will see the message above.
+
+- By clicking on the text, the user will be taken to the home page of the site.
 
 ## Reusable Components
 
