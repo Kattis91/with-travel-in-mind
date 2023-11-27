@@ -80,3 +80,50 @@ test('renders link to the explorer profile for a logged in user', async () => {
   expect(explorerAvatar).toBeInTheDocument();
 });
 
+test('renders link to the bookmarks page when clicked on For you dropdown menu', async () => {
+  render(
+    <Router>
+      <CurrentUserProvider>
+        <NavBar />
+      </CurrentUserProvider>
+    </Router>
+    );
+
+    const forYou = await screen.findByText('For you');
+    fireEvent.click(forYou);
+    
+    const bookmarks = screen.getByRole('link', {name: 'Bookmarks'});
+    expect(bookmarks).toBeInTheDocument(); 
+});
+
+test('renders link to the following page when clicked on For you dropdown menu', async () => {
+    render(
+      <Router>
+        <CurrentUserProvider>
+          <NavBar />
+        </CurrentUserProvider>
+      </Router>
+      );
+  
+      const forYou = await screen.findByText('For you');
+      fireEvent.click(forYou);
+      
+      const following = screen.getByRole('link', {name: 'Following'});
+      expect(following).toBeInTheDocument(); 
+  });
+
+test('renders link to the following page when clicked on For you dropdown menu', async () => {
+  render(
+    <Router>
+      <CurrentUserProvider>
+        <NavBar />
+      </CurrentUserProvider>
+    </Router>
+    );
+  
+    const forYou = await screen.findByText('For you');
+    fireEvent.click(forYou);
+    
+    const favorites = screen.getByRole('link', {name: 'Favorites'});
+    expect(favorites).toBeInTheDocument(); 
+  });
