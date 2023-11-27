@@ -31,6 +31,11 @@
   
 - [Fixed Bugs](#fixed-bugs)
 
+- [Credits](#credits)
+  - [Media](#media)
+  - [Content](#content)
+  - [Acknowledgements](#acknowledgements)
+
 - [Deployment](#deployment)
 
 
@@ -236,6 +241,8 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 - [GitHub](https://github.com/) - The code hosting platform used to save and store the files for this repository.
 
 - [Heroku](https://www.heroku.com/) - The cloud platform used to deploy the project into live environment.
+
+- [SweetAlert2](https://sweetalert2.github.io/) - the library used to add Alert functionality to the app.
 
 ## Existing Features
 
@@ -790,7 +797,7 @@ Testing includes following:
 - If the user did not refresh the page, the search filter was not reset. I considered it a poor user experience because if the user didn't know they needed to refresh the page, they could be confused and think that the site had hanged. Additionally, if the user navigated to some of feed pages (Bookmarks | Following | Favorites) without refreshing the page beforehand, the previous search parameters would carry over and restrict the results. For instance, if the user performed a search for posts tagged with the region "Africa" and then proceeded to the bookmarks page, they would only be able to view bookmarked posts that belonged to the selected region.
 
   **Fix:**
-  
+
   - Create the clearFilters function:
   
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701099827/createFilters_bwkhyx.png)
@@ -799,6 +806,48 @@ Testing includes following:
   
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701099827/reset-filter-button_m0ykav.png)
 
+
+## Credits
+
+### Media
+
+- All the images posted on the site were taken by me or other people who was testing my site.
+
+- [FreeLogoDesign](https://www.freelogodesign.org/) was used to create the "With Travel In Mind" logo.
+
+- [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate a favicon from the logo.
+
+- [Font Awesome](https://fontawesome.com/) was used to add the icons to the Logo, Navbar links, post cards and dropdown menus.
+
+- [Am I Responsive?](https://ui.dev/amiresponsive) was used to see how the site looks on four different screen sizes. 
+
+- [unDraw](https://undraw.co/search) was used for displaying no-results and upload images.
+
+### Content
+
+- Code Institute's Advanced Front-end "Moments" walkthrough project served as inspiration and template for With Travel In Mind. Code was customized and expanded for further functionality.
+
+- I used this article on [Stack Overflow](https://stackoverflow.com/questions/76969410/importerror-allauth-needs-to-be-added-to-installed-apps) to solve the problem with the Navbar's logged-in and logged-out view failing upon signing in. Click [here](#fixed-bugs) and read the first issue to get more details about the solution.
+
+- Instructions and inspiration on how to reset the search filter was found in [this](https://stackoverflow.com/questions/66379498/how-to-reset-my-filter-options-to-their-initial-blank-state-react) Stack Overflow article.
+
+- With the help of [this](https://stackoverflow.com/questions/74719490/how-to-test-a-dropdown-component-in-react-using-react-testing-library-jest) I got a better understanding on how to test (using JEST) whether the NavBar is rendering the links to the Bookmarks, Following and Favorites pages when clicking "For you" dropdown menu.
+
+- [CODEMOTO](https://codemoto.io/coding/react/react-delete-confirmation-modal) provided me with the knowledge about creating the Reusable React Delete Confirmation Modal.
+
+- [TutorialsPoint](https://www.tutorialspoint.com/how-to-align-the-modal-content-box-to-the-center-of-any-screen) was the source I used to decide the position of my Modal box.
+
+- Information on how to use [SweetAlert2](https://sweetalert2.github.io/) library with React is taken from [this] Medium's article.
+
+### Acknowledgements
+
+I would like to express my gratitude towards:
+
+- My mentor Jubril for providing me with exceptional briefings, constructive feedback, and valuable tips.
+
+- Kay, the team facilitator, for consistently and patiently answering my questions during our Monday sessions.
+
+- Sarah, Gemmma, Martin, Oisin, Holly, Sean and Joanne on the Tutor Assistance Team for helping me out with diverse things throughout the project.
 
 ## Deployment
 
