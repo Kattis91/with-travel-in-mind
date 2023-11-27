@@ -1,4 +1,9 @@
 .NotFound {
-    margin-top: 25vh;
+    margin-top: 150px;
     color: white;
+}
+
+.LinkBack {
+    color: white;
+    font-size: 24px;
 }
