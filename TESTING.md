@@ -245,6 +245,19 @@ Images of the success messages can be found [here](#success-messages).
 
 </details>
 
+<details> 
+<summary>Popular explorers</summary>
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Popular explorers. Desktop | Only top ten most popular explorers should be displayed on the page. | Create more than 10 profiles and check that only 10 of them are displayed in the "Follow these popular explorers" container. | Only 10 profiles are shown. | Pass |
+| Popular explorers. Mobile | Only top four most popular explorers should be displayed on the page. | Create more than four profiles and check that only four of them are displayed in the "Follow these popular explorers" container. | Only four profiles are shown. | Pass |
+| Popular explorers. Functionality | Explorer profiles should be displayed in descending order, with the profile with most followers at the top. | 1.Create a few profiles (I have five that are my "own") and follow different explorers a different number of times. Refresh the page and check that the profile with the most followers is at the top. 2. Give another explorer more followers than the one who is currently at the top. Refresh the page to check if the order has changed. | The profiles are displayed in the descending order, with the profile with most followers on top. |  
+| Redirecting | Clicking on both the avatar and the username should take the user to the selected explorer's profile.| 1. Choose an explorer and click on their avatar. 2. Click on the explorer's username. | The user is redirectd to the selected explorer's profile. | Pass | 
+| Follow | Logged-in users should be able to follow explorers listed in the "Follow these popular profiles" container by clicking the "Follow" button next to the username. | Pass |
+
+</details>
+
 ## Testing of User Stories
 
 ### Iteration 1
