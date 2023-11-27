@@ -72,6 +72,74 @@ Are you an experienced traveler and have lots to share? Feel free to share your 
 Or are you busy with other things right now and only have travel in mind?
 Join the community and gain inspiration for your upcoming travels. 
 
+### Scope
+
+#### User Account Management:
+
+- Add sign up/sign in features that give the user access to extra functionality.
+
+- Add Logout functionality in order to protect their account and maintain privacy.
+
+- Add update a profile functionality to enable users to reflect their current preferences and interests.
+
+#### Content | Functionality Requirements:
+
+- Easily accessible navigation bar with the links that have easily understandable names.
+
+- Possibility to view all the posts on the home page.
+
+- Access to the post detail page for all users.
+
+- Search functionality.
+
+- A possibility to view comments.
+
+- Feature that allows users to view the most popular posts.
+
+- Feature that allows users to view the most popular profiles.
+
+- Feedback when ineracting with the site.
+
+- Possibility to view the site on a range of device sizes.
+
+#### Functionality for logged-in users:
+
+- **CRUD functionality:**
+
+  - Implement feature that allows user to **C**reate posts.
+
+  - Implement feature that allows user to **R**ead posts.
+
+  - Implement feature that allows user to **U**pdate posts (if the user is the owner)
+
+  - Implement feature that allows user to **D**elete posts (if the user is the owner)
+
+- **Like and Bookmark features:**
+  
+  - Enable logged-in users to like/unlike posts that are not posted by them.
+
+  - Enable logged-in users to bookmark/unbookmark published posts.
+
+- **Follow and Fan features:**
+
+  - Enable logged-in users to follow/unfollow other explorers.
+
+  - Enable logged-in users to fan/unfan other explorers.
+
+- **Comment functionality:**
+
+  - Enable logged-in users to post comments on any of the published posts.
+
+  - Enable logged-in users to update/delete the comments posted by them.
+
+- **CommentLike functionality:**
+  
+  - Enable logged-in users to like/unlike comments that are not posted by them.
+
+- **Profile update feature:**
+
+  - Enable logged-in users to update their username and password.
+
 ### Structure
 
 The website is organized into several sections, including some that are only available to logged-in users. All visitors can view detailed information about each post. However, logged-in users have additional privileges, such as publishing, editing, and deleting their own posts, as well as interacting with other posts by liking, bookmarking, and commenting on them. The website is designed to facilitate easy searches for posts by allowing users to search by post title or author username or by sorting posts by region. Logged-in users can even sort posts by going to the page with only bookmarked posts or posts by people they follow or have in their favorite list.
