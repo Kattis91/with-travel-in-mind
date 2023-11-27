@@ -258,7 +258,7 @@ Images of the success messages can be found [here](#success-messages).
 | Popular explorers. Mobile | Only top four most popular explorers should be displayed on the page. | Create more than four profiles and check that only four of them are displayed in the "Follow these popular explorers" container. | Only four profiles are shown. | Pass |
 | Popular explorers. Functionality | Explorer profiles should be displayed in descending order, with the profile with most followers at the top. | 1.Create a few profiles (I have five that are my "own") and follow different explorers a different number of times. Refresh the page and check that the profile with the most followers is at the top. 2. Give another explorer more followers than the one who is currently at the top. Refresh the page to check if the order has changed. | The profiles are displayed in the descending order, with the profile with most followers on top. |  
 | Redirecting | Clicking on both the avatar and the username should take the user to the selected explorer's profile.| 1. Choose an explorer and click on their avatar. 2. Click on the explorer's username. | The user is redirectd to the selected explorer's profile. | Pass | 
-| Follow | Logged-in users should be able to follow explorers listed in the "Follow these popular profiles" container by clicking the "Follow" button next to the username. | Pass |
+| Follow | Logged-in users should be able to follow explorers listed in the "Follow these popular profiles" container by clicking the "Follow" button next to the username. | Log in and click "Follow". | The user is now following the chosen profile (For more information see the Follow section) | Pass |
 
 </details>
 
@@ -323,6 +323,23 @@ If I have bookmarked the post - ![image](https://res.cloudinary.com/dx0imlozl/im
 
 </details>
 
+<details> 
+<summary>Comments</summary>
+
+No comments - ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701125616/no-comments_wvlzbx.png)
+There is one comment left - ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701125616/comented_dqlnc8.png)
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| View comments | All users should be able to view comments. | Go to the detail page of the post that have some comments left (the number is greater than zero, see above). | All the comments for the selected post are diplyed below the post description and information. | Pass | 
+| No comments. Logged-in user | If there are no comments on the recipe, the user should see a message saying that. | Find a post with zero comments and go to that post's detail page. | The "There are no comments for this post yet. Be the first to comment!" message appears on the screen. | Pass |
+| No comments. Unlogged user | If there are no comments on the recipe, the user should see a message saying that. | Find a post with zero comments and go to that post's detail page. | The "No comments... yet. Log in to leave a comment!" message appears on the screen. | Pass |
+| Leave a comment. For logged in users only. | Logged-in users should be able to leave comments under the posts. The number of comments should be increased by one. | Log in and choose a post you would like to comment. | The user can leave a comment by typing in the comment form and clicking the "Post" button. The comment is displayed and the number of comments is increased by one. | Pass |
+
+**Description of comment edit and delete functionality** (everything works as it should) can be found in the [Iteration2](#iteration-2) in the Testing of User Stories section (see row 4-5).
+
+</details>
+
 ## Automated Testing
 
 As part of the project, I conducted automated testing towards the end.
@@ -363,8 +380,8 @@ I had to ignore the warning below because "activeClassName" needs to be in upper
 | As a logged-in User I can update my own posts so that correct errors or add new information. | If a user wishes to update or add information to the post they have published, they can click on the dropdown menu followed by the "EDIT" icon. This will take the user to a prepopulated form where they can make the desired changes. | Posts | Must-Have |
 | As a logged-in User I can delete my own posts so that I can remove the ones I don’t want to share anymore. | If a user wishes to delete a post they have published, they can click on the post's title or image, which will take them to the post's detail page. On this page, they can access the dropdown menu and click on the "DELETE" icon. The user will be redirected to a confirmation page, where they will have the option to either delete the post or return to the detail page. | Posts | Must-Have |
 | As a logged-in User I can comment on posts so that I can engage with the community and the author. | The comment form is visible to all logged-in users. The user can leave a comment by typing in the form and clicking the "Post" button. | Comments | Must-Have |
-| As a logged-in User I can edit my comment so that I can correct mistakes. | If a user wants to make any changes or add more information to a comment they've already created, they can do so by clicking on the dropdown menu located on the right side of the comment, and then selecting the "EDIT" icon. This action will redirect them to a pre-populated form, where they can easily make the desired changes. | Posts | Must-Have |
-| As a logged-in User I can delete a comment posted by me so that I can remove the ones I don't want to be posted. | If a user wishes to delete a comment they have created, they can click on the dropdown menu located on the right side of the comment, and then select the "DELETE" icon. The user will be redirected to a confirmation page, where they will have the option to either delete the comment or return to the detail page. | Posts | Must-Have |
+| As a logged-in User I can edit my comment so that I can correct mistakes. | If a user wants to make any changes or add more information to a comment they've already created, they can do so by clicking on the dropdown menu located on the right side of the comment, and then selecting the "EDIT" icon. This action will redirect them to a pre-populated form, where they can easily make the desired changes. | Comments | Must-Have |
+| As a logged-in User I can delete a comment posted by me so that I can remove the ones I don't want to be posted. | If a user wishes to delete a comment they have created, they can click on the dropdown menu located on the right side of the comment, and then select the "DELETE" icon. The user will be redirected to a confirmation page, where they will have the option to either delete the comment or return to the detail page. | Comments | Must-Have |
 | As a User I can see a list of all posts so that I can browse through them and find inspiration. | All posts are displayed on the homepage, with the latest at the top. Users can scroll down to load more in groups of ten. | Posts | Must-Have |
 | As a logged-in User I can add other users to my favorite list so that I easily see the latest from accounts I like the most. | The user can easily become fan of another explorer. They can do that by visiting explorer's profile (when logged in) and click the "Fan" button. | Favorites | Must-Have |
 | As a User I can view other explorers' profiles so that I can see their posts and learn more about them. | All users can see other explorer's profiles by clicking on the explorer's explorer image or username of the user they are curious about. The information that is always displayed about every user is the number of posts, number of followers and favorites, and number of users the explorer is following and has on the favorite list. Bio, region and dream destination are optional fields. The user's actual posts, if any, are displayed after all the information. | Explorers | Must-Have |
