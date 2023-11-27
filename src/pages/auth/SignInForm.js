@@ -10,6 +10,7 @@ import axios from 'axios';
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
 import { useRedirect } from '../../hooks/useRedirect';
 import Swal from 'sweetalert2';
+import { setTokenTimestamp } from '../../utils/utils';
 
 function SignInForm() {
 
@@ -40,6 +41,7 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
+      setTokenTimestamp(data);
       history.goBack();
       Swal.fire({
         text: `Welcome ${username}! Nice to see you here!`,

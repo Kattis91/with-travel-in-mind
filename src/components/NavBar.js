@@ -11,6 +11,7 @@ import axios from 'axios';
 import Avatar from './Avatar';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { removeTokenTimestamp } from '../utils/utils';
 
 
 const NavBar = () => {
@@ -24,6 +25,7 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      removeTokenTimestamp();
       setExpanded(!expanded);
       Swal.fire({
         text: 'You have successfully signed out!',
