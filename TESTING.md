@@ -313,6 +313,16 @@ If I have bookmarked the post - ![image](https://res.cloudinary.com/dx0imlozl/im
 
 </details>
 
+<details> 
+<summary>Fan | Unfan (available for logged-in users only)</summary>
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Fan | The user should be able to add their favorite explorers into their favorite list by clicking the "Fan" button when visiting explorers' profiles. The user who clicks the "Fan" button should increase the number of fans for the chosen explorer by one, as well as their own "favorites" count. The posts of that chosen explorer should now be visible on the "Favorites" page. | Log in and choose an explorer that you want to add to your favorite list. | The number of fans for the selected explorer increases by one, the "favorites" count of the user, who has just added another explorer in their favorite list, is increased by one. The posts published by the selected explorer, if any, can be found in the favorites feed.
+| Unfan| The user should be able to remove another explorer from their favorite list by clicking the "Unfan" button in the explorer's profile. The user who clicks the "Unfan" button should decrease the number of fans for the chosen explorer by one, as well as their own "favorites" count. The posts of the removed explorer should as well be removed from the "Favorites" page. | Log in and choose an explorer you want to remove from yourfavorite list. | The number of fans for the chosen explorer decreases by one, the "favorites" count of the user, who has just removed another explorer from their favorite list, is decreased by one. The posts published by the removed explorer, if any, are removed from the favorites feed.
+
+</details>
+
 ## Automated Testing
 
 As part of the project, I conducted automated testing towards the end.
