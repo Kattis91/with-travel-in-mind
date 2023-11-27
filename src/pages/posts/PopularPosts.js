@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+
+import Container from 'react-bootstrap/Container'
+
 import appStyles from '../../App.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosRes } from '../../api/axiosDefaults';

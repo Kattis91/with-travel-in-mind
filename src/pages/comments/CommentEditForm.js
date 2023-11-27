@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Form from "react-bootstrap/Form";
+import Form from 'react-bootstrap/Form';
 
 import btnStyles from "../../styles/Button.module.css";
 import { axiosRes } from "../../api/axiosDefaults";

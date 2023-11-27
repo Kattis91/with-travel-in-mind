@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 import { useHistory } from "react-router-dom";
 
@@ -14,7 +15,6 @@ import { useParams } from "react-router";
 
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 
 const UsernameForm = () => {

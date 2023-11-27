@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
+
+import Card from 'react-bootstrap/Card';
+import Media from 'react-bootstrap/Media';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import styles from '../../styles/Post.module.css'

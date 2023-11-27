@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
+
+import Image from 'react-bootstrap/Image';
+
 import styles from '../../styles/ExplorerAndMostLikedPost.module.css'
 
 const MostLikedPost = (props) => {

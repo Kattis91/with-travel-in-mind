@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Form from "react-bootstrap/Form";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
+import Form from 'react-bootstrap/Form';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import { Alert, Button } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";

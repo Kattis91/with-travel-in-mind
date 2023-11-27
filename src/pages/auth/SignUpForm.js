@@ -1,5 +1,12 @@
 import React, {useState} from 'react'
-import { Alert, Button, Col, Container, Form, Image, Row } from 'react-bootstrap'
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignUpForm.module.css";

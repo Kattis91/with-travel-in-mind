@@ -4,7 +4,9 @@ import btnStyles from '../../styles/Button.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
-import { Button } from 'react-bootstrap';
+
+import Button from 'react-bootstrap/Button';
+
 import { useSetExplorerData } from '../../contexts/ExplorerDataContext';
 
 const Explorer = (props) => {

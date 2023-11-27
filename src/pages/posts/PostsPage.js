@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
@@ -15,7 +17,6 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
-import { Button, Form } from "react-bootstrap";
 import PopularExplorers from "../explorers/PopularExplorers";
 import PopularPosts from "./PopularPosts";
 import InfiniteScroll from "react-infinite-scroll-component";
