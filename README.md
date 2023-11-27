@@ -6,8 +6,13 @@
 
 # Table of Contents
 
+- [Project Management](#project-management)
+  - [GitHub Project Board](#github-project-board)
+  - [Database Diagram](#database-diagram)
+  
 - [User Experience](#user-experience)
   - [Strategy](#strategy)
+  - [Scope](#scope)
   - [Structure](#structure)
   - [Skeleton](#skeleton)
   - [Surface](#surface)
@@ -39,12 +44,28 @@
 
 - [Deployment](#deployment)
 
+## Project Management
+
+### GitHub Project Board
+
+Throughout the entire development process, I followed the Agile methodology, which involved careful planning and continuous improvement until the final product was completed. To stay organized and on track, I made use of a GitHub project and a [Kanban board](https://github.com/users/Kattis91/projects/4). For more details on the User Stories, please refer to the subsection below ⇩.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701127850/kanban-board_mycebl.png)
+
+### Database Diagram
+
+<details>
+<summary>Click here to view the diagram</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700780451/Database_Diagram_futqfk.png)
+
+</details>
+
+More information can also be found in the README.file for the [With Travel In Mind API](https://github.com/Kattis91/with-travel-in-mind-api).
 
 ## User Experience
 
 I employed the design thinking process to create a website with only essential information, resulting in easy navigation for users.
-
-Throughout the entire development process, I followed the Agile methodology, which involved careful planning and continuous improvement until the final product was completed. To stay organized and on track, I made use of a GitHub project and a [Kanban board](https://github.com/users/Kattis91/projects/4). For more details on the User Stories, please refer to the subsection below ⇩.
 
 ### Strategy
 
