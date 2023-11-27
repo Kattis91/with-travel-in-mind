@@ -1,5 +1,8 @@
+// React imports
 import React, {useState} from 'react'
-
+import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+// Bootstrap imports
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
@@ -7,14 +10,13 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-
+// CSS imports
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
-import { Link } from 'react-router-dom';
+// axios imports
 import axios from 'axios';
-import { useHistory } from 'react-router';
+
 import { useRedirect } from '../../hooks/useRedirect';
 import Swal from 'sweetalert2';
 

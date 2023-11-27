@@ -1,21 +1,20 @@
+// React imports
 import React, { useEffect, useState } from "react";
-
+import { useParams } from "react-router";
+// Bootstrap imports
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-
-import Asset from "../../components/Asset";
-
+// CSS imports
 import styles from "../../styles/ExplorerPage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
+// Compontents imports
+import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import PopularExplorers from "./PopularExplorers";
-import { useParams } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
 import { useExplorerData, useSetExplorerData } from "../../contexts/ExplorerDataContext";
 import Post from "../posts/Post";
 import NoResults from "../../assets/no-results.png";
@@ -23,6 +22,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import { ExplorerEditDropdown } from "../../components/EditDeleteDropdown";
 import PopularPosts from "../posts/PopularPosts";
+// axios import
+import { axiosReq } from "../../api/axiosDefaults";
 
 function ExplorerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);

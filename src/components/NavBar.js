@@ -1,16 +1,23 @@
+// React imports
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// Bootstrap imports
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from "../assets/logo.png";
-import { NavLink } from "react-router-dom";
+// CSS imports
 import styles from "../styles/NavBar.module.css";
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
+// axios imports
 import axios from 'axios';
+
+import logo from "../assets/logo.png";
 import Avatar from './Avatar';
-import { Link } from 'react-router-dom';
+// Alert import
 import Swal from 'sweetalert2';
+
 import { removeTokenTimestamp } from '../utils/utils';
 
 

@@ -1,20 +1,22 @@
+// React imports
 import React, { useState, useEffect } from "react";
-
+import { useHistory } from "react-router-dom";
+import { useParams } from "react-router";
+// Bootstrap imports
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-
-import { useHistory } from "react-router-dom";
-
-import { axiosRes } from "../../api/axiosDefaults";
-import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
-import { useParams } from "react-router";
-
+// CSS imports
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+// axuios import
+import { axiosRes } from "../../api/axiosDefaults";
+// Component import
+import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+// Alert import
 import Swal from "sweetalert2";
 
 const UsernameForm = () => {

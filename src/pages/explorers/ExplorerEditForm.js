@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import { useHistory, useParams } from "react-router";
+// Bootstrap imports
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
@@ -7,12 +8,14 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-
+// CSS imports
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import { useHistory, useParams } from "react-router";
+// Component import
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+// axios import
 import { axiosReq } from "../../api/axiosDefaults";
+// Alert import
 import Swal from "sweetalert2";
 
 const ExplorerEditForm = () => {

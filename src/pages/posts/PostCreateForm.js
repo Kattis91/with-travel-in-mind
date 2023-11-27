@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
-
+import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router';
+// Bootstrap imports
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
@@ -7,17 +8,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-
-import Upload from "../../assets/upload.png";
-
-import styles from "../../styles/PostCreateEditForm.module.css";
-import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
-
-import Asset from "../../components/Asset";
-import { useHistory } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
-import { useRedirect } from "../../hooks/useRedirect";
+// CSS imports
+import styles from '../../styles/PostCreateEditForm.module.css';
+import appStyles from '../../App.module.css';
+import btnStyles from '../../styles/Button.module.css';
+// Component imports
+import Upload from '../../assets/upload.png';
+import Asset from '../../components/Asset'
+import { axiosReq } from '../../api/axiosDefaults';
+import { useRedirect } from '../../hooks/useRedirect';
+// Alert import
 import Swal from 'sweetalert2';
 
 

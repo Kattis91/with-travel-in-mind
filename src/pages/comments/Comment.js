@@ -1,17 +1,21 @@
+// React import
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
+// Bootstrap imports
 import Media from 'react-bootstrap/Media';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-
-import { Link } from "react-router-dom";
-import Avatar from "../../components/Avatar";
+// CSS import
 import styles from "../../styles/Comment.module.css";
+// Components imports
+import Avatar from "../../components/Avatar";
 import { EditDeleteDropdown } from "../../components/EditDeleteDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
 import ModalDeleteConfirmation from "../../components/ModalDeleteConfirmation";
+// axios import
+import { axiosRes } from "../../api/axiosDefaults";
+// Alert import
 import Swal from 'sweetalert2';
 
 const Comment = (props) => {

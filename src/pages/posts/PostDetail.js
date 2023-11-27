@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-
+// React imports
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+// Bootstrap imports
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
+// CSS import
 import appStyles from "../../App.module.css";
-import { axiosReq } from "../../api/axiosDefaults";
-import { useParams } from "react-router";
+// Component imports
 import Post from "./Post";
-
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Comment from "../comments/Comment";
@@ -17,6 +17,8 @@ import PopularPosts from "./PopularPosts";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+// axios import
+import { axiosReq } from "../../api/axiosDefaults";
 
 function PostDetail() {
 

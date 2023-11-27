@@ -1,8 +1,10 @@
 import React from 'react'
+// Bootstrap imports
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import btnStyles from "../styles/Button.module.css";
-import styles from "../styles/ModalDeleteConfirmation.module.css";
+// CSS imports
+import btnStyles from '../styles/Button.module.css';
+import styles from '../styles/ModalDeleteConfirmation.module.css';
 
 const ModalDeleteConfirmation = (props) => {
   
@@ -22,6 +24,7 @@ const ModalDeleteConfirmation = (props) => {
       </Modal.Header>
       <Modal.Body>{message}</Modal.Body>
       <Modal.Footer>
+        { /* Delete Modal info for deleting a post */ }
         {type === "post" && 
           <>
             <Button className={`${btnStyles.Button} ${btnStyles.Purple}`} onClick={handleDelete}>
@@ -32,6 +35,7 @@ const ModalDeleteConfirmation = (props) => {
             </Button>
           </>
         }
+        { /* Delete Modal info for deleting a comment */ }
         {type === "comment" &&
           <>
             <Button className={`${btnStyles.Button} ${btnStyles.Purple}`} onClick={handleCommentDelete}>

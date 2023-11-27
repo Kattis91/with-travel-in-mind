@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from "react";
-
+// React imports
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+// Bootstrap imports
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
+// CSS imports
+import appStyles from '../../App.module.css';
+import styles from '../../styles/PostsPage.module.css';
+import btnStyles from '../../styles/Button.module.css';
+// Component imports
 import Post from "./Post";
 import Asset from "../../components/Asset";
-
-import appStyles from "../../App.module.css";
-import styles from "../../styles/PostsPage.module.css";
-import btnStyles from "../../styles/Button.module.css";
-
-import { useLocation } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
-
 import NoResults from "../../assets/no-results.png";
 import PopularExplorers from "../explorers/PopularExplorers";
 import PopularPosts from "./PopularPosts";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+// axios import
+import { axiosReq } from "../../api/axiosDefaults";
+
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -50,7 +51,8 @@ function PostsPage({ message, filter = "" }) {
     }
     
   }, [filter, search, region, pathname]);
-
+  
+  // to reset search filter
   const clearFilters = () => {
     setSearch("")
     setRegion("")

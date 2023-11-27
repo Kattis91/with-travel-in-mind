@@ -1,12 +1,14 @@
-import React from 'react'
+// React imports
+import React from 'react';
+import { Link } from 'react-router-dom';
+// CSS imports
 import styles from '../../styles/ExplorerAndMostLikedPost.module.css'
 import btnStyles from '../../styles/Button.module.css'
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Link } from 'react-router-dom';
-import Avatar from '../../components/Avatar';
-
+// Bootstrap import
 import Button from 'react-bootstrap/Button';
-
+// Components imports
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Avatar from '../../components/Avatar';
 import { useSetExplorerData } from '../../contexts/ExplorerDataContext';
 
 const Explorer = (props) => {

@@ -1,7 +1,11 @@
-import React from "react";
+// React imports
+import React from 'react';
+import { useHistory } from 'react-router';
+// Bootstrap imports
 import Dropdown from 'react-bootstrap/Dropdown';
+// CSS imports
 import styles from '../styles/EditDeleteDropdown.module.css'
-import { useHistory } from "react-router";
+
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -17,6 +21,7 @@ const Bars = React.forwardRef(({ onClick }, ref) => (
   />
 ));
 
+// Dropdown menu for posts and comments
 export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
   return (
     <Dropdown className="ml-auto" drop="left">
@@ -43,6 +48,7 @@ export const EditDeleteDropdown = ({handleEdit, handleDelete}) => {
   );
 };
 
+// Dropdown menu for profiles
 export function ExplorerEditDropdown({ id }) {
   const history = useHistory();
   return (

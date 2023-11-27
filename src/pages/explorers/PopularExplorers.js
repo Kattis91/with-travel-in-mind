@@ -1,8 +1,10 @@
+// React import
 import React from 'react'
+// CSS import
 import appStyles from '../../App.module.css'
-
+// Bootstrap import
 import Container from 'react-bootstrap/Container'
-
+// Components import
 import Asset from '../../components/Asset';
 import Explorer from './Explorer';
 import { useExplorerData } from '../../contexts/ExplorerDataContext';

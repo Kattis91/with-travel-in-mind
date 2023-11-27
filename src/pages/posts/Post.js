@@ -1,18 +1,22 @@
+// React imports
 import React, { useState } from 'react'
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
-
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
+// Bootstrap imports
 import Card from 'react-bootstrap/Card';
 import Media from 'react-bootstrap/Media';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-
-import { Link } from 'react-router-dom';
+// Component imports
 import Avatar from '../../components/Avatar';
-import styles from '../../styles/Post.module.css'
-import { axiosRes } from '../../api/axiosDefaults';
 import { EditDeleteDropdown } from '../../components/EditDeleteDropdown';
-import { useHistory } from 'react-router';
 import ModalDeleteConfirmation from '../../components/ModalDeleteConfirmation';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+// CSS import
+import styles from '../../styles/Post.module.css'
+// axios import
+import { axiosRes } from '../../api/axiosDefaults';
+// Alert import
 import Swal from 'sweetalert2';
 
 const Post = (props) => {
@@ -41,7 +45,8 @@ const Post = (props) => {
   const is_owner = currentUser?.username === owner;
 
   const history = useHistory();
-
+  
+  // Variables to be able to display the delete post modal
   const [show, setShow] = useState(false);
   const [message, setMessage] = useState("");
   const [type, setType] = useState("")

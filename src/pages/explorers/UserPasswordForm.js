@@ -1,17 +1,19 @@
+// React imports
 import React, { useEffect, useState } from 'react'
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { useHistory, useParams } from 'react-router';
 import { axiosRes } from '../../api/axiosDefaults';
-
+// Bootstrap imports
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-
+// CSS imports
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+// Alert import
 import Swal from 'sweetalert2';
 
 const UserPasswordForm = () => {
