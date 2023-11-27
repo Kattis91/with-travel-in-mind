@@ -42,6 +42,10 @@ All the pages passed through the validator without any errors and warnings to sh
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
 
+- **Not Found Page**
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/html-validator_yxcwlw.png)
+
 ### CSS
 
 Validator: [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator).
@@ -269,6 +273,20 @@ Images of the success messages can be found [here](#success-messages).
 | Redirecting | Clicking on both the post image and title should take the user to the selected post's detail page.| 1. Choose a post and click on the post's image. 2. Click on the post's title. | The user is redirectd to the selected post's detail page. | Pass | 
 
 </details>
+
+## Automated Testing
+
+As part of the project, I conducted automated testing towards the end.
+
+The walkthrough project "Moments" was my mainstay, along with this article for testing dropdown objects.
+
+**Result:**
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701111931/automated-testing_c1wgir.png)
+
+I had to ignore the warning below because "activeClassName" needs to be in uppercase to follow naming conventions. Removing it would also remove the class.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701111931/automated-testing-warning_fzpgw4.png)
 
 ## Testing of User Stories
 
