@@ -274,6 +274,21 @@ Images of the success messages can be found [here](#success-messages).
 
 </details>
 
+<details> 
+<summary>Like | Unlike (available for logged-in users only)</summary>
+
+When I haven't liked a post yet - ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701121680/unliked_vhkp0x.png)
+If I have liked the post - ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701121300/liked_rpv3st.png)
+
+| Feature | Expect | Action | Result | Pass/Fail |
+|---------|--------|--------|--------|-----------|
+| Liking a post | Logged-in users should be able to like other explorers' posts. Clicking the like icon should increase the number of likes by one. | Log in and like another user's post. | The number of likes is increased by one. | Pass |
+| Trying to like own post | It shouldn't be possible for the user to like the post published by them. | Log in and try to like a post you have published. The "You can't like your own post!" message appears above the like icon. | Pass |
+| Unliking a post | Logged in users should be able to unlike the post they earlier have liked. Clicking the like icon should decrease the number of likes by one. | The number of likes is decreased by one. | Pass |
+| Trying to like a post when not logged in | It shouldn't be possible for unlogged users to like posts. | Log out and try to click the like icon. | The "Log in to like posts!" message appears above the like icon. | Pass | 
+
+</details>
+
 ## Automated Testing
 
 As part of the project, I conducted automated testing towards the end.
