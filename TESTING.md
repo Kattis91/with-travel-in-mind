@@ -358,6 +358,9 @@ I had to ignore the warning below because "activeClassName" needs to be in upper
 
 ### Iteration 1
 
+Following User Stories will be tested in this section:
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701127125/iteration-1_e4kdx5.png)
+
 | User Story | How are they achieved? | EPIC | Label |
 |------------|------------------------|------|-------|
 | As a User I can sign up so that I can create a profile. | The user can easily register by creating a username and password, and then confirming the password. After successful registration, the user is provided with feedback and redirected to the sign-in page. | Authentication | Must-Have |
@@ -375,6 +378,9 @@ I had to ignore the warning below because "activeClassName" needs to be in upper
 
 ### Iteration 2
 
+Following User Stories will be tested in this section:
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701127365/iteration-2_tssttb.png)
+
 | User Story | How are they achieved? | EPIC | Label |
 |------------|------------------------|------|-------|
 | As a logged-in User I can update my own posts so that correct errors or add new information. | If a user wishes to update or add information to the post they have published, they can click on the dropdown menu followed by the "EDIT" icon. This will take the user to a prepopulated form where they can make the desired changes. | Posts | Must-Have |
@@ -391,6 +397,9 @@ I had to ignore the warning below because "activeClassName" needs to be in upper
 | As a User I can view comments on posts so that can read what other users think about the posts. | All users, regardless of their login status, can view post comments shown on the post detail page. A clear message is displayed if there are no comments yet. | Comments | Could-Have |
 
 ### Iteration 3
+
+Following User Stories will be tested in this section:
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701127366/iteration-3_wcqpsx.png)
 
 | User Story | How are they achieved? | EPIC | Label |
 |------------|------------------------|------|-------|
