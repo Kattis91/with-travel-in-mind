@@ -38,7 +38,7 @@ export const ExplorerDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -60,7 +60,7 @@ export const ExplorerDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -85,7 +85,7 @@ export const ExplorerDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -107,7 +107,7 @@ export const ExplorerDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -122,7 +122,7 @@ export const ExplorerDataProvider = ({ children }) => {
           popularExplorers: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

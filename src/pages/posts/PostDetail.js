@@ -39,7 +39,7 @@ function PostDetail() {
         setPost({ results: [post] });
         setComments(comments);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
   

@@ -54,7 +54,7 @@ const UserPasswordForm = () => {
         timer: 3000        
       })
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

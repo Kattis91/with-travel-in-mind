@@ -397,6 +397,8 @@ Following User Stories will be tested in this section:
 | As a logged-in User I can like other users' posts so that I can show my appreciation to the author. | All logged-in users, except the post owner, can like posts, which increases the number of likes. | Likes | Should-Have |
 | As a logged-in User I can unlike a post so that I can remove a like if I don't want to like the post anymore. | All users who previously liked the post can unlike it, causing the number of likes to decrease by one (per like). | Likes | Could-Have |
 
+[Back to top ⇧](#table-of-contents)
+
 ### Iteration 2
 
 Following User Stories will be tested in this section:
@@ -416,6 +418,8 @@ Following User Stories will be tested in this section:
 | As a User I can easily view the most followed explorers so that know which popular profiles to check out. | The user can see the most followed profiles on the right side of the page on desktop and at the top on mobile. | Explorers | Should-Have |
 | As a logged-in User I can follow another user so that I easily can stay updated with any new posts that they create. | The user can easily follow another explorer. They can do that by visiting explorer's profile (when logged in) and click the "Follow" button or follow them by clicking the same button in the "Follow these popular explorers" container. | Follow | Should-Have |
 | As a User I can view comments on posts so that can read what other users think about the posts. | All users, regardless of their login status, can view post comments shown on the post detail page. A clear message is displayed if there are no comments yet. | Comments | Could-Have |
+
+[Back to top ⇧](#table-of-contents)
 
 ### Iteration 3
 

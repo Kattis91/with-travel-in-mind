@@ -45,7 +45,7 @@ const ExplorerEditForm = () => {
           const { name, bio, region_you_would_like_to_explore, dream_destination, image } = data;
           setExplorerData({ name, bio, region_you_would_like_to_explore, dream_destination, image });
         } catch (err) {
-          console.log(err);
+          // console.log(err);
           history.push("/");
         }
       } else {
@@ -88,7 +88,7 @@ const ExplorerEditForm = () => {
       })
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

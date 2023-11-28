@@ -839,6 +839,7 @@ Testing includes following:
 - Validator testing
 - Responsivness & Browser Compability Testing
 - Manual Testing
+- Automated testing
 - Testing of User Stories
 
 ## Fixed Bugs

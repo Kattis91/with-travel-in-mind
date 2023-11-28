@@ -71,7 +71,7 @@ const Comment = (props) => {
         timer: 3000
       })
     } catch (err) {
-      console.log(err)
+      // console.log(err);
     }
   };
   
@@ -87,7 +87,7 @@ const Comment = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -103,7 +103,7 @@ const Comment = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

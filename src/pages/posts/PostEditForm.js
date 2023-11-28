@@ -44,7 +44,7 @@ function PostEditForm() {
 
         is_owner ? setPostData({ title, description, place, region, image }) : history.push("/");
       } catch(err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -90,7 +90,7 @@ function PostEditForm() {
         timer: 3000
       })
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
