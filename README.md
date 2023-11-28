@@ -401,13 +401,13 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
       
     - **Favorites:**
 
-      - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list.
+      - When the user clicks on "Favorites", they will be directed to a page where they can find all the posts by the users they have in their favorite list. ([User Story](https://github.com/Kattis91/with-travel-in-mind/issues/13))
 
         ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-favorites_umb7g0.png)
      
     - **Following:**
 
-      - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow.
+      - When the user clicks on "Following", they will be directed to a page where they can find all the posts by the users they follow. ([User Story](https://github.com/Kattis91/with-travel-in-mind/issues/12))
 
         ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-following_w9a3tl.png)
     
