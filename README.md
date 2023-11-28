@@ -31,7 +31,7 @@ Link to the Back-End repository: [with-travel-in-mind-api](https://github.com/Ka
   - [Sign In](#sign-in)
   - [Posts Page](#posts-page)
   - [Post Detail page](#post-detail-page)
-  - [Popular Explorer](#popular-explorers)
+  - [Popular Explorers](#popular-explorers)
   - [Hottest Posts](#hottest-posts)
   - [Explorer Profiles](#explorer-profiles)
   - [Success messages](#success-messages)
