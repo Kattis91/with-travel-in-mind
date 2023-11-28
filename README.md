@@ -357,6 +357,10 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 - [SweetAlert2](https://sweetalert2.github.io/) - the library used to add Alert functionality to the app.
 
+- [axios](https://axios-http.com/docs/intro) - A promise based HTTP client for the browser and node.js
+
+- [jwt-decode](https://www.npmjs.com/package/jwt-decode) - A small browser library that helps decoding JWTs token.
+
 [Back to top ⇧](#table-of-contents)
 
 ## Existing Features
