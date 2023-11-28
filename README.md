@@ -987,6 +987,10 @@ Testing includes following:
   
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701099827/reset-filter-button_m0ykav.png)
 
+## Known Issues
+
+Currently, there is an issue that hasn't been resolved yet. The React app and the DRF app live on different servers, which  causes a problem with Safari blocking cross-domain cookies and preventing cross-site tracking. When the application tries to set the JWT JSON web token as an http-only cookie, it gets blocked due to certain settings in your browser. Although you can temporarily fix the issue by turning off the prevent cross-site tracking and cookie options within Safari. This solution is not the best as the user cannot be expected to do this for the site to function correctly. My next step to solve the issue will be to combine the repositories.
+
 [Back to top ⇧](#table-of-contents)
 
 ## Credits
