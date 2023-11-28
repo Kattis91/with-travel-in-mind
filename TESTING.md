@@ -376,6 +376,18 @@ This functionality was thoroughly tested with different posts and different logg
 
 </details>
 
+<details><summary>Explorer profile</summary>
+
+This functionality was thoroughly tested with different logged-in statuses and by visiting my own profile and some other people's profiles.
+
+To view test results:
+ 
+- See the User Stories marked with "Explorer" label in [Iteration2](#iteration-2) and [Iteration3](#iteration-3).
+
+- Visit [README.md file](README.md) and find the subsection **"Explorer Profiles"** in the _"Existing features"_ section.
+
+</details>
+
 ## Automated Testing
 
 As part of the project, I conducted automated testing towards the end.
