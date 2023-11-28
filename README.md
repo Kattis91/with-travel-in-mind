@@ -352,6 +352,8 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ### Navigation Bar
 
+**Click [here](https://github.com/Kattis91/with-travel-in-mind/issues?q=is%3Aissue+is%3Aclosed+label%3A%22EPIC%3A+Navigation%22) to view relevant User Stories.**
+
 - The navigation bar is complete and responsive. It appears consistently on every page, making navigation more convenient.
 
 - This section facilitates seamless navigation between pages, eliminating the need to rely on the "back" button.
@@ -414,6 +416,10 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ### Search
 
+**Relevant User Stories can be found here:**
+- [Search Posts](https://github.com/Kattis91/with-travel-in-mind/issues/11)
+- [Filter posts by category](https://github.com/Kattis91/with-travel-in-mind/issues/38)
+
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435547/search_ietn9p.png)
 
 The message and the image are displayed when there are no results found: 
@@ -438,6 +444,8 @@ The message and the image are displayed when there are no results found:
 
 
 ### Add Post
+
+**Click [here](https://github.com/Kattis91/with-travel-in-mind/issues/5) to view the User Story.**
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700599677/add-post_h8xke0.png)
 
@@ -470,6 +478,8 @@ The message and the image are displayed when there are no results found:
 [Back to top ⇧](#table-of-contents)
 
 ### Sign Up
+
+**User Story can be found [here](https://github.com/Kattis91/with-travel-in-mind/issues/1).**
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700606692/sign-up-form_ruamir.png)
 
@@ -506,6 +516,8 @@ The message and the image are displayed when there are no results found:
 
 ### Sign In
 
+**The User Story can be found [here](https://github.com/Kattis91/with-travel-in-mind/issues/2).**
+
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700606692/sign-in-form_ofjnqa.png)
 
 - The form enables users to log in.
@@ -538,6 +550,8 @@ The message and the image are displayed when there are no results found:
 
 ### Posts page
 
+**Click [here](https://github.com/Kattis91/with-travel-in-mind/issues/8) to view the User Story**
+
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658316/post-header_psllue.png)
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658317/post-image_rj77dw.png)
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700658317/post-info_f0liak.png)
@@ -560,6 +574,22 @@ Each post contains the following features:
 [Back to top ⇧](#table-of-contents)
 
 ### Post Detail page
+
+**User Stories:**
+
+- [View Details of a post](https://github.com/Kattis91/with-travel-in-mind/issues/9)
+
+- <details><summary>Comment User Stories</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701135132/comment-user-stories_oqauuh.png)
+
+  </details>
+
+- <details><summary>Edit | Delete posts</summary>
+  
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701135556/edit-delete-user-stories_dorc78.png)
+
+  </details>
 
 When the user clicks on the post, they are redirected to the post's detail page.
 
@@ -614,6 +644,8 @@ The post information remains the same, but extra features are now available.
 
 ### Popular explorers
 
+**The User Story can be viewed [here](https://github.com/Kattis91/with-travel-in-mind/issues/15).**
+
 - All users, including non-logged in users, can view a list of the most popular profiles (explorers).
 
 - Profiles are listed in descending order from most popular to least popular.
@@ -639,6 +671,8 @@ The post information remains the same, but extra features are now available.
 
 ### Hottest posts
 
+**The User Story can be found [here](https://github.com/Kattis91/with-travel-in-mind/issues/33).**
+
 - All users, including non-logged in users, can view a list of the most hottest posts.
 
 - Posts are listed in descending order starting with the one with most likes.
@@ -660,7 +694,21 @@ The post information remains the same, but extra features are now available.
 
 ### Explorer profiles
 
-- All the explorer profiles have the same structure. 
+**User Stories:**
+
+- [View an explorer profile](https://github.com/Kattis91/with-travel-in-mind/issues/14)
+
+- <details><summary>Edit profile, username and password</summary>
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701135371/explorer-user-stories_v9zqkk.png)
+
+</details>
+
+- [Follow](https://github.com/Kattis91/with-travel-in-mind/issues/18) | [Unfollow](https://github.com/Kattis91/with-travel-in-mind/issues/19)
+
+- [Add to favorite list](https://github.com/Kattis91/with-travel-in-mind/issues/20) | [Remove from favorite list](https://github.com/Kattis91/with-travel-in-mind/issues/21)
+
+All the explorer profiles have the same structure. 
 
 - Bio, region, and dream destination are optional fields.
 
@@ -703,6 +751,8 @@ The post information remains the same, but extra features are now available.
 [Back to top ⇧](#table-of-contents)
 
 ### Success messages
+
+**The User Story can be found [here](https://github.com/Kattis91/with-travel-in-mind/issues/34).**
 
 The user gets feedback on their successful actions. Feedback is provided for the actions performed with posts, comments, and explorer profile. The user gets a feedback even when signing up, signing in and signing out. Please find additional information and images displaying the exact messages below.
 
