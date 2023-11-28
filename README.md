@@ -9,7 +9,7 @@
 - [Project Management](#project-management)
   - [GitHub Project Board](#github-project-board)
   - [Database Diagram](#database-diagram)
-  
+
 - [User Experience](#user-experience)
   - [Strategy](#strategy)
   - [Scope](#scope)
@@ -62,6 +62,8 @@ Throughout the entire development process, I followed the Agile methodology, whi
 </details>
 
 More information can also be found in the README.file for the [With Travel In Mind API](https://github.com/Kattis91/with-travel-in-mind-api).
+
+[Back to top ⇧](#table-of-contents)
 
 ## User Experience
 
@@ -160,6 +162,8 @@ Join the community and gain inspiration for your upcoming travels.
 - **Profile update feature:**
 
   - Enable logged-in users to update their username and password.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Structure
 
@@ -288,6 +292,8 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700847347/ubuntu-font_psl0k6.png)
 
+[Back to top ⇧](#table-of-contents)
+
 ## Technologies Used
 
 ### Languages
@@ -333,6 +339,8 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 - [Heroku](https://www.heroku.com/) - The cloud platform used to deploy the project into live environment.
 
 - [SweetAlert2](https://sweetalert2.github.io/) - the library used to add Alert functionality to the app.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Existing Features
 
@@ -396,6 +404,8 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700837390/hamburger-menu-with-dropdown-opened_lirn9t.png)
 
+[Back to top ⇧](#table-of-contents)
+
 ### Search
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700435547/search_ietn9p.png)
@@ -450,6 +460,8 @@ The message and the image are displayed when there are no results found:
 - After correctly submitting the form, the user is redirected to their newly created post's detailed page upon clicking the **Create** button.
 
 - When the user clicks on the **Cancel** button, they are redirected back to the page they were on before clicking "Add Post".
+
+[Back to top ⇧](#table-of-contents)
 
 ### Sign Up
 
@@ -539,49 +551,51 @@ Each post contains the following features:
 - Bookmark icon with the number of bookmarks.
   - Logged in users can bookmark posts/remove bookmarks from posts.
 
+[Back to top ⇧](#table-of-contents)
+
 ### Post Detail page
 
 When the user clicks on the post, they are redirected to the post's detail page.
 
-The post information remains the same, but extra features are now available:
+The post information remains the same, but extra features are now available.
 
-- **Comments:**
+#### Comments:
 
-  - All the users get access to the comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671196/comments_oar9ef.png)
-  - Users who are not logged in are prompted to log in if they want to leave comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671314/no-comments-unlogged-user_ia4pub.png)
-  - Logged-in users can:
-      - Like/unlike comments left by other explorers.
-      - Leave comments:
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
+- All the users get access to the comments:
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671196/comments_oar9ef.png)
+- Users who are not logged in are prompted to log in if they want to leave comments:
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671314/no-comments-unlogged-user_ia4pub.png)
+- Logged-in users can:
+    - Like/unlike comments left by other explorers.
+    - Leave comments:
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
 
-  - Comment owners can update/delete their comments:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700670772/edit-delete-comment_dmxi9c.png)
+- Comment owners can update/delete their comments:
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700670772/edit-delete-comment_dmxi9c.png)
 
-    - **Edit:**
+  - **Edit:**
     
-      - Clicking the "edit" icon, the user is redirected to the pre-populated comment edit page.
+    Clicking the "edit" icon, the user is redirected to the pre-populated comment edit page.
     
-    - **Delete:**
+  - **Delete:**
       
-      Clicking the "delete" icon, a delete confirmation modal appears on the screen.
-      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671870/comment-delete-confirmation_lg2xax.png)
+    Clicking the "delete" icon, a delete confirmation modal appears on the screen.
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671870/comment-delete-confirmation_lg2xax.png)
 
-      - Clicking the "Yes!" button deletes the comment and removes it from the post detail page.
+    - Clicking the "Yes!" button deletes the comment and removes it from the post detail page.
 
-      - Clicking "Cancel" closes the modal, keeping the user on selected posts detail page.    
+    - Clicking "Cancel" closes the modal, keeping the user on selected posts detail page.    
 
-- **Edit/delete functionality for the post owners:**
+#### Edit/delete functionality for the post owners:
 
   The dropdown menu is displayed just beside the "created_at" date:
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671525/edit-delete-post_xrksgl.png)
   
-  - **Edit:**
+- **Edit:**
     
-    - Clicking the "edit" icon, the user is redirected to the pre-populated post edit page.
+  Clicking the "edit" icon, the user is redirected to the pre-populated post edit page.
    
-  - **Delete:**
+- **Delete:**
       
     Clicking the "delete" icon, a delete confirmation modal appears on the screen.
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671722/post-delete-confirmation_nwr1qi.png)
@@ -589,6 +603,8 @@ The post information remains the same, but extra features are now available:
     - Clicking the "Yes!" button deletes the post and removes it from the posts page. The user gets redirected to the home page.
 
     - Clicking "Cancel" closes the modal, keeping the user on selected posts page.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Popular explorers
 
@@ -603,10 +619,12 @@ The post information remains the same, but extra features are now available:
   - **Desktop** (displayed to the right at the top of the page):
   
     - Non-logged users:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700648334/popular-explorers-desktop_bguwnd.png)
+
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700648334/popular-explorers-desktop_bguwnd.png)
 
     - Logged-in users:
-    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700650413/popular-explorers-logged-in-user-desktop_lrvv2p.png)
+
+      ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700650413/popular-explorers-logged-in-user-desktop_lrvv2p.png)
 
       You need to log in to be able to follow/unfollow other explorers.
 
@@ -631,6 +649,8 @@ The post information remains the same, but extra features are now available:
   - **Mobile**(displayed at the top of the page, between popular explorers container and the search bar):
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700649268/hottest-posts-mobile_zl8mpd.png)
   The number of posts shown is limited to **three**.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Explorer profiles
 
@@ -673,6 +693,8 @@ The post information remains the same, but extra features are now available:
     - The user can even add other explorers into their favorite list by clicking the "Fan" button. They can remove other explorers from the list by clicking the "Unfan" button.
 
     - It is NOT possible to edit another explorer's profile.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Success messages
 
@@ -754,6 +776,8 @@ The user gets feedback on their successful actions. Feedback is provided for the
 
 - By clicking on the text, the user will be taken to the home page of the site.
 
+[Back to top ⇧](#table-of-contents)
+
 ## Reusable Components
 
 Several reusable React components were created to reduce code duplication.
@@ -803,6 +827,8 @@ To enhance the defensive design of the website, I implemented a validation check
 The nav bar component is a crucial element of the website that manages the main site navigation menu. It incorporates a function to sign out the user. The icons are sorted into two groups, one for logged-out users and the other for logged-in users. The appropriate icons are displayed based on whether the user is authenticated or not.
 
 Click [here](#navigation-bar) to find more information about Navigation bar.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Testing and Validation
 
@@ -904,6 +930,7 @@ Testing includes following:
   
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701099827/reset-filter-button_m0ykav.png)
 
+[Back to top ⇧](#table-of-contents)
 
 ## Credits
 
@@ -946,6 +973,8 @@ I would like to express my gratitude towards:
 - Kay, the team facilitator, for consistently and patiently answering my questions during our Monday sessions.
 
 - Sarah, Gemmma, Martin, Oisin, Holly, Sean and Joanne on the Tutor Assistance Team for helping me out with diverse things throughout the project.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Deployment
 
