@@ -53,6 +53,13 @@ Link to the Back-End repository: [with-travel-in-mind-api](https://github.com/Ka
   - [Acknowledgements](#acknowledgements)
 
 - [Deployment](#deployment)
+  - [Create Heroku App and connect it to GitHub](#create-heroku-app-and-connect-it-to-github)
+  - [Add the Heroku deployment commands](#add-the-heroku-deployment-commands)
+  - [Final Deployment](#final-deployment)
+
+- [Development](#development)
+  - [Fork](#fork)
+  - [Clone](#clone)
 
 ## Project Management
 
@@ -1073,3 +1080,58 @@ I would like to express my gratitude towards:
 - Click **"Connect"** to link up Heroku app to the GitHub repository.
 
 - Click on **"Deploy Branch"**.
+
+### Add the Heroku deployment commands
+
+- Add the following prebuild command to in the package.json file, in the “scripts” section:
+
+  **`"heroku-prebuild": "npm install -g serve",`**
+
+- Add a Procfile at the root of the project with the following web command:
+
+  **`web: serve -s build`**
+
+### Final Deployment 
+
+- Git | push and commit all the changes.
+
+- Go to Heroku and open Dashboard for the application.
+
+- Click on the **"Deploy"** section on the top of the page.
+
+- Select **Deploy branch**.
+
+- Open the app and test all the functionality.
+
+[Back to top ⇧](#table-of-contents)
+
+## Development 
+
+### Fork
+
+- Log in to **GitHub** and ind the repository for this project, [_Kattis91/with-travel-in-mind_](https://github.com/Kattis91/with-travel-in-mind).
+
+- In the top-right corner of the page, click **Fork**.
+
+- Type some new name into the "Repository name" field to distinguish your fork from the upstream repository.
+
+- Click **Create Fork**.
+
+- The fork is now in your personal account and can be changed in the way you want.
+
+### Clone
+
+- On **GitHub**, navigate to your fork of the _what-is-cooking_ repository.
+
+- Above the list of files, click **<>Code**.
+
+- Copy the **URL** for the repository. Repository can be cloned in three different ways:
+  - **HTTPS**;
+  - **SSH**;
+  - **GitHub CLI**.
+
+- Open Terminal and change the current working directory to the location where you want the cloned directory.
+
+- Type `git clone`, and paste the URL you copied earlier. Press **Enter**
+
+[Back to top ⇧](#table-of-contents)
