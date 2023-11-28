@@ -95,7 +95,7 @@ function PostsPage({ message, filter = "" }) {
               >
                 <Form.Control
                   type="text"
-                  placeholder="Search posts by the title or the name of the explorer" 
+                  placeholder="Search posts by the title, place or the name of the explorer" 
                   value={search}
                   onChange={(event) => setSearch(event.target.value)}
                 />
