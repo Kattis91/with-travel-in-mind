@@ -2,6 +2,12 @@
 
 "With Travel In Mind" is an online application designed to foster a community of travelers who share their experiences and knowledge about various destinations. The platform allows users to interact with each other by following, adding to favorites, commenting, bookmarking, and liking posts and comments. Whether you're a seasoned traveler or a novice explorer, With Travel In Mind is the perfect platform to connect with like-minded wanderers and discover new destinations.
 
+Link to the live site: [With Travel In Mind](https://with-travel-in-mind-02bff24bf991.herokuapp.com/)
+
+Link to the live API: [With Travel In Mind API](https://with-travel-in-mind-api-a2180400f610.herokuapp.com/)
+
+Link to the Back-End repository: [with-travel-in-mind-api](https://github.com/Kattis91/with-travel-in-mind-api)
+
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701008098/am-i-responsive_lwoi4o.png)
 
 # Table of Contents
