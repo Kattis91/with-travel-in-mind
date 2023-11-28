@@ -1043,6 +1043,8 @@ Currently, there is an issue that hasn't been resolved yet. The React app and th
 
 - Code Institute's Advanced Front-end "Moments" walkthrough project served as inspiration and template for With Travel In Mind. Code was customized and expanded for further functionality.
 
+- [React Documentation](https://react.dev/) was used throughout the project to gain more knowledge.
+
 - I used this article on [Stack Overflow](https://stackoverflow.com/questions/76969410/importerror-allauth-needs-to-be-added-to-installed-apps) to solve the problem with the Navbar's logged-in and logged-out view failing upon signing in. Click [here](#fixed-bugs) and read the first issue to get more details about the solution.
 
 - Instructions and inspiration on how to reset the search filter was found in [this](https://stackoverflow.com/questions/66379498/how-to-reset-my-filter-options-to-their-initial-blank-state-react) Stack Overflow article.
