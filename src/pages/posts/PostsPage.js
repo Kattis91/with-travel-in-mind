@@ -19,14 +19,17 @@ import PopularExplorers from "../explorers/PopularExplorers";
 import PopularPosts from "./PopularPosts";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 // axios import
 import { axiosReq } from "../../api/axiosDefaults";
+
 
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const currentUser = useCurrentUser();
 
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
@@ -50,7 +53,7 @@ function PostsPage({ message, filter = "" }) {
       clearTimeout(timer)
     }
     
-  }, [filter, search, region, pathname]);
+  }, [filter, search, region, pathname, currentUser]);
   
   // to reset search filter
   const clearFilters = () => {
