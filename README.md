@@ -415,7 +415,7 @@ The website primarily uses the **'Ubuntu'** font and has a fallback of Sans-Seri
 
         ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700651095/no-results-following_w9a3tl.png)
     
-    - Clicking "Sign out" logs out the user and directs to the home page.
+    - Clicking "Sign out" logs out the user and directs to the home page ([User Story](https://github.com/Kattis91/with-travel-in-mind/issues/3))
     
     - The avatar and "Explorer" takes the user to their explorer profile.
   
@@ -617,7 +617,7 @@ The post information remains the same, but extra features are now available.
 - Users who are not logged in are prompted to log in if they want to leave comments:
   ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671314/no-comments-unlogged-user_ia4pub.png)
 - Logged-in users can:
-    - Like/unlike comments left by other explorers.
+    - Like/unlike comments left by other explorers ([User Story](https://github.com/Kattis91/with-travel-in-mind/issues/39))
     - Leave comments:
     ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700671003/no-comments-logged-in-users_ry3mrf.png)
 
@@ -722,6 +722,8 @@ The post information remains the same, but extra features are now available.
 - [Follow](https://github.com/Kattis91/with-travel-in-mind/issues/18) | [Unfollow](https://github.com/Kattis91/with-travel-in-mind/issues/19)
 
 - [Add to favorite list](https://github.com/Kattis91/with-travel-in-mind/issues/20) | [Remove from favorite list](https://github.com/Kattis91/with-travel-in-mind/issues/21)
+
+- [View all posts by a specific explorer](https://github.com/Kattis91/with-travel-in-mind/issues/28)
 
 All the explorer profiles have the same structure. 
 
