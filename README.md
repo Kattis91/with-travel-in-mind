@@ -37,11 +37,15 @@ Link to the Back-End repository: [with-travel-in-mind-api](https://github.com/Ka
   - [Success messages](#success-messages)
   - [Not Found page](#not-found-page)
 
+- [Future Features](#future-features)
+
 - [Reusable Components](#reusable-components)
 
 - [Testing and Validation](#testing-and-validation)
   
 - [Fixed Bugs](#fixed-bugs)
+
+- [Known Issues](#known-issues)
 
 - [Credits](#credits)
   - [Media](#media)
@@ -833,6 +837,19 @@ The user gets feedback on their successful actions. Feedback is provided for the
 - By clicking on the text, the user will be taken to the home page of the site.
 
 [Back to top ⇧](#table-of-contents)
+
+## Future features
+
+- On the Back-End: Rename the "Favourites" app to the "Fans" app for clarity.
+
+- Allow users to upload multiple images in a single post.
+
+- Enable users to contact each other.
+
+- Make it possible to reply to specific comments ("Reply in thread")
+
+- Replace the dropdown menu with a map with pins.
+
 
 ## Reusable Components
 
