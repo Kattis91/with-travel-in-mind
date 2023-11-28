@@ -2,6 +2,24 @@
 
 :back: [Go back to README](README.md)
 
+## Table of contents
+
+- [Validator Testing](#validator-testing)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JavaScript](#javascript)
+
+- [Responsivness & Browser Compability Testing](#responsivness--browser-compability-testing)
+
+- [Manual Testing](#manual-testing)
+
+- [Automated Testing](#automated-testing)
+
+- [Testing of User Stories](#testing-of-user-stories)
+  - [Iteration 1](#iteration-1)
+  - [Iteration 2](#iteration-2)
+  - [Iteration 3](#iteration-3)
+
 ## Validator Testing
 
 ### HTML
@@ -52,7 +70,6 @@ Validator: [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator).
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701002515/css-validator_md8sv5.png)
 
-
 ### JavaScript
 
 Validator: [ESLint](https://eslint.org/).
@@ -97,6 +114,8 @@ The following errors were corrected:
   As the code is based on the code provided by Code Institute I chose to ignore that by disable the line: `eslint-disable-next-line` 
 
   Click [here](https://stackoverflow.com/questions/71097299/how-can-i-resolve-reactmarkdown-that-uses-children-as-a-prop-w-error-do-not-p) to come to the source.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Responsivness & Browser Compability Testing
 
@@ -354,6 +373,8 @@ I had to ignore the warning below because "activeClassName" needs to be in upper
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701111931/automated-testing-warning_fzpgw4.png)
 
+[Back to top ⇧](#table-of-contents)
+
 ## Testing of User Stories
 
 ### Iteration 1
@@ -419,3 +440,6 @@ Following User Stories will be tested in this section:
 | As a logged-in User I can change my username so that other users will see my updated username on my profile. | Logged-in users can edit their username. They can do so by selecting the hamburger menu while being on their Explorer page and choosing the "Change username" option. | Explorers | Could-Have |
 | As a User I can filter the posts list by category so that I can easily see all posts relating to one particular category. | All users can filter posts by choosing a region in the dropdown menu at the top of all posts pages. If no posts match the selected region, a message will inform the user. | Posts | Could-Have |
 
+[Back to top ⇧](#table-of-contents)
+
+:back: [Go back to README](README.md)
